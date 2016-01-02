@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="nginx," />
+  <meta name="keywords" content="android,pattern,原型,设计模式," />
 
 
 
@@ -39,16 +39,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="简介Nginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。201">
+<meta name="description" content="早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？这和大公司开一家小公司，去做特定的项目类似，规避风险。
+假设我们有一份    重要的合同，需要一式两份保存，每人个一份。这时候我们要快速的备份一份，因为内容完全一样，这事后可以用原型模型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx的简介">
-<meta property="og:url" content="http://yoursite.com/2015/10/06/Nginx的简介/index.html">
+<meta property="og:title" content="设计模式系列11---快速拷贝的原型模型">
+<meta property="og:url" content="http://yoursite.com/2016/01/03/设计模式系列11---快速拷贝的原型模型/index.html">
 <meta property="og:site_name" content="SanjayF's blog">
-<meta property="og:description" content="简介Nginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。201">
-<meta property="og:updated_time" content="2016-01-02T13:13:51.000Z">
+<meta property="og:description" content="早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？这和大公司开一家小公司，去做特定的项目类似，规避风险。
+假设我们有一份    重要的合同，需要一式两份保存，每人个一份。这时候我们要快速的备份一份，因为内容完全一样，这事后可以用原型模型">
+<meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/2013050615205185.jpg">
+<meta property="og:updated_time" content="2016-01-02T16:47:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx的简介">
-<meta name="twitter:description" content="简介Nginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。201">
+<meta name="twitter:title" content="设计模式系列11---快速拷贝的原型模型">
+<meta name="twitter:description" content="早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？这和大公司开一家小公司，去做特定的项目类似，规避风险。
+假设我们有一份    重要的合同，需要一式两份保存，每人个一份。这时候我们要快速的备份一份，因为内容完全一样，这事后可以用原型模型">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -58,7 +62,7 @@
   };
 </script>
 
-  <title> Nginx的简介 | SanjayF's blog </title>
+  <title> 设计模式系列11---快速拷贝的原型模型 | SanjayF's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -201,7 +205,7 @@
           
           
             
-              Nginx的简介
+              设计模式系列11---快速拷贝的原型模型
             
           
         </h1>
@@ -210,19 +214,34 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-10-06T13:30:09+08:00" content="2015-10-06">
-            2015-10-06
+          <time itemprop="dateCreated" datetime="2016-01-03T00:34:00+08:00" content="2016-01-03">
+            2016-01-03
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/06/Nginx的简介/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/06/Nginx的简介/" itemprop="commentsCount"></span>
+              <a href="/2016/01/03/设计模式系列11---快速拷贝的原型模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/设计模式系列11---快速拷贝的原型模型/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -236,10 +255,102 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>Nginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。2011年6月1日，nginx 1.0.4发布。<br>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，供俄国大型的入口网站及搜索引擎Rambler（俄文：Рамблер）使用。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、新浪、网易、腾讯等。</p>
-<h2 id="u670D_u52A1_u5668"><a href="#u670D_u52A1_u5668" class="headerlink" title="服务器"></a>服务器</h2><p>Nginx作为负载均衡服务器：Nginx 既可以在内部直接支持 Rails 和 PHP 程序对外进行服务，也可以支持作为 HTTP代理服务器对外进行服务。Nginx采用C进行编写，不论是系统资源开销还是CPU使用效率都比 Perlbal 要好很多。<br>代码</p>
-<p>Nginx代码完全用C语言从头写成，已经移植到许多体系结构和操作系统，包括：Linux、FreeBSD、Solaris、Mac OS X、AIX以及Microsoft Windows。Nginx有自己的函数库，并且除了zlib、PCRE和OpenSSL之外，标准模块只使用系统C库函数。而且，如果不需要或者考虑到潜在的授权冲突，可以不使用这些第三方库。<br>代理服务器</p>
-<p>作为邮件代理服务器：Nginx 同时也是一个非常优秀的邮件代理服务器（最早开发这个产品的目的之一也是作为邮件代理服务器），Last.fm 描述了成功并且美妙的使用经验。<br>Nginx 是一个安装非常的简单、配置文件非常简洁（还能够支持perl语法）、Bugs非常少的服务器。Nginx 启动特别容易，并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动。你还能够不间断服务的情况下进行软件版本的升级。</p>
+        <span itemprop="articleBody"><p> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/2013050615205185.jpg" alt="enter image description here"><br>早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？<br>这和大公司开一家小公司，去做特定的项目类似，规避风险。</p>
+<p>假设我们有一份    重要的合同，需要一式两份保存，每人个一份。<br>这时候我们要快速的备份一份，因为内容完全一样，这事后可以用原型模型</p>
+<a id="more"></a>
+<h1 id="u4EE3_u7801_u5B9E_u73B0"><a href="#u4EE3_u7801_u5B9E_u73B0" class="headerlink" title="代码实现"></a>代码实现</h1><p>我们写一个合同类，里面有合同的日期，合同的具体内容，签名的人的列表。<br>就像下面这个这样。</p>
+<pre><code>public class Contract  implements  Cloneable{
+
+    public String context;
+    public List&lt;String&gt; sign;
+    public Date date;
+
+    @Override
+    public Contract clone(){
+
+        try {
+            Contract newContract= (Contract) super.clone();
+            newContract.context=this.context;
+            newContract.date=this.date;
+            newContract.sign=this.sign;
+
+            return  newContract;
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+
+        return  null;
+    }
+}
+</code></pre><p>我们的合同实现了<code>Cloneable</code>接口，所以我们可以快速的copy一份<br>具体如下</p>
+<pre><code>public class client {
+
+    public static void main(String[] args) {
+        Contract contract=new Contract();
+        contract.context=&quot;this is contract text&quot;;
+        contract.date=new Date(System.currentTimeMillis());
+
+        List&lt;String&gt; signs=new ArrayList&lt;&gt;();
+        signs.add(&quot;jack&quot;);
+        signs.add(&quot;tom&quot;);
+        contract.sign=signs;
+
+        Contract mContract=contract.clone();
+
+    }
+}
+</code></pre><p>好了，我们的原型模型实际说的就是这样，快速的复制一份。<br>不过有点需要提示的，就是这是一种<code>浅拷贝</code>。<br>并没有做到完全的独立的两份。</p>
+<p>下面的例子就可以告诉你结果。<br>我们简单的修改前面的例子，加多一点修改</p>
+<pre><code>public static void main(String[] args) {
+       Contract originalContract=new Contract();
+       originalContract.context=&quot;this is contract text&quot;;
+       originalContract.date=new Date(System.currentTimeMillis());
+
+       List&lt;String&gt; signs=new ArrayList&lt;&gt;();
+       signs.add(&quot;jack&quot;);
+       signs.add(&quot;tom&quot;);
+       originalContract.sign=signs;
+
+       Contract mCopyContract=originalContract.clone();
+       mCopyContract.context=&quot;change the context&quot;;
+
+       mCopyContract.sign.add(&quot;rose&quot;);
+       System.out.println(&quot;oriContext=&quot; + originalContract.context + &quot;, copyContext=&quot; + mCopyContract.context);
+
+       System.out.println(&quot;oriSign =&quot;+ originalContract.sign +&quot; copySign=&quot;+mCopyContract.sign);
+
+   }
+</code></pre><p>我们拷贝后，修改我们的合同的内容，同时在拷贝版的合同加多<code>rose</code>的签名。理论上来说，我们的合同时一式两份，应该互不相干的。对原本的合同也不应该有任何影响，带着这样的判断，我们看下打印的内容。</p>
+<pre><code>oriContext=this is contract text, copyContext=change the context
+
+oriSign =[jack, tom, rose] copySign=[jack, tom, rose]
+</code></pre><p>我们看到我们的合同的内容是两份不一样，不过我们的签名！居然两份都有了，这不科学啊！</p>
+<p>如果你曾经学过<code>C／C++</code>，这个就好结实，对于<code>Sign</code>的复制，他们就是给了指针，单纯的引用，并没有给我们重现开辟一个地方来保存！</p>
+<p>所以我们需要修改原来的复制的地方！<br>改成<code>深拷贝</code>的。</p>
+<pre><code>public ArrayList&lt;String&gt; sign; 
+
+ @Override
+ public Contract clone(){
+
+     try {
+         Contract newContract= (Contract) super.clone();
+         newContract.context=this.context;
+         newContract.date=this.date;
+         newContract.sign= (ArrayList&lt;String&gt;) this.sign.clone();//注意这里。
+
+         return  newContract;
+     } catch (CloneNotSupportedException e) {
+         e.printStackTrace();
+     }
+
+     return  null;
+ }
+</code></pre><p>我们修改了我们的<code>sign</code>是一个具体的<code>ArrayList</code>类型，同时复制的时候加多<code>clone（）</code>调用。</p>
+<p>现在我们就可以安心快速的复制一个内容了，很好。</p>
+<h1 id="u540E_u8BB0"><a href="#u540E_u8BB0" class="headerlink" title="后记"></a>后记</h1><p> 这个原型模型应该是这些模型中最简单的吧，<br>因为他实际可以简单说的成就是一样事情，拷贝。<br>拷贝我们原来的东西，而且我们的java语言已经提供了这个特性接口。</p>
+<p>不过有一些需要提下的，就是这个原型模型比较适合构造成本比较高的，或者构造较为麻烦的情况，特别是一个循环里面生成大量的对象情况，因为他背后是在内存中二进制流的拷贝，所以他的构造函数是<br>不会被执行的，这个需要特别注意！！</p>
+<p>对于简单的，还是使用new一个好。</p>
+<p>写了这么多篇设计模式的内容，回去重新看了写的前面的内容，<br>整体写得内容的表述还是很一般一般的，但可以看到有逐渐的改善！<br>这是一个挺好的事，虽然我写的不是很通俗易懂，但继续写的过程，不断有一些改善，这就很好了。同时也回去修改一些错误，感觉这就比没写文章时候更好了，这就值了。</p>
 </span>
       
     </div>
@@ -248,7 +359,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/nginx/" rel="tag">#nginx</a>
+            <a href="/tags/android/" rel="tag">#android</a>
+          
+            <a href="/tags/pattern/" rel="tag">#pattern</a>
+          
+            <a href="/tags/原型/" rel="tag">#原型</a>
+          
+            <a href="/tags/设计模式/" rel="tag">#设计模式</a>
           
         </div>
       
@@ -257,13 +374,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/06/nginx环境的搭建和测试/" rel="prev">nginx环境的搭建和测试</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/05/MySql实现主从热备和读写分离/" rel="next">MySql实现主从热备和读写分离</a>
+              <a href="/2016/01/02/设计模式系列10---高度定制的抽象工厂方法模式/" rel="next">设计模式系列10---高度定制的抽象工厂方法模式</a>
             
           </div>
         </div>
@@ -278,10 +393,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/10/06/Nginx的简介/"
-     data-title="Nginx的简介"
+        <div class="ds-share flat" data-thread-key="2016/01/03/设计模式系列11---快速拷贝的原型模型/"
+     data-title="设计模式系列11---快速拷贝的原型模型"
      data-content=""
-     data-url="http://yoursite.com/2015/10/06/Nginx的简介/">
+     data-url="http://yoursite.com/2016/01/03/设计模式系列11---快速拷贝的原型模型/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -311,8 +426,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/10/06/Nginx的简介/"
-                   data-title="Nginx的简介" data-url="http://yoursite.com/2015/10/06/Nginx的简介/">
+              <div class="ds-thread" data-thread-key="2016/01/03/设计模式系列11---快速拷贝的原型模型/"
+                   data-title="设计模式系列11---快速拷贝的原型模型" data-url="http://yoursite.com/2016/01/03/设计模式系列11---快速拷贝的原型模型/">
               </div>
             
           </div>
@@ -394,7 +509,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u670D_u52A1_u5668"><span class="nav-number">2.</span> <span class="nav-text">服务器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u4EE3_u7801_u5B9E_u73B0"><span class="nav-number">1.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u540E_u8BB0"><span class="nav-number">2.</span> <span class="nav-text">后记</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

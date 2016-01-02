@@ -202,6 +202,102 @@
           
           
             
+              <a class="post-title-link" href="/2015/08/24/Spring的两种任务调度Scheduled和Async/" itemprop="url">
+                Spring的两种任务调度Scheduled和Async
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-08-24T07:53:40+08:00" content="2015-08-24">
+            2015-08-24
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Spring/" itemprop="url" rel="index">
+                  <span itemprop="name">Spring</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/08/24/Spring的两种任务调度Scheduled和Async/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/24/Spring的两种任务调度Scheduled和Async/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p> Spring提供了两种后台任务的方法,分别是:</p>
+<ol>
+<li>调度任务，@Schedule</li>
+<li>异步任务，@Async</li>
+</ol>
+<p>当然，使用这两个是有条件的，需要在spring应用的上下文中声明<br> <code>&lt;task:annotation-driven/&gt;</code>当然，如果我们是基于java配置的，需要在配置哪里加多<code>EnableScheduling</code>和<code>@EnableAsync</code> 就像下面这样</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@EnableScheduling</span></span><br><span class="line"><span class="variable">@EnableAsync</span> </span><br><span class="line">public class WebAppConfig &#123;</span><br><span class="line"></span><br><span class="line">            ....</span><br><span class="line">｝</span><br></pre></td></tr></table></figure>
+<p>除此之外，还是有第三方库可以调用的，例如Quartz.</p>
+<hr>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/08/24/Spring的两种任务调度Scheduled和Async/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/08/22/Take-a-Deep-Breath-and-Just-Be/" itemprop="url">
                 Take a Deep Breath and Just Be
               </a>
@@ -472,7 +568,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-count">54</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -486,7 +582,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">67</span>
+              <span class="site-state-item-count">68</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

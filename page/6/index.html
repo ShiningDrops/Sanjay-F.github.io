@@ -202,6 +202,125 @@
           
           
             
+              <a class="post-title-link" href="/2015/12/15/源码探索系列3---四大金刚之Activity的启动过程完全解析/" itemprop="url">
+                源码探索系列3---四大金刚之Activity的启动过程完全解析
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-12-15T01:32:00+08:00" content="2015-12-15">
+            2015-12-15
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/15/源码探索系列3---四大金刚之Activity的启动过程完全解析/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/15/源码探索系列3---四大金刚之Activity的启动过程完全解析/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在不同版本API，底层实现有些不一样，所以这里贴出现在在看的API版本号<br>API: 23</p>
+<hr>
+<p>关于Activity的四个启动flag，这里下次再说。<br>先说下我们熟悉的一句吧</p>
+<pre><code>startActivity(new Intent(this,Test2Activity.class));
+</code></pre><p>相信我们对这句太熟悉不过了，不过说到这里，我想说下关于写Intent的一个感觉好的实践<br>相信你已写腻了一堆这样的<code>intent</code>，用起来确实很不好的，就像下面这样</p>
+<pre><code>Intent newIntent= new Intent(this,Test2Activity.class);
+        newIntent.putExtra(&quot;data1&quot;, &quot;trialData1&quot;);
+        Bundle bundle=new Bundle();
+        bundle.putSerializable(&quot;key&quot;,&quot;trialData&quot;); 
+        startActivity(newIntent);
+</code></pre><p>像这种方式我在很多开源项目看到了很多这样的写法，这种不好的方式在于，很多我们要跳到同一个Activity里面去时候，重复写了，这很显然不适合<code>DRY原则</code>，而且我们在另外一个Activity获取数据时候，也需要记住这些Key，这不太好！看到的另外一种方式就是直接写一个<code>IntentUtil</code>类，里面写满各种Intent，感觉这种也不是很好！虽然没重复了，不过在获取数据方面还不是很好，还需要定义一些Constant数据，这里提供我个人觉得好的方式，在我们的Activity里面写一个静态的<code>makeIntent（）</code>函数。<br>如下：</p>
+<pre><code>public class Test2Activity extends AppCompatActivity {
+
+
+    public static final String EXTRA_DATA = &quot;extra_data&quot;;
+
+    public static Intent makeIntent(Context mContext, String data) {
+        return new Intent(mContext, Test2Activity.class).putExtra(EXTRA_DATA, data);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_test2);
+         //获取传过来的数据
+        String result = getIntent().getStringExtra(EXTRA_DATA);
+    }
+}
+</code></pre><p>之后我们需要调整到这个界面，只需要这么写</p>
+<pre><code>startActivity(Test2Activity.makeIntent(this,&quot;data&quot;));
+</code></pre><p>通过这个静态方法，我们在数据里面读取方面都很简单，而且启动的时候也知道是要跳到那个界面去,重要是看起来很简单！而且不需要去定义一个常量类来记录这些数据的<code>Key</code></p>
+<p>最后的一个大杀器就是直接写成模板。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/15/源码探索系列3---四大金刚之Activity的启动过程完全解析/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/12/09/源码探索系列2---深入解析AsyncTask/" itemprop="url">
                 源码探索系列2---深入解析AsyncTask
               </a>
@@ -597,105 +716,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/12/04/Android测试教程11--Mock之mockito，异步测试/" itemprop="url">
-                Android测试教程11--Mock之mockito，异步测试
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-12-04T18:17:00+08:00" content="2015-12-04">
-            2015-12-04
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/android/" itemprop="url" rel="index">
-                  <span itemprop="name">android</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/04/Android测试教程11--Mock之mockito，异步测试/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/04/Android测试教程11--Mock之mockito，异步测试/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>#1. mockito是干什么的？</p>
-<p>Mock框架之一，其余的还有EasyMock，PowerMock等。</p>
-<blockquote>
-<p>Mock说白了就是打桩（Stub）或则模拟，当你调用一个不好在测试中创建的对象时，<br>Mock框架为你<strong>模拟</strong>一个和真实对象类似的替身来完成相应的行为</p>
-</blockquote>
-<p>就是利用他，我们可以创建一个傀儡，然后被mock的类要返回的数据我们都可以<strong>指定</strong>！<br>就像下面这样 :</p>
-<pre><code>User user = mock(User.class);
-when(user.getName(3)).thenReturn(&quot;张三&quot;);
-Log.e(TAG, &quot;name=&quot; + user.getName(3));
-assertEquals(&quot;张三&quot;, user.getName(3));
-</code></pre><p>我们mock了User这个类，要求他当被请求返回名字<code>getName()</code>的时候，就返回<code>张三</code></p>
-<p>很好懂吧？下面说点实际的运用</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/04/Android测试教程11--Mock之mockito，异步测试/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -734,7 +754,7 @@ assertEquals(&quot;张三&quot;, user.getName(3));
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-count">54</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -748,7 +768,7 @@ assertEquals(&quot;张三&quot;, user.getName(3));
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">67</span>
+              <span class="site-state-item-count">68</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

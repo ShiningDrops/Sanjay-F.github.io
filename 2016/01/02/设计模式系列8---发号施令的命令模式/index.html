@@ -39,33 +39,33 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="好了，我们还是开一个故事吧。我们看到过这样的一个表情，我们的程序员接收到来自四面八方的需求，要和不同的人打交道，应对各种所谓需求背后还加多句：“领导提出来的，恨重要“之类的结束语，最终过载，导致崩溃跳楼的情况。哈哈
-最重要的是，我们的美工同学也有这样的经历吧！
+<meta name="description" content="好了，我们还是开一个故事吧。我们看到过这样的一个表情，我们的程序员接收到来自四面八方的需求，要和不同的人打交道，应对各种所谓需求背后还加多句：“领导提出来的，很重要“之类的结束语，最终过载，导致崩溃跳楼的情况。哈哈
+而且我们的美工同学也有这样的经历吧！
 这种混乱的需求来源，导致了下面这种情况。
 
-所以，与其让整体暴漏在问题前，不如推我们的PM出去面对所有正所谓集体阵亡，不如一个好。就像我们">
+所以，与其让整体暴漏在问题前，不如推我们的PM出去面对所有正所谓集体阵亡，不如死一个好。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式系列8---发号施令的命令模式">
 <meta property="og:url" content="http://yoursite.com/2016/01/02/设计模式系列8---发号施令的命令模式/index.html">
 <meta property="og:site_name" content="SanjayF's blog">
-<meta property="og:description" content="好了，我们还是开一个故事吧。我们看到过这样的一个表情，我们的程序员接收到来自四面八方的需求，要和不同的人打交道，应对各种所谓需求背后还加多句：“领导提出来的，恨重要“之类的结束语，最终过载，导致崩溃跳楼的情况。哈哈
-最重要的是，我们的美工同学也有这样的经历吧！
+<meta property="og:description" content="好了，我们还是开一个故事吧。我们看到过这样的一个表情，我们的程序员接收到来自四面八方的需求，要和不同的人打交道，应对各种所谓需求背后还加多句：“领导提出来的，很重要“之类的结束语，最终过载，导致崩溃跳楼的情况。哈哈
+而且我们的美工同学也有这样的经历吧！
 这种混乱的需求来源，导致了下面这种情况。
 
-所以，与其让整体暴漏在问题前，不如推我们的PM出去面对所有正所谓集体阵亡，不如一个好。就像我们">
+所以，与其让整体暴漏在问题前，不如推我们的PM出去面对所有正所谓集体阵亡，不如死一个好。">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/75d0dc88d43f8794d129179bd31b0ef419d53ac2.jpg">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/28010737_qP1k.jpg">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/28010737_1RXA.jpg">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/pm.jpg">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/Screen%20Shot%202016-01-02%20at%2011.46.34.png">
-<meta property="og:updated_time" content="2016-01-02T13:13:51.000Z">
+<meta property="og:updated_time" content="2016-01-02T13:51:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式系列8---发号施令的命令模式">
-<meta name="twitter:description" content="好了，我们还是开一个故事吧。我们看到过这样的一个表情，我们的程序员接收到来自四面八方的需求，要和不同的人打交道，应对各种所谓需求背后还加多句：“领导提出来的，恨重要“之类的结束语，最终过载，导致崩溃跳楼的情况。哈哈
-最重要的是，我们的美工同学也有这样的经历吧！
+<meta name="twitter:description" content="好了，我们还是开一个故事吧。我们看到过这样的一个表情，我们的程序员接收到来自四面八方的需求，要和不同的人打交道，应对各种所谓需求背后还加多句：“领导提出来的，很重要“之类的结束语，最终过载，导致崩溃跳楼的情况。哈哈
+而且我们的美工同学也有这样的经历吧！
 这种混乱的需求来源，导致了下面这种情况。
 
-所以，与其让整体暴漏在问题前，不如推我们的PM出去面对所有正所谓集体阵亡，不如一个好。就像我们">
+所以，与其让整体暴漏在问题前，不如推我们的PM出去面对所有正所谓集体阵亡，不如死一个好。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -268,11 +268,11 @@
       
 
       
-        <span itemprop="articleBody"><p> 好了，我们还是开一个故事吧。<br>我们看到过这样的一个表情，我们的程序员接收到来自四面八方的需求，要和不同的人打交道，应对各种所谓需求背后还加多句：“领导提出来的，恨重要“之类的结束语，最终过载，导致崩溃跳楼的情况。哈哈<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/75d0dc88d43f8794d129179bd31b0ef419d53ac2.jpg" alt="enter image description here"></p>
-<p>最重要的是，我们的美工同学也有这样的经历吧！<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/28010737_qP1k.jpg" alt="enter image description here"></p>
+        <span itemprop="articleBody"><p> 好了，我们还是开一个故事吧。<br>我们看到过这样的一个表情，我们的程序员接收到来自四面八方的需求，要和不同的人打交道，应对各种所谓需求背后还加多句：“领导提出来的，很重要“之类的结束语，最终过载，导致崩溃跳楼的情况。哈哈<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/75d0dc88d43f8794d129179bd31b0ef419d53ac2.jpg" alt="enter image description here"></p>
+<p>而且我们的美工同学也有这样的经历吧！<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/28010737_qP1k.jpg" alt="enter image description here"></p>
 <p>这种混乱的需求来源，导致了下面这种情况。</p>
 <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/28010737_1RXA.jpg" alt="enter image description here"></p>
-<p>所以，与其让整体暴漏在问题前，不如推我们的PM出去面对所有<br>正所谓集体阵亡，不如一个好。就像我们服务器一样，搭建集群就是为了避免单点问题。</p>
+<p>所以，与其让整体暴漏在问题前，不如推我们的PM出去面对所有<br>正所谓集体阵亡，不如死一个好。</p>
 <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/pm.jpg" alt="enter image description here"></p>
 <a id="more"></a>
 <h1 id="u4EE3_u7801_u5B9E_u73B0"><a href="#u4EE3_u7801_u5B9E_u73B0" class="headerlink" title="代码实现"></a>代码实现</h1><p>对于这些问题，我们把我们的产品经理推到了风头浪尖，由他去面对风雨，接收各种提出来的命令，然后团队人员再接收他的调度，这很有IOC的味道，不适吗？把原本紧密耦合的几个类，拆开来，让我们的pm独自面对。<br>现在我们先写出我们的Pm。</p>

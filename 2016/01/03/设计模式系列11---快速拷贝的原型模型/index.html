@@ -40,19 +40,19 @@
 
 
 <meta name="description" content="早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？这和大公司开一家小公司，去做特定的项目类似，规避风险。
-假设我们有一份    重要的合同，需要一式两份保存，每人个一份。这时候我们要快速的备份一份，因为内容完全一样，这事后可以用原型模型">
+假设我们有一份    重要的合同，需要一式两份保存，每人个一份。这时候我们要快速的备份一份，因为内容完全一样，这时候就可以用原型模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式系列11---快速拷贝的原型模型">
 <meta property="og:url" content="http://yoursite.com/2016/01/03/设计模式系列11---快速拷贝的原型模型/index.html">
 <meta property="og:site_name" content="SanjayF's blog">
 <meta property="og:description" content="早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？这和大公司开一家小公司，去做特定的项目类似，规避风险。
-假设我们有一份    重要的合同，需要一式两份保存，每人个一份。这时候我们要快速的备份一份，因为内容完全一样，这事后可以用原型模型">
+假设我们有一份    重要的合同，需要一式两份保存，每人个一份。这时候我们要快速的备份一份，因为内容完全一样，这时候就可以用原型模型">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/2013050615205185.jpg">
-<meta property="og:updated_time" content="2016-01-02T16:47:47.000Z">
+<meta property="og:updated_time" content="2016-01-02T16:50:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式系列11---快速拷贝的原型模型">
 <meta name="twitter:description" content="早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？这和大公司开一家小公司，去做特定的项目类似，规避风险。
-假设我们有一份    重要的合同，需要一式两份保存，每人个一份。这时候我们要快速的备份一份，因为内容完全一样，这事后可以用原型模型">
+假设我们有一份    重要的合同，需要一式两份保存，每人个一份。这时候我们要快速的备份一份，因为内容完全一样，这时候就可以用原型模型">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -256,7 +256,7 @@
 
       
         <span itemprop="articleBody"><p> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/2013050615205185.jpg" alt="enter image description here"><br>早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？<br>这和大公司开一家小公司，去做特定的项目类似，规避风险。</p>
-<p>假设我们有一份    重要的合同，需要一式两份保存，每人个一份。<br>这时候我们要快速的备份一份，因为内容完全一样，这事后可以用原型模型</p>
+<p>假设我们有一份    重要的合同，需要一式两份保存，每人个一份。<br>这时候我们要快速的备份一份，因为内容完全一样，这时候就可以用原型模型</p>
 <a id="more"></a>
 <h1 id="u4EE3_u7801_u5B9E_u73B0"><a href="#u4EE3_u7801_u5B9E_u73B0" class="headerlink" title="代码实现"></a>代码实现</h1><p>我们写一个合同类，里面有合同的日期，合同的具体内容，签名的人的列表。<br>就像下面这个这样。</p>
 <pre><code>public class Contract  implements  Cloneable{

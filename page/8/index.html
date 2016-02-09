@@ -36,7 +36,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shorticon icon" type="image/x-icon" href="/fav.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="SanjayF&apos;s  github  blog">
@@ -77,7 +77,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ceb5544cc01478679a4a6bc9f79ca0eb";
+      hm.src = "//hm.baidu.com/hm.js?18f6d52faaf2600c05e8045494b5935e";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/26/Android测试教程7--丢失/" itemprop="url">
-                Android测试教程7---丢失，待补充
+              <a class="post-title-link" href="/2015/12/28/源码探索系列14---那个HandleThread/" itemprop="url">
+                源码探索系列14---那个HandleThread
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-26T23:11:00+08:00" content="2015-11-26">
-            2015-11-26
+          <time itemprop="dateCreated" datetime="2015-12-28T22:05:00+08:00" content="2015-12-28">
+            2015-12-28
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/26/Android测试教程7--丢失/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/26/Android测试教程7--丢失/" itemprop="commentsCount"></span>
+              <a href="/2015/12/28/源码探索系列14---那个HandleThread/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/源码探索系列14---那个HandleThread/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,94 +255,11 @@
 
       
         
-          <span itemprop="articleBody"><p> 我的这篇文章被CSDN吞了，找不回来了</p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/11/26/Android测试教程6--测试我们的Application/" itemprop="url">
-                Android测试教程6--测试我们的Application
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-11-26T13:27:00+08:00" content="2015-11-26">
-            2015-11-26
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/android/" itemprop="url" rel="index">
-                  <span itemprop="name">android</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/26/Android测试教程6--测试我们的Application/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/26/Android测试教程6--测试我们的Application/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>有时候我们会继承我们的Application，然后在里面加多一些全局的设置，常量啊等等。</p>
-<p>那么该如何测试呢？<br>这里举一个简单的例子<br>来测试一下用SharedPreferences保存和读取数据。</p>
+          <p>这篇文章被CSDN搞丢了，好在通过使用谷歌搜索，<br>看到历史的记录版本，现在再根据记忆，补充下内容。<br>算是恢复了这篇文章的大概的模样。虽然对于CSDN的来说这文章没什么，但对于我来说就是自己花的时间和精力。   </p>
+<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><p>这次我们来说说HandleThread，听名字好像就是Handler+Thread的感觉啊。<br>他和Handler的关系就像Service和IntentService一样，一个不支持耗时的任务，一个可以。<br>不过两者还是有点区别，一些是运行在主线程的，一个不在主线程跑。<br>很好理解，要是在主线程跑也能搞耗时任务，那不就逆天了？？<br>对于他的使用，我们就不介绍了，让我们看下他实际做些什么吧。</p>
+<p>就从我们的HandleThread的声明开始说起吧<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/26/Android测试教程6--测试我们的Application/#more" rel="contents">
+            <a class="btn" href="/2015/12/28/源码探索系列14---那个HandleThread/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -375,8 +292,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/24/Android测试教程5--模拟键盘输入/" itemprop="url">
-                Android测试教程5--模拟键盘输入
+              <a class="post-title-link" href="/2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/" itemprop="url">
+                源码探索系列13---Window的PhoneWindow与WindowManager
               </a>
             
           
@@ -386,8 +303,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-24T11:35:00+08:00" content="2015-11-24">
-            2015-11-24
+          <time itemprop="dateCreated" datetime="2015-12-28T17:36:00+08:00" content="2015-12-28">
+            2015-12-28
           </time>
         </span>
 
@@ -412,8 +329,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/24/Android测试教程5--模拟键盘输入/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/24/Android测试教程5--模拟键盘输入/" itemprop="commentsCount"></span>
+              <a href="/2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -428,12 +345,15 @@
 
       
         
-          <p> 开发过程中，如何向需要输入字符串的输入框输入数据呢？<br> 最重要的语句如下：</p>
-<pre><code>ulPhoneET.requestFocus();
-sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
-</code></pre><p>先让输入框获得焦点，然后调用<code>sendKeys</code>输入我们想要的内容。<br>例如这里输入一个电话号码<code>18812345678</code>（请各个字用空格空开）</p>
+          <p>关于Window，PhoneWindow和WindowManager三者的关系是：</p>
+<blockquote>
+<p>Window是一个抽象类，他的具体实现是PhoneWindow<br>我们通过WindowManager来管理Window。</p>
+</blockquote>
+<p>我们的所有的界面，例如Activity，Toast，Dialog等都是靠Window来呈现，因此他是View的管理者咯。</p>
+<p>很久前用过他的一个功能就是拿来做消息提醒，当有用户发来特定消息时候，就跑出来一个小悬浮窗来提示用户。现在看得多的就是各种管家关于内存的提示！这真的很让人纠结的安卓机啊！特别是某米的手机，当年发现他不支持这个功能！搞到得单独为他开发一个别的方式….</p>
+<p>好了，说这么多，我们该从哪里开始说起呢？</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/24/Android测试教程5--模拟键盘输入/#more" rel="contents">
+            <a class="btn" href="/2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -466,8 +386,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
           
             
-              <a class="post-title-link" href="/2015/11/21/Android测试教程4--定点测试/" itemprop="url">
-                Android测试教程4--定点测试
+              <a class="post-title-link" href="/2015/12/27/源码探索系列12---关于事件分发机制/" itemprop="url">
+                源码探索系列12---关于事件分发机制
               </a>
             
           
@@ -477,8 +397,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-21T21:39:00+08:00" content="2015-11-21">
-            2015-11-21
+          <time itemprop="dateCreated" datetime="2015-12-27T21:36:00+08:00" content="2015-12-27">
+            2015-12-27
           </time>
         </span>
 
@@ -503,8 +423,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/21/Android测试教程4--定点测试/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/21/Android测试教程4--定点测试/" itemprop="commentsCount"></span>
+              <a href="/2015/12/27/源码探索系列12---关于事件分发机制/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/27/源码探索系列12---关于事件分发机制/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -519,12 +439,22 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
 
       
         
-          <p>我们在测试的时候，很多时候难以避免的问题就是，我写了很多测试案例。<br>但只是想对其中一部分重要的测试进行测试，或者只是希望对数据库部分进行测试。<br>但那些测试有分割在不同的包，不同的类里面，那么，到底该怎么解决呢？</p>
-<p>能不能<strong>“钓鱼测试”</strong></p>
-<p>执行特定的一类的测试案例呢？</p>
-<p>显然是可以啦。<br>下面是其中解决方案之一。</p>
+          <p>关于View的事件分发，实质就是关于MotionEvent时间的分发<br>再简单点说就是通过一堆判断，最后决定这个MotionEvent给谁用的问题。</p>
+<ul>
+<li><p><strong>三巨头</strong><br>分发过程中有主要涉及到三个人：<br><code>dispatchTouchEvent()</code>,<code>onInterceptTouchEvent()</code>,<code>onTouchEvent()</code><br>这三者的关系如下</p>
+<pre><code> public boolean dispatchTouchEvent(MotionEvent ev) {
+      boolean belongToMe=false;
+      if(onInterceptTouchEvent(ev)){
+           belongToMe=onTouchEvent(ev);
+      }else{
+          belongToMe=child.dispatchTouchEvent(ev);
+      }
+      return belongToMe;
+}
+</code></pre></li>
+</ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/21/Android测试教程4--定点测试/#more" rel="contents">
+            <a class="btn" href="/2015/12/27/源码探索系列12---关于事件分发机制/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -557,8 +487,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
           
             
-              <a class="post-title-link" href="/2015/11/19/Android测试教程3--用Robotium来生自动生成操作/" itemprop="url">
-                Android测试教程3--用Robotium来生自动生成操作
+              <a class="post-title-link" href="/2015/12/27/源码探索系列11---关于View的绘制/" itemprop="url">
+                源码探索系列11---关于View的绘制
               </a>
             
           
@@ -568,8 +498,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-19T12:16:00+08:00" content="2015-11-19">
-            2015-11-19
+          <time itemprop="dateCreated" datetime="2015-12-27T02:36:00+08:00" content="2015-12-27">
+            2015-12-27
           </time>
         </span>
 
@@ -594,8 +524,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/19/Android测试教程3--用Robotium来生自动生成操作/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/19/Android测试教程3--用Robotium来生自动生成操作/" itemprop="commentsCount"></span>
+              <a href="/2015/12/27/源码探索系列11---关于View的绘制/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/27/源码探索系列11---关于View的绘制/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -610,9 +540,102 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
 
       
         
-          <p>前面的教程2。<br>我们自己手写了一些简单的测试案例，你发现需要各种绑定界面的。<br>现在作为偷懒的人，想像以前用按键精灵一样，自动给我们做好各种点击操作，<br>来看下运行是否正常。那么该怎么做呢？<br>下面教程告诉你，用<code>Robotium</code>如何做到。</p>
+          <p>我们开发过程，基本需要自定义View，画一些自己的小插件出来<br>这需要我们掌握整个View的绘画过程和一些别的小技巧。<br>这里总结下整个View的源码中涉及到的一些绘制过程的核心部分，<br>之后再来看下整体的内容，毕竟整个源码有近2W1行，不是随便一时半会能搞定的，还是得下不少功夫。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/19/Android测试教程3--用Robotium来生自动生成操作/#more" rel="contents">
+            <a class="btn" href="/2015/12/27/源码探索系列11---关于View的绘制/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/12/25/开源系列1---造个图片选择器/" itemprop="url">
+                开源系列1---造个图片选择器
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-12-25T11:41:00+08:00" content="2015-12-25">
+            2015-12-25
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/25/开源系列1---造个图片选择器/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/25/开源系列1---造个图片选择器/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>打算开个开源系列，用来分享在项目过程中些的一些小轮子。<br>在这年的末尾，挤下时间，看能改几个还勉强过得去的出来分享给大家。<br>能力有些，实现得也不算很优雅。<br>还望各大神指点。</p>
+<h1 id="u6211_u8981_u9020_u8F6E_u5B50"><a href="#u6211_u8981_u9020_u8F6E_u5B50" class="headerlink" title="我要造轮子"></a>我要造轮子</h1><p>作为一名爱折腾人员，重复造轮子这种事还是常做的。<br>没办法啊，做的过程才能发现问题嘛！最少我在做的过程就遇到啦！<br>例如阴影效果，图片如何压缩显示的问题（蹩脚的写了一个ImageLoader实在不怎样，改用Fresco!），排列等等问题</p>
+<p> <a href="https://github.com/Sanjay-F/PhotoSelector">项目的下载地址请点击这里</a></p>
+<p>我们直接上效果图，这个是完成后的样子，目前改得勉强像一回事了。<br>就先粘贴上来，有需要的就拿去再根据自己需要改一个。</p>
+<p> <img src="http://img.blog.csdn.net/20151224225205588" alt="这里写图片描述">     —  <img src="http://img.blog.csdn.net/20151224225846858" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20151224233556670" alt="这里写图片描述"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/25/开源系列1---造个图片选择器/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -638,7 +661,7 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/7/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/9/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/7/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/9/">&raquo;</a>
   </nav>
 
  </div>
@@ -672,21 +695,21 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-count">75</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

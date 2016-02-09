@@ -36,7 +36,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shorticon icon" type="image/x-icon" href="/fav.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="SanjayF&apos;s  github  blog">
@@ -77,7 +77,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ceb5544cc01478679a4a6bc9f79ca0eb";
+      hm.src = "//hm.baidu.com/hm.js?18f6d52faaf2600c05e8045494b5935e";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/19/源码探索系列9---四大金刚之ContentProvider/" itemprop="url">
-                源码探索系列9---四大金刚之ContentProvider
+              <a class="post-title-link" href="/2016/01/03/设计模式系列12---快速拷贝的原型模型/" itemprop="url">
+                设计模式系列12---遍历统一的迭代模式
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-19T02:42:00+08:00" content="2015-12-19">
-            2015-12-19
+          <time itemprop="dateCreated" datetime="2016-01-03T21:22:00+08:00" content="2016-01-03">
+            2016-01-03
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/19/源码探索系列9---四大金刚之ContentProvider/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/19/源码探索系列9---四大金刚之ContentProvider/" itemprop="commentsCount"></span>
+              <a href="/2016/01/03/设计模式系列12---快速拷贝的原型模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/设计模式系列12---快速拷贝的原型模型/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,18 +255,13 @@
 
       
         
-          <p>好了，终于到了最后一个啦，写到这里，真的觉得不容意啊，以前看这些组件也就那样了，现在还要记录下来，重点是这东西都被分析烂了，我们这些后人屌丝还在写，没点突破的。真没意思呢！就当写作业咯。啦啦啦啦，不管如何，让我们开始看下吧</p>
-<h1 id="u8D77_u822A__u2014_ContentResolver"><a href="#u8D77_u822A__u2014_ContentResolver" class="headerlink" title="起航 — ContentResolver"></a>起航 — ContentResolver</h1><p>API： 23</p>
-<p>说真的，这个组件我还真的相对于Activity和Service用起来真的好少啊！<br>现在都不能记起来用他来干嘛了，虽然知道他能用来做跨进程通讯用，不过对于一般的app。<br>这玩意还真的用的次数少啊! 现在能想起来的一次使用这个就是要获取图片的时候。<br>以前开发的时候遇到的恶心的是，有些Rom把相册给阉割了，搞了个别的来代替，导致调不了图库！<br>所以搞到需要自己开发一个，真的很无语！ </p>
-<pre><code>ContentResolver mContentResolver = this.getContentResolver();
-Cursor mCursor = mContentResolver.query(mImageUri, null,
-            MediaStore.Images.Media.MIME_TYPE + &quot;=? or &quot;
-                    + MediaStore.Images.Media.MIME_TYPE + &quot;=? or &quot; + MediaStore.Images.Media.MIME_TYPE + &quot;=?&quot; + &quot; or &quot; + MediaStore.Images.Media.MIME_TYPE + &quot;=?&quot;,
-            new String[]{&quot;image/jpeg&quot;, &quot;image/png&quot;, &quot;image/jpg&quot;, &quot;image/jpe&quot;},
-            MediaStore.Images.Media.DATA);
-</code></pre><p>从这里我们开始看起吧</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/W020141211406589017323.jpg" alt="enter image description here"></p>
+<p>对于迭代这件事，我们曾经遇到过很多类似的事情，</p>
+<p>例如：上课点名！！！</p>
+<p> 每次我们的课室<code>存储</code>了一堆的<code>学生对象</code>，然后老师开始<code>迭代名单</code>–点名，<br> 判断某学生是否来上课了，没来的平时分给你扣点，积少成多，考试就压力大了。</p>
+<p> 大学时代满满的回忆啊。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/19/源码探索系列9---四大金刚之ContentProvider/#more" rel="contents">
+            <a class="btn" href="/2016/01/03/设计模式系列12---快速拷贝的原型模型/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -299,8 +294,8 @@ Cursor mCursor = mContentResolver.query(mImageUri, null,
           
           
             
-              <a class="post-title-link" href="/2015/12/18/源码探索系列8---IntentService/" itemprop="url">
-                源码探索系列8---IntentService
+              <a class="post-title-link" href="/2016/01/03/设计模式系列11---快速拷贝的原型模型/" itemprop="url">
+                设计模式系列11---快速拷贝的原型模型
               </a>
             
           
@@ -310,8 +305,8 @@ Cursor mCursor = mContentResolver.query(mImageUri, null,
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-18T14:57:00+08:00" content="2015-12-18">
-            2015-12-18
+          <time itemprop="dateCreated" datetime="2016-01-03T00:34:00+08:00" content="2016-01-03">
+            2016-01-03
           </time>
         </span>
 
@@ -336,8 +331,8 @@ Cursor mCursor = mContentResolver.query(mImageUri, null,
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/18/源码探索系列8---IntentService/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/源码探索系列8---IntentService/" itemprop="commentsCount"></span>
+              <a href="/2016/01/03/设计模式系列11---快速拷贝的原型模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/设计模式系列11---快速拷贝的原型模型/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -352,26 +347,10 @@ Cursor mCursor = mContentResolver.query(mImageUri, null,
 
       
         
-          <p>我们知道，我们的<code>Service</code>如果要执行一些耗时的操作，需要开单独的线程去干活，而<code>IntentService</code>却不用，<br>在他的<code>onHandleIntent</code>函数里面我们可以执行耗时操作，啊，到底神奇在哪里了呢？<br>让我们去看看他的源码，背后到底做了什么好事情！</p>
-<h1 id="u8D77_u822A__u2014_IntentService"><a href="#u8D77_u822A__u2014_IntentService" class="headerlink" title="起航 — IntentService"></a>起航 — IntentService</h1><p>API：23</p>
-<pre><code>public abstract class IntentService extends Service 
-</code></pre><p>我们的<code>IntentService</code>是一个继承<code>Service</code>的抽象类，那关于他的启动，停止等就和Service一样，前一篇就解释过了，我们现在就不说了。整个类也就164行，不大，还不够AMS里面一个函数的一半长度，哈，我们从他的<code>OnCreate</code>函数开始吧</p>
-<pre><code>@Override
-public void onCreate() {
-    // TODO: It would be nice to have an option to hold a partial wakelock
-    // during processing, and to have a static startService(Context, Intent)
-    // method that would launch the service &amp; hand off a wakelock.
-
-    super.onCreate();
-    HandlerThread thread = new HandlerThread(&quot;IntentService[&quot; + mName + &quot;]&quot;);
-    thread.start();
-
-    mServiceLooper = thread.getLooper();
-    mServiceHandler = new ServiceHandler(mServiceLooper);
-}
-</code></pre><p>我们看到他开了一个子线程和Handler。这里我们可以猜测了，之所以在我们的<code>onHandleIntent</code>很可能是因为他们两个！<br>
+          <p> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/2013050615205185.jpg" alt="enter image description here"><br>早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？<br>这和大公司开一家小公司，去做特定的项目类似，规避风险。</p>
+<p>假设我们有一份    重要的合同，需要一式两份保存，每人个一份。<br>这时候我们要快速的备份一份，因为内容完全一样，这时候就可以用原型模型</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/18/源码探索系列8---IntentService/#more" rel="contents">
+            <a class="btn" href="/2016/01/03/设计模式系列11---快速拷贝的原型模型/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -404,8 +383,8 @@ public void onCreate() {
           
           
             
-              <a class="post-title-link" href="/2015/12/18/源码探索系列7---四大金刚之Service/" itemprop="url">
-                源码探索系列7---四大金刚之Service
+              <a class="post-title-link" href="/2016/01/02/设计模式系列10---高度定制的抽象工厂方法模式/" itemprop="url">
+                设计模式系列10---高度定制的抽象工厂方法模式
               </a>
             
           
@@ -415,8 +394,8 @@ public void onCreate() {
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-18T12:57:00+08:00" content="2015-12-18">
-            2015-12-18
+          <time itemprop="dateCreated" datetime="2016-01-02T18:04:00+08:00" content="2016-01-02">
+            2016-01-02
           </time>
         </span>
 
@@ -441,8 +420,8 @@ public void onCreate() {
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/18/源码探索系列7---四大金刚之Service/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/源码探索系列7---四大金刚之Service/" itemprop="commentsCount"></span>
+              <a href="/2016/01/02/设计模式系列10---高度定制的抽象工厂方法模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/02/设计模式系列10---高度定制的抽象工厂方法模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -457,16 +436,12 @@ public void onCreate() {
 
       
         
-          <p>今天我们来看下这安卓的四大组件的另外一个Service，<br>按套路应该先列点我们在探索过程需要注意的问题，不过现在一时没想到有什么，<br>让我们边看说解释，看下有什么需要注意的</p>
-<h1 id="u8D77_u822A_u2014-_u5F00_u542F_u670D_u52A1"><a href="#u8D77_u822A_u2014-_u5F00_u542F_u670D_u52A1" class="headerlink" title="起航—-开启服务"></a>起航—-开启服务</h1><p>API ： 23</p>
-<p>我们启动服务一般有两种调用<code>StartService</code>和<code>BindService</code>,这里我们先从StartService开始。<br>首先去到ContextWrapper里面的startService函数</p>
-<pre><code>@Override
-public ComponentName startService(Intent service) {
-    return mBase.startService(service);
-}
-</code></pre>
+          <p>上一篇我们介绍了关于使用公模做手机的事情，但有个问题就是不能高度定制，现在我们来介绍下我的抽象工厂方法，他可以做到的定制就很高啦，既可以造飞机，汽车，又可以做苹果手机等等。</p>
+<p>一般能处理这类问题的，都是些大厂家，这类大厂家就很规范，分工明确的，而且也有很多流水线，代工不少产品，为了降低风险同时提营业额嘛，好懂。</p>
+<p>假设有一家叫 <code>NiuBi</code> 的公司，他很厉害，有多条流水线，一条生产火箭，一条生产苹果机，一条生产汽车的。能加工这么广的是厉害。</p>
+<p>面对一个这么厉害的厂，我们需要更高的抽象，现在来展示下怎么写这个厂。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/18/源码探索系列7---四大金刚之Service/#more" rel="contents">
+            <a class="btn" href="/2016/01/02/设计模式系列10---高度定制的抽象工厂方法模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -499,8 +474,8 @@ public ComponentName startService(Intent service) {
           
           
             
-              <a class="post-title-link" href="/2015/12/17/源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析/" itemprop="url">
-                源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析
+              <a class="post-title-link" href="/2016/01/02/设计模式系列9---和而不同的工厂方法模式/" itemprop="url">
+                设计模式系列9---和而不同的工厂模式
               </a>
             
           
@@ -510,8 +485,8 @@ public ComponentName startService(Intent service) {
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-17T01:24:00+08:00" content="2015-12-17">
-            2015-12-17
+          <time itemprop="dateCreated" datetime="2016-01-02T13:43:00+08:00" content="2016-01-02">
+            2016-01-02
           </time>
         </span>
 
@@ -536,8 +511,8 @@ public ComponentName startService(Intent service) {
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/17/源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/17/源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析/" itemprop="commentsCount"></span>
+              <a href="/2016/01/02/设计模式系列9---和而不同的工厂方法模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/02/设计模式系列9---和而不同的工厂方法模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -552,17 +527,12 @@ public ComponentName startService(Intent service) {
 
       
         
-          <p>这篇文章将会对这三者做简单的综合性的比较，同时对LocalBroadCast深入到源码进行一个探索。看这个类为何相对BroadCast高效！</p>
-<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><h1 id="1-__u6BD4_u8F83"><a href="#1-__u6BD4_u8F83" class="headerlink" title="1. 比较"></a>1. 比较</h1><ul>
-<li><p><strong>性能 对比 ：  EventBus不差 </strong> </p>
-<pre><code>EventBus ~ LocalBroadCast  &gt; Bradocast 
-</code></pre></li>
-<li><p><strong>运行的线程环境：    EventBus完胜！</strong></p>
-<p> LocalBroadcastManager 所有调用都是在主线程，<br> EventBus 可以定义在调用线程、主线程、后台线程、异步。</p>
-</li>
-<li><p><strong>代码量比较：  EventBus完胜！</strong></p>
+          <p>现在的手机制造业，在高度的繁荣发展后，流水线的工作基础，吸引了很多厂商为了压低成本，搞一些odm的手机，就是在一个模版的基础上，改下壳，换个商标的样子，就开发布会，说有新的手机！大家快带上你的钱来买，卖得好不好，纯靠营销能力啊。</p>
+<p>例如下面的，某情怀和某米的手机，是不是很一样啊？<br>改一改又是一部手机！</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/b999a9014c086e066a86ab7f05087bf40ad1cbdc.jpg" alt="enter image description here"> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/Screen%20Shot%202016-01-02%20at%2012.51.36.png" alt="enter image description here"></p>
+<p>那么，作为工厂，应该怎么搞呢？</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/17/源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析/#more" rel="contents">
+            <a class="btn" href="/2016/01/02/设计模式系列9---和而不同的工厂方法模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -595,8 +565,8 @@ public ComponentName startService(Intent service) {
           
           
             
-              <a class="post-title-link" href="/2015/12/16/源码探索系列4---数据库ORM框架之Ormlite解析/" itemprop="url">
-                源码探索系列4---数据库ORM框架之Ormlite解析
+              <a class="post-title-link" href="/2016/01/02/设计模式系列8---发号施令的命令模式/" itemprop="url">
+                设计模式系列8---发号施令的命令模式
               </a>
             
           
@@ -606,8 +576,8 @@ public ComponentName startService(Intent service) {
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-16T02:37:00+08:00" content="2015-12-16">
-            2015-12-16
+          <time itemprop="dateCreated" datetime="2016-01-02T12:05:00+08:00" content="2016-01-02">
+            2016-01-02
           </time>
         </span>
 
@@ -632,8 +602,8 @@ public ComponentName startService(Intent service) {
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/16/源码探索系列4---数据库ORM框架之Ormlite解析/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/16/源码探索系列4---数据库ORM框架之Ormlite解析/" itemprop="commentsCount"></span>
+              <a href="/2016/01/02/设计模式系列8---发号施令的命令模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/02/设计模式系列8---发号施令的命令模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -648,13 +618,14 @@ public ComponentName startService(Intent service) {
 
       
         
-          <p>在做项目时候，有使用Ormlite来做数据库部分，以提高开发速度。</p>
-<blockquote>
-<p> OrmLite - Lightweight Object Relational Mapping (ORM) Java Package</p>
-</blockquote>
-<p>这个ORM框架在一般数据量不大的情况下，是一个很好的工具，他封装得很好，使用起来也很方便！<br>相比于原始的<code>Sqlite</code>来说，使用后，很容易回不去了，<br>因为你不再需要敲一堆的sql语句，担心那个字段写错，处理cursor，写各种查询等等！<br>重要的是在增加一些字段属性时候，不再需要改到哭了！<br>
+          <p> 好了，我们还是开一个故事吧。<br>我们看到过这样的一个表情，我们的程序员接收到来自四面八方的需求，要和不同的人打交道，应对各种所谓需求背后还加多句：“领导提出来的，很重要“之类的结束语，最终过载，导致崩溃跳楼的情况。哈哈<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/75d0dc88d43f8794d129179bd31b0ef419d53ac2.jpg" alt="enter image description here"></p>
+<p>而且我们的美工同学也有这样的经历吧！<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/28010737_qP1k.jpg" alt="enter image description here"></p>
+<p>这种混乱的需求来源，导致了下面这种情况。</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/28010737_1RXA.jpg" alt="enter image description here"></p>
+<p>所以，与其让整体暴漏在问题前，不如推我们的PM出去面对所有<br>正所谓集体阵亡，不如死一个好。</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/pm.jpg" alt="enter image description here"></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/16/源码探索系列4---数据库ORM框架之Ormlite解析/#more" rel="contents">
+            <a class="btn" href="/2016/01/02/设计模式系列8---发号施令的命令模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -680,7 +651,7 @@ public ComponentName startService(Intent service) {
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/6/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/6/">&raquo;</a>
   </nav>
 
  </div>
@@ -714,21 +685,21 @@ public ComponentName startService(Intent service) {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-count">75</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

@@ -36,7 +36,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shorticon icon" type="image/x-icon" href="/fav.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="SanjayF&apos;s  github  blog">
@@ -77,7 +77,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ceb5544cc01478679a4a6bc9f79ca0eb";
+      hm.src = "//hm.baidu.com/hm.js?18f6d52faaf2600c05e8045494b5935e";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/" itemprop="url">
-                源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview
+              <a class="post-title-link" href="/2016/01/06/设计模式系列22---局部与整体的组合模式/" itemprop="url">
+                设计模式系列22---局部与整体的组合模式
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-30T00:27:46+08:00" content="2015-12-30">
-            2015-12-30
+          <time itemprop="dateCreated" datetime="2016-01-06T14:26:00+08:00" content="2016-01-06">
+            2016-01-06
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/" itemprop="commentsCount"></span>
+              <a href="/2016/01/06/设计模式系列22---局部与整体的组合模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/06/设计模式系列22---局部与整体的组合模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,13 +255,13 @@
 
       
         
-          <p>作为这源码探索系列的初篇的终结，选择Listview来做最后一个探索的对象好像也挺好的。<br>所以我们就来简单的看下我们曾经最熟悉的Listview是怎么去绘制我们的各个View，如何复用的View。</p>
-<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><p>API：23</p>
-<p>我们的<code>Listview</code>是继承于<code>AbsListView</code> 的</p>
-<pre><code>public class ListView extends AbsListView 
-</code></pre><p>而这个AbsListView里面帮我们做了大量的工作，包括与我们的adapter相关的工作，对View的复用等。<br>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/8601a18b87d6277f6a5d25a228381f30e824fcd9.jpg" alt="enter image description here"></p>
+<p>今天要说的是结构模式的最后一个，组合模式。</p>
+<p>他和我们的数据结构里面的树有点关系，怎么个关系？</p>
+<p>还记得我们在讲 <code>设计模式4---对外包办的门面模型</code>的案例提到的老板叫总经理干活，实际是下面别的部门的人在干活的案例吗？</p>
+<p>现在我们来写一个基于组合模型的总经理叫各部门人员干活的过程。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/#more" rel="contents">
+            <a class="btn" href="/2016/01/06/设计模式系列22---局部与整体的组合模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -294,8 +294,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/29/设计模式系列1---独当一面的单例/" itemprop="url">
-                设计模式系列1---独当一面的单例
+              <a class="post-title-link" href="/2016/01/06/设计模式系列21---避免浪费的享元模型/" itemprop="url">
+                设计模式系列21---避免浪费的享元模型
               </a>
             
           
@@ -305,8 +305,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-29T21:55:46+08:00" content="2015-12-29">
-            2015-12-29
+          <time itemprop="dateCreated" datetime="2016-01-06T12:58:00+08:00" content="2016-01-06">
+            2016-01-06
           </time>
         </span>
 
@@ -331,8 +331,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/29/设计模式系列1---独当一面的单例/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/设计模式系列1---独当一面的单例/" itemprop="commentsCount"></span>
+              <a href="/2016/01/06/设计模式系列21---避免浪费的享元模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/06/设计模式系列21---避免浪费的享元模型/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -347,12 +347,13 @@
 
       
         
-          <p>在开始写之前我想吐槽下CSDN！ 在上面写的源码探索系列6和14居然不见了，上次找版主去找回一次别的文章！ 这次居然跑了两篇，服务器要高可用啊！</p>
-<p>现在还记得14写的内容是HandleThread，但第六篇那么久那里还记得写的是哪篇，想补都补不回来了！<br>（更新：12/30， 记起来了，那个第六篇是四大金刚之一的广播，唉，那篇写了好久才整理出来的，跪了！）</p>
-<p>为了写这篇文章，内心压制了好久，那些文章都是我每天下完班辛辛苦苦熬到凌晨一两点才写完的！ 翻看了那么多代码，熬了这么久！真的内心难以忍受这样的错误！</p>
-<p>一个可以让人舒服写字的地方真不容易找！</p>
+          <p>  <img src="http://7xl9zd.com1.z0.glb.clouddn.com/d6db63561c56b8bc405fc93d56bcee78.jpg" alt="enter image description here"></p>
+<p>单例模式垄断了对资源的访问，避免了多次生成带来的重复浪费。<br>但有时候，我们并没有这么严格的限制，还是希望多几个干活的，或者说<br>我们的实例有部分的重用功能，但又不能像单例那样只有一个，还是需要很多的实例。</p>
+<p>具体如：</p>
+<p>我们服务器缓存了100W个用户的信息，但是有一些冗余，例如我们的年龄只有100个取值，最多150是不是！但我们有100个用户，每个都有一个单独的年龄字段，相对是有点多余的，如果可以只压缩到100个的话。或者我们的用户里面的省会信息，也就34个！</p>
+<p> 好了，废话那么多，到底这个享元应该怎么写呢？</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/29/设计模式系列1---独当一面的单例/#more" rel="contents">
+            <a class="btn" href="/2016/01/06/设计模式系列21---避免浪费的享元模型/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -385,8 +386,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/29/设计模式系列0---写在这系列前的话/" itemprop="url">
-                设计模式系列0---写在这系列前的话
+              <a class="post-title-link" href="/2016/01/05/设计模式系列20---聊聊IoC与中介者/" itemprop="url">
+                设计模式系列20---聊聊IoC与中介者
               </a>
             
           
@@ -396,8 +397,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-29T01:55:46+08:00" content="2015-12-29">
-            2015-12-29
+          <time itemprop="dateCreated" datetime="2016-01-05T15:46:00+08:00" content="2016-01-05">
+            2016-01-05
           </time>
         </span>
 
@@ -422,8 +423,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/29/设计模式系列0---写在这系列前的话/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/设计模式系列0---写在这系列前的话/" itemprop="commentsCount"></span>
+              <a href="/2016/01/05/设计模式系列20---聊聊IoC与中介者/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/05/设计模式系列20---聊聊IoC与中介者/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -438,122 +439,18 @@
 
       
         
-          <span itemprop="articleBody"><h1 id="u524D_u8BB0"><a href="#u524D_u8BB0" class="headerlink" title="前记"></a>前记</h1><p>熬了那么多个晚上，整个源码探索系列也算写了点内容了。<br>虽然很多是代码，不过整个过程要看的内容也真的还不少。<br>是时候换点内容，刺激下大脑了，下次时机合适时再补充对整个安卓FrameWork的探索文章。<br>在写这第一系列的源码探索过程遇到了不少设计模式，如：<code>桥接</code>，<code>组合</code>，<code>单例</code>，<code>静态代理</code>，<code>工场</code>，<code>策略</code>等等，因此产生了写设计模式系列的文章念头。<br>当然，整个过程也和不少的数据结构打了下交道，<br>嗯，如果有时间，也就顺便把一些数据结构的内容记录下。</p>
-<p>那么问题来了，作为一名初出茅庐的小菜鸟，<br>对这些设计模式的理解也不是多么说出神入化，<br>关于设计模式的内容的书与文章也已满天飞了，现在我出来写设计模式的文章，又写得不怎么样，这世界还需要多我这么个关于设计模式的吗？</p>
-<p><strong>我的思考</strong></p>
-<ol>
-<li><strong>温习</strong><br>看过不少本讨论设计模式的书和文章，在实际的开发中也有不少的应用，现在写出来，也算是对自己的一次总结吧。</li>
-<li><strong>知新</strong><br>所谓温故而知新，可以为师矣。我就厚着脸皮，再重新思考下这个设计模式，寻找一些新的灵光的地方，看能不能有什么变化。</li>
-<li><strong>没有的有</strong><br>因为这是我的文章啊，哈哈，就是以前没写过，所以要写。不为任何人，只为自己写的文章。就这样。哈哈！</li>
-</ol>
-<p>自己写，或多或少可以有多一些的思考，就像看别人写的代码一样，觉浅需行。<br>书上看的时候觉得行，懂了。但想彻底掌握还是需要自己亲行力践</p>
-<h1 id="u53C2_u8003_u4E66_u7C4D"><a href="#u53C2_u8003_u4E66_u7C4D" class="headerlink" title="参考书籍"></a>参考书籍</h1><p>这里列下看过的设计模式的书，文章的就太难以罗列了，就不写在这了,<br>那篇文章写的时候有参考就再额外补充吧。</p>
-<ol>
-<li>《Design Pattern in java》— Steven Metsker; William C. Wake，教科书一本。</li>
-<li>《设计模式》—Head First系列，非常轻松幽默，图文并茂。</li>
-<li>《设计模式之禅》—秦小波，如果你看过原稿，你会觉内容有些内涵啊。 </li>
-<li>《Android 源码设计模式解析与实战》—何红辉，关爱民，深度与广度兼有，不过排版特差！ </li>
-<li>《设计模式：可复用面向对象软件的基础》—GOF，这本没得说，经典</li>
-</ol>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/" itemprop="url">
-                源码探索系列15---那个AsyncTask里面的FutureTask
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-12-29T01:46:00+08:00" content="2015-12-29">
-            2015-12-29
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/android/" itemprop="url" rel="index">
-                  <span itemprop="name">android</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>很久前在写<a href="http://blog.csdn.net/sanjay_f/article/details/50237729">源码探索系类2–AsyncTask</a>时候有提及到这个类，现在在这里把<code>FutureTask</code>，<code>Future</code>和<code>Callback</code>，这三个火枪手的关系温习下 </p>
-<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><p>就让我们进入主题，开始说说这个<strong>FutureTask</strong>吧。</p>
-<p>在安装开发过程中，系统限制我们对于耗时的任务是不能执行在主线程的，必须单独开一个线程去做。<br>所以我们在开发过程的一种写法是下面这样</p>
-<h2 id="1-__u7528Runnable"><a href="#1-__u7528Runnable" class="headerlink" title="1. 用Runnable"></a>1. <strong>用Runnable</strong></h2><pre><code>new Thread(new Runnable() {
-        @Override
-        public void run() {
-
-         //do something
-         ...
-
-         myHandler.sendMessage(msg);   
-        }
-}).run();
-</code></pre><p>但有时候我们需要这个线程的运算结果，可我们没办法直接获取，因此安卓配套了一个Handler给我们用，利用他发送消息会我们的主线程，执行一些更新任务等。</p>
+          <p>有一个叫<code>控制反转</code>(Inversion of Control，缩写IoC ) 的东西 ，这个对于计算机的人应该是不陌生的概念，就算你不知道那个<code>Bob大叔</code>。</p>
+<p>这个概念简单说的是下面这样的事情</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E4%B9%B1%E9%BA%BB_%E8%80%A6%E5%90%88%E5%85%B3%E7%B3%BB.JPG" alt="enter image description here"></p>
+<p>原本各个类之间的关系乱七八糟的，看起来头都晕了。<br>他们就像齿轮一样，相互咬合依赖。</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E9%BD%BF%E8%BD%AE_%E8%80%A6%E5%90%88%E5%85%B3%E7%B3%BB_full.jpg" alt="enter image description here"><br>如果有一个出问题，那可能整个就崩溃了。</p>
+<p>但是，如果有一个人出来承担大事，负责协调各个类的话！<br>那么，他们的关系就可以是像下面图片这样的，<br>各个对象之间可以不感受到对方的“存在”，但整体又运作良好。<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E9%BD%BF%E8%BD%AE_%E8%A7%A3%E8%80%A6%E5%90%88_full.jpg" alt="enter image description here"></p>
+<p> 举个可能不恰当的例子：</p>
+<p> 企业<code>ObjectA</code>要招人，可能要去学校<code>ObjectB</code>开宣讲会，去别的企业<code>ObjectC</code>挖人等等。<br> 有些人看到了其中的机会，专门负责为企业输送人才，我们称这类人叫猎头<code>Ioc</code>（也有人才中心等，这里为描述方便，不细究），他负责帮助企业去找到需要的人，我们的HR就可以在公司呆着，看着猎头源源不断发来简历就好了！<br> 再也不用去和学校，别的企业打交道了。是的，从此HR与这两者解耦合,过上了幸福美好的生活!!</p>
+<p>那么问题来了，如何用中介者模式来模拟这个招聘流程？</p>
+<p>今天我们要聊的这个就中介者就是类似的情况，我们来看下实际的代码情况。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/#more" rel="contents">
+            <a class="btn" href="/2016/01/05/设计模式系列20---聊聊IoC与中介者/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -586,8 +483,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/28/源码探索系列14---那个HandleThread/" itemprop="url">
-                源码探索系列14---那个HandleThread
+              <a class="post-title-link" href="/2016/01/05/设计模式系列19---可复原的备忘模式/" itemprop="url">
+                设计模式系列19---可复原的备忘模式
               </a>
             
           
@@ -597,8 +494,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-28T22:05:00+08:00" content="2015-12-28">
-            2015-12-28
+          <time itemprop="dateCreated" datetime="2016-01-05T12:06:00+08:00" content="2016-01-05">
+            2016-01-05
           </time>
         </span>
 
@@ -623,8 +520,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/28/源码探索系列14---那个HandleThread/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/源码探索系列14---那个HandleThread/" itemprop="commentsCount"></span>
+              <a href="/2016/01/05/设计模式系列19---可复原的备忘模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/05/设计模式系列19---可复原的备忘模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -639,11 +536,111 @@
 
       
         
-          <p>这篇文章被CSDN搞丢了，好在通过使用谷歌搜索，<br>看到历史的记录版本，现在再根据记忆，补充下内容。<br>算是恢复了这篇文章的大概的模样。虽然对于CSDN的来说这文章没什么，但对于我来说就是自己花的时间和精力。   </p>
-<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><p>这次我们来说说HandleThread，听名字好像就是Handler+Thread的感觉啊。<br>他和Handler的关系就像Service和IntentService一样，一个不支持耗时的任务，一个可以。<br>不过两者还是有点区别，一些是运行在主线程的，一个不在主线程跑。<br>很好理解，要是在主线程跑也能搞耗时任务，那不就逆天了？？<br>对于他的使用，我们就不介绍了，让我们看下他实际做些什么吧。</p>
-<p>就从我们的HandleThread的声明开始说起吧<br>
+          <p> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/4a36acaf2edda3ccc6d433be01e93901213f9278.jpg" alt="enter image description here"></p>
+<p>玩游戏我们都知道有个东西叫<code>自动存档</code>，在我们遇到大Boss要打的时候，更是如此，一定要存档！<br>如果没有存档，死了就要你重新开始，如果是些大型游戏，已经花费了你很多时间，遇到大Boss，然后你被打死了，又没有存档，估计你就想直接把这个游戏卸载了。</p>
+<p>有时偷懒，还去下载别人的通关档案回来覆盖本地的。<br>哈，我就曾经做过！还有一些已经刷满无限金币等的存档！<br>曾经还遇到过必须被大Boss打死才能继续的剧情，但因为外挂太牛逼，活生生把大Boss给打死了！搞到后面都没法继续，只能自己手动滚回某个档案，装怂，去被boss虐下。</p>
+<p>所以很好理解，这个自动存档会保存我们当前的角色的状态，然后如果被大Boss打死了，就自动恢复到这个存档点状态，我们还可以继续去打大Boss，直到我们过关为止。</p>
+<p>那么问题来了，我们该怎么用代码实现呢？<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/28/源码探索系列14---那个HandleThread/#more" rel="contents">
+            <a class="btn" href="/2016/01/05/设计模式系列19---可复原的备忘模式/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2016/01/04/设计模式系列18---有状态的状态模式/" itemprop="url">
+                设计模式系列18---有状态的状态模式
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2016-01-04T23:42:00+08:00" content="2016-01-04">
+            2016-01-04
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/01/04/设计模式系列18---有状态的状态模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列18---有状态的状态模式/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/53715814201004022126431684313353485_004.jpg" alt="enter image description here"></p>
+<p> 今天我们来聊聊个红绿灯，我们知道有个口诀叫：</p>
+<blockquote>
+<p>红灯停<br>绿灯行<br>黄灯亮了等一等</p>
+</blockquote>
+<p> 但这不是我们关注的重点，我们关注的点是我们红绿灯的状态！</p>
+<p>一般是 <strong>绿灯 -&gt;  黄灯-&gt; 红灯</strong> 的顺序。</p>
+<blockquote>
+<p>绿灯能且只能跑到黄灯<br>黄灯能且只能跑到红灯<br>红灯能且只能跑到绿灯</p>
+</blockquote>
+<p>不过曾经深圳尝试改革，直接从<code>绿灯</code>跳成了<code>红灯</code>，消失一出，当时一片哗然，在试行了一段时间后，发现不妥就又恢复了。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/04/设计模式系列18---有状态的状态模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -669,7 +666,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/4/">&raquo;</a>
   </nav>
 
  </div>
@@ -703,21 +700,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-count">75</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

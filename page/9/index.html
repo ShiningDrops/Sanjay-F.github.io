@@ -36,7 +36,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shorticon icon" type="image/x-icon" href="/fav.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="SanjayF&apos;s  github  blog">
@@ -77,7 +77,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ceb5544cc01478679a4a6bc9f79ca0eb";
+      hm.src = "//hm.baidu.com/hm.js?18f6d52faaf2600c05e8045494b5935e";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/19/Android测试教程2--简单小测试/" itemprop="url">
-                Android测试教程2--简单小测试
+              <a class="post-title-link" href="/2015/12/23/源码探索系列10---替代Listview的RecycleView/" itemprop="url">
+                源码探索系列10---替代Listview的RecycleView
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-19T00:41:00+08:00" content="2015-11-19">
-            2015-11-19
+          <time itemprop="dateCreated" datetime="2015-12-23T01:22:00+08:00" content="2015-12-23">
+            2015-12-23
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/19/Android测试教程2--简单小测试/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/19/Android测试教程2--简单小测试/" itemprop="commentsCount"></span>
+              <a href="/2015/12/23/源码探索系列10---替代Listview的RecycleView/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/23/源码探索系列10---替代Listview的RecycleView/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,9 +255,14 @@
 
       
         
-          <p>在教程1，我们知道了怎么运行起我们的测试，现在，我们是时候对我们的界面进行一些操作了，让我们来做一个小的简单测试吧。</p>
+          <p> 自从有了Recycleview，很多原本是我们的Listview业务都被替代了，关于两者的简单比较，<a href="http://blog.csdn.net/sanjay_f/article/details/48830311">可以看这篇文章</a>。我们今天就去看看他背后故事，下次再写Listview，这名征战多年的老将。</p>
+<p>一些不要搞懂的问题</p>
+<ol>
+<li>为何谷歌推荐用这个，背后的效率是高在哪里？</li>
+<li>LayoutManager是怎么去弄不同布局的</li>
+</ol>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/19/Android测试教程2--简单小测试/#more" rel="contents">
+            <a class="btn" href="/2015/12/23/源码探索系列10---替代Listview的RecycleView/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -290,8 +295,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/18/Android测试教程1--跑起来/" itemprop="url">
-                Android测试教程1--跑起来
+              <a class="post-title-link" href="/2015/12/19/源码探索系列9---四大金刚之ContentProvider/" itemprop="url">
+                源码探索系列9---四大金刚之ContentProvider
               </a>
             
           
@@ -301,8 +306,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-18T23:11:00+08:00" content="2015-11-18">
-            2015-11-18
+          <time itemprop="dateCreated" datetime="2015-12-19T02:42:00+08:00" content="2015-12-19">
+            2015-12-19
           </time>
         </span>
 
@@ -327,8 +332,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/18/Android测试教程1--跑起来/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/18/Android测试教程1--跑起来/" itemprop="commentsCount"></span>
+              <a href="/2015/12/19/源码探索系列9---四大金刚之ContentProvider/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/19/源码探索系列9---四大金刚之ContentProvider/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -343,9 +348,18 @@
 
       
         
-          <h1 id="1__u9009_u62E9Android_Instrument_Tests"><a href="#1__u9009_u62E9Android_Instrument_Tests" class="headerlink" title="1 选择Android Instrument Tests"></a>1 选择Android Instrument Tests</h1><p>确认你选中的Test Artifact 是Android Instrument Tests；<br><img src="http://img.blog.csdn.net/20151118174128573" alt="这里写图片描述"><br>就在AS的左下角，自己看吧。有些人选择的是Junit，导致这个类的前面都是红色小标记，没办法运行。</p>
+          <p>好了，终于到了最后一个啦，写到这里，真的觉得不容意啊，以前看这些组件也就那样了，现在还要记录下来，重点是这东西都被分析烂了，我们这些后人屌丝还在写，没点突破的。真没意思呢！就当写作业咯。啦啦啦啦，不管如何，让我们开始看下吧</p>
+<h1 id="u8D77_u822A__u2014_ContentResolver"><a href="#u8D77_u822A__u2014_ContentResolver" class="headerlink" title="起航 — ContentResolver"></a>起航 — ContentResolver</h1><p>API： 23</p>
+<p>说真的，这个组件我还真的相对于Activity和Service用起来真的好少啊！<br>现在都不能记起来用他来干嘛了，虽然知道他能用来做跨进程通讯用，不过对于一般的app。<br>这玩意还真的用的次数少啊! 现在能想起来的一次使用这个就是要获取图片的时候。<br>以前开发的时候遇到的恶心的是，有些Rom把相册给阉割了，搞了个别的来代替，导致调不了图库！<br>所以搞到需要自己开发一个，真的很无语！ </p>
+<pre><code>ContentResolver mContentResolver = this.getContentResolver();
+Cursor mCursor = mContentResolver.query(mImageUri, null,
+            MediaStore.Images.Media.MIME_TYPE + &quot;=? or &quot;
+                    + MediaStore.Images.Media.MIME_TYPE + &quot;=? or &quot; + MediaStore.Images.Media.MIME_TYPE + &quot;=?&quot; + &quot; or &quot; + MediaStore.Images.Media.MIME_TYPE + &quot;=?&quot;,
+            new String[]{&quot;image/jpeg&quot;, &quot;image/png&quot;, &quot;image/jpg&quot;, &quot;image/jpe&quot;},
+            MediaStore.Images.Media.DATA);
+</code></pre><p>从这里我们开始看起吧</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/18/Android测试教程1--跑起来/#more" rel="contents">
+            <a class="btn" href="/2015/12/19/源码探索系列9---四大金刚之ContentProvider/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -378,8 +392,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/10/07/给你的redis加上一把锁/" itemprop="url">
-                给你的redis加上一把锁
+              <a class="post-title-link" href="/2015/12/18/源码探索系列8---IntentService/" itemprop="url">
+                源码探索系列8---IntentService
               </a>
             
           
@@ -389,19 +403,34 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-10-07T17:55:46+08:00" content="2015-10-07">
-            2015-10-07
+          <time itemprop="dateCreated" datetime="2015-12-18T14:57:00+08:00" content="2015-12-18">
+            2015-12-18
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/07/给你的redis加上一把锁/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/07/给你的redis加上一把锁/" itemprop="commentsCount"></span>
+              <a href="/2015/12/18/源码探索系列8---IntentService/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/源码探索系列8---IntentService/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -416,11 +445,26 @@
 
       
         
-          <p> 一个段子<br> 曾经有个实习生，对redis没有加密，<br> 被一名黑客知道了地址，一条命令<code>FLUSHALL</code>，清掉了缓存。<br> 瞬间数据库被压崩，导致整个业务崩溃。</p>
-<p> <img src="http://img.blog.csdn.net/20151007171421076" alt="这里写图片描述"></p>
-<p> 那么，我们该如何保护我们的redis呢？</p>
+          <p>我们知道，我们的<code>Service</code>如果要执行一些耗时的操作，需要开单独的线程去干活，而<code>IntentService</code>却不用，<br>在他的<code>onHandleIntent</code>函数里面我们可以执行耗时操作，啊，到底神奇在哪里了呢？<br>让我们去看看他的源码，背后到底做了什么好事情！</p>
+<h1 id="u8D77_u822A__u2014_IntentService"><a href="#u8D77_u822A__u2014_IntentService" class="headerlink" title="起航 — IntentService"></a>起航 — IntentService</h1><p>API：23</p>
+<pre><code>public abstract class IntentService extends Service 
+</code></pre><p>我们的<code>IntentService</code>是一个继承<code>Service</code>的抽象类，那关于他的启动，停止等就和Service一样，前一篇就解释过了，我们现在就不说了。整个类也就164行，不大，还不够AMS里面一个函数的一半长度，哈，我们从他的<code>OnCreate</code>函数开始吧</p>
+<pre><code>@Override
+public void onCreate() {
+    // TODO: It would be nice to have an option to hold a partial wakelock
+    // during processing, and to have a static startService(Context, Intent)
+    // method that would launch the service &amp; hand off a wakelock.
+
+    super.onCreate();
+    HandlerThread thread = new HandlerThread(&quot;IntentService[&quot; + mName + &quot;]&quot;);
+    thread.start();
+
+    mServiceLooper = thread.getLooper();
+    mServiceHandler = new ServiceHandler(mServiceLooper);
+}
+</code></pre><p>我们看到他开了一个子线程和Handler。这里我们可以猜测了，之所以在我们的<code>onHandleIntent</code>很可能是因为他们两个！<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/07/给你的redis加上一把锁/#more" rel="contents">
+            <a class="btn" href="/2015/12/18/源码探索系列8---IntentService/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -453,8 +497,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/10/06/nginx的配置文件详解/" itemprop="url">
-                nginx的配置文件详解
+              <a class="post-title-link" href="/2015/12/18/源码探索系列7---四大金刚之Service/" itemprop="url">
+                源码探索系列7---四大金刚之Service
               </a>
             
           
@@ -464,19 +508,34 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-10-06T13:33:06+08:00" content="2015-10-06">
-            2015-10-06
+          <time itemprop="dateCreated" datetime="2015-12-18T12:57:00+08:00" content="2015-12-18">
+            2015-12-18
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/06/nginx的配置文件详解/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/06/nginx的配置文件详解/" itemprop="commentsCount"></span>
+              <a href="/2015/12/18/源码探索系列7---四大金刚之Service/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/源码探索系列7---四大金刚之Service/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -491,10 +550,16 @@
 
       
         
-          <p>这是一篇介绍关于nginx的配置文件的介绍文章</p>
-<p>主要有负载均衡策略，重试策略 ，备机策略 三个模块.</p>
+          <p>今天我们来看下这安卓的四大组件的另外一个Service，<br>按套路应该先列点我们在探索过程需要注意的问题，不过现在一时没想到有什么，<br>让我们边看说解释，看下有什么需要注意的</p>
+<h1 id="u8D77_u822A_u2014-_u5F00_u542F_u670D_u52A1"><a href="#u8D77_u822A_u2014-_u5F00_u542F_u670D_u52A1" class="headerlink" title="起航—-开启服务"></a>起航—-开启服务</h1><p>API ： 23</p>
+<p>我们启动服务一般有两种调用<code>StartService</code>和<code>BindService</code>,这里我们先从StartService开始。<br>首先去到ContextWrapper里面的startService函数</p>
+<pre><code>@Override
+public ComponentName startService(Intent service) {
+    return mBase.startService(service);
+}
+</code></pre>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/06/nginx的配置文件详解/#more" rel="contents">
+            <a class="btn" href="/2015/12/18/源码探索系列7---四大金刚之Service/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -527,8 +592,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/10/06/nginx环境的搭建和测试/" itemprop="url">
-                nginx环境的搭建和测试
+              <a class="post-title-link" href="/2015/12/17/源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析/" itemprop="url">
+                源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析
               </a>
             
           
@@ -538,19 +603,34 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-10-06T13:32:07+08:00" content="2015-10-06">
-            2015-10-06
+          <time itemprop="dateCreated" datetime="2015-12-17T01:24:00+08:00" content="2015-12-17">
+            2015-12-17
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/06/nginx环境的搭建和测试/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/06/nginx环境的搭建和测试/" itemprop="commentsCount"></span>
+              <a href="/2015/12/17/源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/17/源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -565,22 +645,17 @@
 
       
         
-          <h1 id="u5B89_u88C5Tomcat"><a href="#u5B89_u88C5Tomcat" class="headerlink" title="安装Tomcat"></a>安装Tomcat</h1><p>Tomcat官网：<a href="http://tomcat.apache.org/">http://tomcat.apache.org/</a><br>我使用的版本：apache-tomcat-7.0.42.tar.gz<br>在桌面新建多一个文件叫Tomcat，解压到目录下（可以自己选）<br>复制多一分，分别叫tomcat1和tomcat2<br>打开tomcat2里面的<code>conf/server.xml</code>文件，然后编辑如下</p>
-<p>注意：<br>要这么修改，是因为这两个都是跑在我自己的电脑上啊，如果你的是在不同的服务器下，可以不用的.</p>
-<h3 id="u7B2C_u4E00_u5904_u7AEF_u53E3_u4FEE_u6539_uFF1A"><a href="#u7B2C_u4E00_u5904_u7AEF_u53E3_u4FEE_u6539_uFF1A" class="headerlink" title="第一处端口修改："></a>第一处端口修改：</h3><pre><code>&lt;!--  修改port端口为8002，另外tomcat的配置不动--&gt;  
-&lt;Server port=&quot;8002&quot; shutdown=&quot;SHUTDOWN&quot;&gt;   
-</code></pre><p>注：端口随意，不重复就好，只是为了方便区别，我把这个叫8002；</p>
-<h3 id="u7B2C_u4E8C_u5904_u7AEF_u53E3_u4FEE_u6539_uFF1A"><a href="#u7B2C_u4E8C_u5904_u7AEF_u53E3_u4FEE_u6539_uFF1A" class="headerlink" title="第二处端口修改："></a>第二处端口修改：</h3><pre><code>&lt;!-- port=&quot;8082&quot; tomcat监听端口--&gt;  
-&lt;Connector port=&quot;8082&quot; protocol=&quot;HTTP/1.1&quot;   
-               connectionTimeout=&quot;20000&quot;   
-               redirectPort=&quot;9443&quot; /&gt;  
-</code></pre><p>  注意，我这里把<code>redirectPort</code>修改了.</p>
-<!-- ###   第三处端口修改：  
-    Engine元素增加 jvmRoute  属性：
-    <Engine name="Catalina" defaultHost="localhost" jvmRoute="tomcat2">  
-注：另外一个tomcat1的server.xml文件，请在这个位置请加多`jvmRoute="tomcat1"` -->
+          <p>这篇文章将会对这三者做简单的综合性的比较，同时对LocalBroadCast深入到源码进行一个探索。看这个类为何相对BroadCast高效！</p>
+<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><h1 id="1-__u6BD4_u8F83"><a href="#1-__u6BD4_u8F83" class="headerlink" title="1. 比较"></a>1. 比较</h1><ul>
+<li><p><strong>性能 对比 ：  EventBus不差 </strong> </p>
+<pre><code>EventBus ~ LocalBroadCast  &gt; Bradocast 
+</code></pre></li>
+<li><p><strong>运行的线程环境：    EventBus完胜！</strong></p>
+<p> LocalBroadcastManager 所有调用都是在主线程，<br> EventBus 可以定义在调用线程、主线程、后台线程、异步。</p>
+</li>
+<li><p><strong>代码量比较：  EventBus完胜！</strong></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/06/nginx环境的搭建和测试/#more" rel="contents">
+            <a class="btn" href="/2015/12/17/源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -606,7 +681,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/8/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/10/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/8/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/10/">&raquo;</a>
   </nav>
 
  </div>
@@ -640,21 +715,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-count">75</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

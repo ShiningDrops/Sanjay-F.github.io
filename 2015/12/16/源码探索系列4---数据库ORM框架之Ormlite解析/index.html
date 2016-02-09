@@ -36,7 +36,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shorticon icon" type="image/x-icon" href="/fav.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="在做项目时候，有使用Ormlite来做数据库部分，以提高开发速度。
@@ -53,7 +53,7 @@
  OrmLite - Lightweight Object Relational Mapping (ORM) Java Package
 
 这个ORM框架在一般数据量不大的情况下，是一个很好的工具，他封装得很好，使用起来也很方便！相比于原始的Sqlite来说，使用后，很容易回不去了，因为你不再需要敲一堆的sql语句，担心那个字段写">
-<meta property="og:updated_time" content="2016-01-02T13:13:51.000Z">
+<meta property="og:updated_time" content="2016-01-17T14:24:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="源码探索系列4---数据库ORM框架之Ormlite解析">
 <meta name="twitter:description" content="在做项目时候，有使用Ormlite来做数据库部分，以提高开发速度。
@@ -90,7 +90,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ceb5544cc01478679a4a6bc9f79ca0eb";
+      hm.src = "//hm.baidu.com/hm.js?18f6d52faaf2600c05e8045494b5935e";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -292,7 +292,7 @@ private static &lt;T, ID&gt; int createTable(ConnectionSource connectionSource, 
         return doCreateTable(connectionSource, tableInfo, ifNotExists);
     }
 }
-</code></pre><p>他会先去创建dao，同时这个dao是用<code>容器单例</code>的模式来做的，所以后面我们继续调用这个Dao的时候，可以快速的获得，得到Dao后，他去创建<code>Table</code>，相关代码如下</p>
+</code></pre><p>他会先去创建dao，同时这个dao是用<code>容器单例</code>的模式来做的，所以后面我们继续调用这个Dao的时候，可以快速的获得，<br>继续，在得到Dao后，他去创建<code>Table</code>，相关代码如下</p>
 <pre><code> public static synchronized &lt;D extends Dao&lt;T, ?&gt;, T&gt; D createDao(
                  ConnectionSource connectionSource, Class&lt;T&gt; clazz) throws SQLException {
 
@@ -315,7 +315,25 @@ private static &lt;T&gt; Dao&lt;?, ?&gt; lookupDao(DaoManager.ClassConnectionSou
     Dao dao = (Dao)classMap.get(key);
     return dao == null?null:dao;
 }
-</code></pre><p>创建表：</p>
+</code></pre><p><strong>注意</strong> <strong>注意</strong> <strong>注意</strong><br>说到这里，需要重点强调下！<br>有些人为了省去在自己的<code>ormliteHelper</code>里面写各种的getXXxDao，用下面的方法：<br>例如那个<a href="http://blog.csdn.net/lmj623565791/article/details/39122981" target="_blank" rel="external">鸿大神的Android 快速开发系列 ORMLite 框架最佳实践</a> </p>
+<pre><code>public synchronized Dao getDao(Class clazz) throws SQLException  
+    {  
+        Dao dao = null;  
+        String className = clazz.getSimpleName();  
+
+        if (daos.containsKey(className))  
+        {  
+            dao = daos.get(className);  
+        }  
+        if (dao == null)  
+        {  
+            dao = super.getDao(clazz);  
+            daos.put(className, dao);  
+        }  
+        return dao;  
+    }  
+</code></pre><p>显然是没必要的，因为我们看到内部实现已经写了，用一个<code>HashMap</code>去保存了，但不得不说一般人不看源代码，哪里知道这事！他的最佳实践写得还有很多可以优化的地方，下次有空再把自己写的贴上来！最少要把各种操作给封装以下，免得下次要换掉<code>ORMLite</code>怎办？</p>
+<p>创建表：</p>
 <pre><code>private static &lt;T, ID&gt; int doCreateTable(ConnectionSource connectionSource, TableInfo&lt;T, ID&gt; tableInfo, boolean ifNotExists) throws SQLException {
     DatabaseType databaseType = connectionSource.getDatabaseType();
     logger.info(&quot;creating table \&apos;{}\&apos;&quot;, tableInfo.getTableName());
@@ -686,21 +704,21 @@ helper.getUserDao().create(mUser);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-count">75</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

@@ -36,7 +36,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shorticon icon" type="image/x-icon" href="/fav.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="SanjayF&apos;s  github  blog">
@@ -77,7 +77,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ceb5544cc01478679a4a6bc9f79ca0eb";
+      hm.src = "//hm.baidu.com/hm.js?18f6d52faaf2600c05e8045494b5935e";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/04/Android测试教程11--Mock之mockito，异步测试/" itemprop="url">
-                Android测试教程11--Mock之mockito，异步测试
+              <a class="post-title-link" href="/2015/12/30/设计模式系列2---幕后黑手的代理模式/" itemprop="url">
+                设计模式系列2---幕后黑手的代理模式
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-04T18:17:00+08:00" content="2015-12-04">
-            2015-12-04
+          <time itemprop="dateCreated" datetime="2015-12-30T17:21:27+08:00" content="2015-12-30">
+            2015-12-30
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/04/Android测试教程11--Mock之mockito，异步测试/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/04/Android测试教程11--Mock之mockito，异步测试/" itemprop="commentsCount"></span>
+              <a href="/2015/12/30/设计模式系列2---幕后黑手的代理模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/设计模式系列2---幕后黑手的代理模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,20 +255,10 @@
 
       
         
-          <p>#1. mockito是干什么的？</p>
-<p>Mock框架之一，其余的还有EasyMock，PowerMock等。</p>
-<blockquote>
-<p>Mock说白了就是打桩（Stub）或则模拟，当你调用一个不好在测试中创建的对象时，<br>Mock框架为你<strong>模拟</strong>一个和真实对象类似的替身来完成相应的行为</p>
-</blockquote>
-<p>就是利用他，我们可以创建一个傀儡，然后被mock的类要返回的数据我们都可以<strong>指定</strong>！<br>就像下面这样 :</p>
-<pre><code>User user = mock(User.class);
-when(user.getName(3)).thenReturn(&quot;张三&quot;);
-Log.e(TAG, &quot;name=&quot; + user.getName(3));
-assertEquals(&quot;张三&quot;, user.getName(3));
-</code></pre><p>我们mock了User这个类，要求他当被请求返回名字<code>getName()</code>的时候，就返回<code>张三</code></p>
-<p>很好懂吧？下面说点实际的运用</p>
+          <p> 今天我们来说说那个代理模式，他的一大功效就是成了挡子弹的人，代替幕后黑手出来干活。<br> 为何这么说呢？<br> 因为人如其名，代理，就是中间人代理商这样的，<br> 我们不用过问到底背后怎么做，只需要找到这个代理人，他可以帮我们搞定所有。</p>
+<p>假设有这么一个人，他可以制造茶叶蛋，炸弹，手枪，火箭，电脑病毒等等。嗯，是个人才。<br>现在他突然手头紧了，想找个朋友帮他看有没什么门路，卖点东西出去，但为了给自己留点后路，他就同他朋友说他会做<code>茶叶蛋</code>，是个十分正经的守法好人民，同时希望帮他卖一点，虽然这朋友并不知道他如意算盘背后是给他背后做的事业提供资金来源。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/04/Android测试教程11--Mock之mockito，异步测试/#more" rel="contents">
+            <a class="btn" href="/2015/12/30/设计模式系列2---幕后黑手的代理模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -301,8 +291,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
           
           
             
-              <a class="post-title-link" href="/2015/12/03/Android测试教程10--monkey Test/" itemprop="url">
-                Android测试教程10--monkey Test
+              <a class="post-title-link" href="/2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/" itemprop="url">
+                源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview
               </a>
             
           
@@ -312,8 +302,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-03T23:48:00+08:00" content="2015-12-03">
-            2015-12-03
+          <time itemprop="dateCreated" datetime="2015-12-30T00:27:46+08:00" content="2015-12-30">
+            2015-12-30
           </time>
         </span>
 
@@ -338,8 +328,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/03/Android测试教程10--monkey Test/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/Android测试教程10--monkey Test/" itemprop="commentsCount"></span>
+              <a href="/2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -354,12 +344,13 @@ assertEquals(&quot;张三&quot;, user.getName(3));
 
       
         
-          <p>#1，Monkey Test简介</p>
-<p>什么是monkey test？<br>如其名，像猴子一样，虽然不懂什么，但是可以乱点一通。<br>是的，他的一大特色就是可以乱点一通！！！！！！！<br>就在规定的次数范围内做任何随机的操作，随机操作包括点击、滑动、Application切换、横竖屏、应用关闭等等，用户能做的操作统统可以模拟；！！<br>所以简单说就是 <strong>“压力测试”</strong></p>
-<p><a href="http://developer.android.com/tools/help/monkey.html">官方介绍文档地址，点这里</a></p>
-<p>那要准备点什么吗？</p>
+          <p>作为这源码探索系列的初篇的终结，选择Listview来做最后一个探索的对象好像也挺好的。<br>所以我们就来简单的看下我们曾经最熟悉的Listview是怎么去绘制我们的各个View，如何复用的View。</p>
+<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><p>API：23</p>
+<p>我们的<code>Listview</code>是继承于<code>AbsListView</code> 的</p>
+<pre><code>public class ListView extends AbsListView 
+</code></pre><p>而这个AbsListView里面帮我们做了大量的工作，包括与我们的adapter相关的工作，对View的复用等。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/03/Android测试教程10--monkey Test/#more" rel="contents">
+            <a class="btn" href="/2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -392,8 +383,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
           
           
             
-              <a class="post-title-link" href="/2015/12/03/Android测试教程9--聊聊配置测试环境的一些问题/" itemprop="url">
-                Android测试教程9--聊聊配置测试环境的一些问题
+              <a class="post-title-link" href="/2015/12/29/设计模式系列1---独当一面的单例/" itemprop="url">
+                设计模式系列1---独当一面的单例
               </a>
             
           
@@ -403,8 +394,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-03T18:09:00+08:00" content="2015-12-03">
-            2015-12-03
+          <time itemprop="dateCreated" datetime="2015-12-29T21:55:46+08:00" content="2015-12-29">
+            2015-12-29
           </time>
         </span>
 
@@ -429,8 +420,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/03/Android测试教程9--聊聊配置测试环境的一些问题/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/Android测试教程9--聊聊配置测试环境的一些问题/" itemprop="commentsCount"></span>
+              <a href="/2015/12/29/设计模式系列1---独当一面的单例/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/设计模式系列1---独当一面的单例/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -445,9 +436,12 @@ assertEquals(&quot;张三&quot;, user.getName(3));
 
       
         
-          <p>最近学测试的时候，遇到一些配置上的问题，在这里都写下来</p>
+          <p>在开始写之前我想吐槽下CSDN！ 在上面写的源码探索系列6和14居然不见了，上次找版主去找回一次别的文章！ 这次居然跑了两篇，服务器要高可用啊！</p>
+<p>现在还记得14写的内容是HandleThread，但第六篇那么久那里还记得写的是哪篇，想补都补不回来了！<br>（更新：12/30， 记起来了，那个第六篇是四大金刚之一的广播，唉，那篇写了好久才整理出来的，跪了！）</p>
+<p>为了写这篇文章，内心压制了好久，那些文章都是我每天下完班辛辛苦苦熬到凌晨一两点才写完的！ 翻看了那么多代码，熬了这么久！真的内心难以忍受这样的错误！</p>
+<p>一个可以让人舒服写字的地方真不容易找！</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/03/Android测试教程9--聊聊配置测试环境的一些问题/#more" rel="contents">
+            <a class="btn" href="/2015/12/29/设计模式系列1---独当一面的单例/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -480,8 +474,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
           
           
             
-              <a class="post-title-link" href="/2015/12/03/源码探索系列0---微信抢红包插件原理解析/" itemprop="url">
-                源码探索系列0---微信抢红包插件原理解析
+              <a class="post-title-link" href="/2015/12/29/设计模式系列0---写在这系列前的话/" itemprop="url">
+                设计模式系列0---写在这系列前的话
               </a>
             
           
@@ -491,8 +485,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-03T11:23:00+08:00" content="2015-12-03">
-            2015-12-03
+          <time itemprop="dateCreated" datetime="2015-12-29T01:55:46+08:00" content="2015-12-29">
+            2015-12-29
           </time>
         </span>
 
@@ -517,8 +511,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/03/源码探索系列0---微信抢红包插件原理解析/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/源码探索系列0---微信抢红包插件原理解析/" itemprop="commentsCount"></span>
+              <a href="/2015/12/29/设计模式系列0---写在这系列前的话/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/设计模式系列0---写在这系列前的话/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -533,16 +527,24 @@ assertEquals(&quot;张三&quot;, user.getName(3));
 
       
         
-          <p>好程序员，序号都是从0开始的。哈哈</p>
-<h1 id="u5FAE_u4FE1_u62A2_u7EA2_u5305_u63D2_u4EF6"><a href="#u5FAE_u4FE1_u62A2_u7EA2_u5305_u63D2_u4EF6" class="headerlink" title="微信抢红包插件"></a>微信抢红包插件</h1><p>不知道你们还记不记得小米发布会的时候，把不服跑个分改成抢红包了，同时演示了一遍。<br>现在这个是基于他的修改版本，<a href="https://github.com/geeeeeeeeek/WeChatLuckyMoney">地址在这里</a></p>
-<p>,如果你想看下小米抢红包的源代码，<a href="https://github.com/XiaoMi/LuckyMoneyTool">就点击这里</a></p>
-<p> 接下来讲解其中一种实现 ，但这个是dev版，不是百分百，要百分百好用的，<a href="https://github.com/geeeeeeeeek/WeChatLuckyMoney/tree/stable">点这里</a>：</p>
-<p>下面的讲解仅针对该伙伴分享的<strong>dev分支</strong>。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/03/源码探索系列0---微信抢红包插件原理解析/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
+          <span itemprop="articleBody"><h1 id="u524D_u8BB0"><a href="#u524D_u8BB0" class="headerlink" title="前记"></a>前记</h1><p>熬了那么多个晚上，整个源码探索系列也算写了点内容了。<br>虽然很多是代码，不过整个过程要看的内容也真的还不少。<br>是时候换点内容，刺激下大脑了，下次时机合适时再补充对整个安卓FrameWork的探索文章。<br>在写这第一系列的源码探索过程遇到了不少设计模式，如：<code>桥接</code>，<code>组合</code>，<code>单例</code>，<code>静态代理</code>，<code>工场</code>，<code>策略</code>等等，因此产生了写设计模式系列的文章念头。<br>当然，整个过程也和不少的数据结构打了下交道，<br>嗯，如果有时间，也就顺便把一些数据结构的内容记录下。</p>
+<p>那么问题来了，作为一名初出茅庐的小菜鸟，<br>对这些设计模式的理解也不是多么说出神入化，<br>关于设计模式的内容的书与文章也已满天飞了，现在我出来写设计模式的文章，又写得不怎么样，这世界还需要多我这么个关于设计模式的吗？</p>
+<p><strong>我的思考</strong></p>
+<ol>
+<li><strong>温习</strong><br>看过不少本讨论设计模式的书和文章，在实际的开发中也有不少的应用，现在写出来，也算是对自己的一次总结吧。</li>
+<li><strong>知新</strong><br>所谓温故而知新，可以为师矣。我就厚着脸皮，再重新思考下这个设计模式，寻找一些新的灵光的地方，看能不能有什么变化。</li>
+<li><strong>没有的有</strong><br>因为这是我的文章啊，哈哈，就是以前没写过，所以要写。不为任何人，只为自己写的文章。就这样。哈哈！</li>
+</ol>
+<p>自己写，或多或少可以有多一些的思考，就像看别人写的代码一样，觉浅需行。<br>书上看的时候觉得行，懂了。但想彻底掌握还是需要自己亲行力践</p>
+<h1 id="u53C2_u8003_u4E66_u7C4D"><a href="#u53C2_u8003_u4E66_u7C4D" class="headerlink" title="参考书籍"></a>参考书籍</h1><p>这里列下看过的设计模式的书，文章的就太难以罗列了，就不写在这了,<br>那篇文章写的时候有参考就再额外补充吧。</p>
+<ol>
+<li>《Design Pattern in java》— Steven Metsker; William C. Wake，教科书一本。</li>
+<li>《设计模式》—Head First系列，非常轻松幽默，图文并茂。</li>
+<li>《设计模式之禅》—秦小波，如果你看过原稿，你会觉内容有些内涵啊。 </li>
+<li>《Android 源码设计模式解析与实战》—何红辉，关爱民，深度与广度兼有，不过排版特差！ </li>
+<li>《设计模式：可复用面向对象软件的基础》—GOF，这本没得说，经典</li>
+</ol>
+</span>
         
       
     </div>
@@ -572,8 +574,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
           
           
             
-              <a class="post-title-link" href="/2015/11/27/Android测试教程8--测试我们的Activity/" itemprop="url">
-                Android测试教程8--测试我们的Activity
+              <a class="post-title-link" href="/2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/" itemprop="url">
+                源码探索系列15---那个AsyncTask里面的FutureTask
               </a>
             
           
@@ -583,8 +585,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-27T11:31:00+08:00" content="2015-11-27">
-            2015-11-27
+          <time itemprop="dateCreated" datetime="2015-12-29T01:46:00+08:00" content="2015-12-29">
+            2015-12-29
           </time>
         </span>
 
@@ -609,8 +611,8 @@ assertEquals(&quot;张三&quot;, user.getName(3));
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/27/Android测试教程8--测试我们的Activity/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/27/Android测试教程8--测试我们的Activity/" itemprop="commentsCount"></span>
+              <a href="/2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -625,16 +627,22 @@ assertEquals(&quot;张三&quot;, user.getName(3));
 
       
         
-          <p>做安卓开发，怎能不测试下我们的Activity呢？<br>但实际的项目经验告诉我的直觉，这个测试真是因人而异啊。<br>为啥？</p>
-<ul>
-<li>有些人把网络请求直接写在Activity里面的</li>
-<li>有采用MVVM，MVP架构的</li>
-<li>有的把数据库操作部分直接写在Activity里面的</li>
-<li>还有各种乱七八糟的</li>
-</ul>
-<p>所以理解的Activity测试内容就给人不一样的感觉。<br>这里讲下一个特殊的测试类<code>ActivityUnitTestCase</code> </p>
+          <p>很久前在写<a href="http://blog.csdn.net/sanjay_f/article/details/50237729">源码探索系类2–AsyncTask</a>时候有提及到这个类，现在在这里把<code>FutureTask</code>，<code>Future</code>和<code>Callback</code>，这三个火枪手的关系温习下 </p>
+<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><p>就让我们进入主题，开始说说这个<strong>FutureTask</strong>吧。</p>
+<p>在安装开发过程中，系统限制我们对于耗时的任务是不能执行在主线程的，必须单独开一个线程去做。<br>所以我们在开发过程的一种写法是下面这样</p>
+<h2 id="1-__u7528Runnable"><a href="#1-__u7528Runnable" class="headerlink" title="1. 用Runnable"></a>1. <strong>用Runnable</strong></h2><pre><code>new Thread(new Runnable() {
+        @Override
+        public void run() {
+
+         //do something
+         ...
+
+         myHandler.sendMessage(msg);   
+        }
+}).run();
+</code></pre><p>但有时候我们需要这个线程的运算结果，可我们没办法直接获取，因此安卓配套了一个Handler给我们用，利用他发送消息会我们的主线程，执行一些更新任务等。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/27/Android测试教程8--测试我们的Activity/#more" rel="contents">
+            <a class="btn" href="/2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -660,7 +668,7 @@ assertEquals(&quot;张三&quot;, user.getName(3));
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/8/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/6/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/8/">&raquo;</a>
   </nav>
 
  </div>
@@ -694,21 +702,21 @@ assertEquals(&quot;张三&quot;, user.getName(3));
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-count">75</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

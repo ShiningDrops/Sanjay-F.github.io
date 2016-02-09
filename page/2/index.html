@@ -36,7 +36,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shorticon icon" type="image/x-icon" href="/fav.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="SanjayF&apos;s  github  blog">
@@ -77,7 +77,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ceb5544cc01478679a4a6bc9f79ca0eb";
+      hm.src = "//hm.baidu.com/hm.js?18f6d52faaf2600c05e8045494b5935e";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/01/设计模式系列6---分隔的装饰模式/" itemprop="url">
-                设计模式系列6---分隔与包装的装饰模式
+              <a class="post-title-link" href="/2016/01/10/源码探索系列20---安装APK的PackageManagerService/" itemprop="url">
+                源码探索系列20---安装APK的PackageManagerService
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-01T00:15:00+08:00" content="2016-01-01">
-            2016-01-01
+          <time itemprop="dateCreated" datetime="2016-01-10T23:56:46+08:00" content="2016-01-10">
+            2016-01-10
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/01/设计模式系列6---分隔的装饰模式/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/01/设计模式系列6---分隔的装饰模式/" itemprop="commentsCount"></span>
+              <a href="/2016/01/10/源码探索系列20---安装APK的PackageManagerService/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/10/源码探索系列20---安装APK的PackageManagerService/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,12 +255,10 @@
 
       
         
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83.jpg" alt="enter image description here"></p>
-<p>在说完门面，需要提到一个他的近亲，就是同属于结构模式的装饰(<strong>Decorator</strong>)。</p>
-<p>按照开头写故事思路，这故事真是憋了好久才想到套娃的案例。</p>
-<p>应该很多人都有看过套娃吧？没看过的就看上面的图，挺好懂得，就是一个嵌套一个的，挺有意思的。<br>不断的拆开这些套娃，发现里面还有更小的套娃，在拆开发现还有更更小的套娃….<br>打开过程是挺惊喜的，不过装回去就麻烦了，呵呵。</p>
+          <p> 我们新新苦苦的写好了程序，打好包，给用户安装。<br> 那么问题来了，为何能够安装这个APK呢， 背后到底发生了什么事？</p>
+<p>  <img src="http://7xl9zd.com1.z0.glb.clouddn.com/20150105041330439.png" alt="enter image description here"></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/01/设计模式系列6---分隔的装饰模式/#more" rel="contents">
+            <a class="btn" href="/2016/01/10/源码探索系列20---安装APK的PackageManagerService/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -293,8 +291,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/31/设计模式系列5---多变灵活的桥接/" itemprop="url">
-                设计模式系列5---多变灵活的桥接
+              <a class="post-title-link" href="/2016/01/10/源码探索系列19---加载布局的LayoutInflater/" itemprop="url">
+                源码探索系列19---加载布局的LayoutInflater
               </a>
             
           
@@ -304,8 +302,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-31T23:26:00+08:00" content="2015-12-31">
-            2015-12-31
+          <time itemprop="dateCreated" datetime="2016-01-10T00:31:46+08:00" content="2016-01-10">
+            2016-01-10
           </time>
         </span>
 
@@ -330,8 +328,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/31/设计模式系列5---多变灵活的桥接/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/31/设计模式系列5---多变灵活的桥接/" itemprop="commentsCount"></span>
+              <a href="/2016/01/10/源码探索系列19---加载布局的LayoutInflater/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/10/源码探索系列19---加载布局的LayoutInflater/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -346,35 +344,21 @@
 
       
         
-          <table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>《桥接》 —  SanjayF</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">小时候，梦想是当一名宇航员，驾驭飞船，太空探索。</td>
-</tr>
-<tr>
-<td style="text-align:center">长大后，梦想是当一名渔船夫，划着扁舟，荡漾湖面。</td>
-</tr>
-<tr>
-<td style="text-align:center">后来啊，梦想是当一名大土豪，开着汽车，周游列国。</td>
-</tr>
-<tr>
-<td style="text-align:center">而现在，梦想是当一名好码农，敲着代码，写完桥接。</td>
-</tr>
-<tr>
-<td style="text-align:center"><img src="http://7xl9zd.com1.z0.glb.clouddn.com/19304468_19304468_1364439264237_mthumb.jpg" alt="enter image description here"></td>
-</tr>
-<tr>
-<td style="text-align:center">图： 周庄的桥</td>
-</tr>
-</tbody>
-</table>
+          <p>对于这个layoutInflater我们肯定不陌生，每次写各种Adatper都遇到他，基本就像下面这样的套路。</p>
+<pre><code>@Override
+public View getView(int i, View view, ViewGroup viewGroup) {
+    SimpleViewHolder viewHolder;
+    if (view == null) {
+        view = LayoutInflater.from(mContext).inflate(R.layout.listitem_demo, null);
+        viewHolder = new SimpleViewHolder();
+        viewHolder.bindView(view);
+        view.setTag(viewHolder);
+    } else {
+        viewHolder = (SimpleViewHolder) view.getTag();
+    }
+</code></pre><p>那么问题来了，这个家伙是怎么加载到他的呢？<br>我们今天去看下。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/31/设计模式系列5---多变灵活的桥接/#more" rel="contents">
+            <a class="btn" href="/2016/01/10/源码探索系列19---加载布局的LayoutInflater/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -407,8 +391,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/31/设计模式系列4---对外包办的门面模型/" itemprop="url">
-                设计模式系列4---对外包办的门面模型
+              <a class="post-title-link" href="/2016/01/08/源码探索系列18---关于资源的加载与匹配的资源机制/" itemprop="url">
+                源码探索系列18---关于资源的加载与匹配的资源机制
               </a>
             
           
@@ -418,8 +402,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-31T16:26:00+08:00" content="2015-12-31">
-            2015-12-31
+          <time itemprop="dateCreated" datetime="2016-01-08T23:41:46+08:00" content="2016-01-08">
+            2016-01-08
           </time>
         </span>
 
@@ -444,8 +428,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/31/设计模式系列4---对外包办的门面模型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/31/设计模式系列4---对外包办的门面模型/" itemprop="commentsCount"></span>
+              <a href="/2016/01/08/源码探索系列18---关于资源的加载与匹配的资源机制/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/08/源码探索系列18---关于资源的加载与匹配的资源机制/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -460,14 +444,13 @@
 
       
         
-          <p>说到门面这个词， 在我国的文化就很有内涵啦！<br>不过<code>Facade</code> 这个词有时候翻译为外观。<br>到底该怎么理解这个门面模型呢？</p>
-<p>我们可以看一个公司的架构 </p>
-<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/20120725112047797.jpg" alt="enter image description here"></p>
-<p><strong>董事长</strong>同他的<strong>总经理</strong>说他要把今年的销售额翻<code>30</code>倍吧。总经理听了脸都青了，但没办法，还是得干活，说行，然后就把指标发下去了，让下面的干活去。即把实际做的事情分割给不同部门，然后自己又在办公室继续玩电脑了。</p>
-<p>这样对于发号施令的董事长，不需要知道具体的细节，只需要记得找总经理负责这事就好了。<br>就是苦了这个总经理，需要了解所有的部门情况，分割不同的事情给下面的人干活去。</p>
-<p>所以我们可以简化这个流程成这样的，老板说要去赚钱，总经理找了技术部开发了个杀手级应用，然后销售部门就负责去卖，从而达到赚钱的效果。</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/6598091212959279517.jpg" alt="enter image description here"></p>
+<p>今天我们来聊聊那个我们加载系统资源的问题。</p>
+<p>说的就是我们放在<code>res</code>目录下的内容，系统是如何获取的。</p>
+<pre><code>getResources().getString(R.string.app_name);
+</code></pre>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/31/设计模式系列4---对外包办的门面模型/#more" rel="contents">
+            <a class="btn" href="/2016/01/08/源码探索系列18---关于资源的加载与匹配的资源机制/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -500,8 +483,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/30/设计模式系列3---搞转换的适配器模型/" itemprop="url">
-                设计模式系列3---搞转换的适配器模型
+              <a class="post-title-link" href="/2016/01/07/源码探索系列17---LRU与LruCache/" itemprop="url">
+                源码探索系列17---LRU与LruCache
               </a>
             
           
@@ -511,8 +494,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-30T21:26:00+08:00" content="2015-12-30">
-            2015-12-30
+          <time itemprop="dateCreated" datetime="2016-01-07T19:06:00+08:00" content="2016-01-07">
+            2016-01-07
           </time>
         </span>
 
@@ -537,8 +520,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/30/设计模式系列3---搞转换的适配器模型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/设计模式系列3---搞转换的适配器模型/" itemprop="commentsCount"></span>
+              <a href="/2016/01/07/源码探索系列17---LRU与LruCache/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/07/源码探索系列17---LRU与LruCache/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -553,13 +536,11 @@
 
       
         
-          <p>用过苹果手机的人对这两样东西应该很熟悉</p>
-<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/adapter.jpg" alt="enter image description here">  <img src="http://7xl9zd.com1.z0.glb.clouddn.com/charge_apple.jpg" alt="enter image description here"></p>
-<p>我们常常需要买多左边那个适配器来用，要不然以苹果这插头，没几个排插能插上的。<br>但有了这转换器的话，只要满足两端标准，就可以<strong>循环利用</strong>，很”环保”.</p>
-<p>例如这样： <img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E5%82%B2%E6%B8%B8%E6%88%AA%E5%9B%BE20151230203716.jpg" alt="enter image description here">    —   或者这个： <img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E5%82%B2%E6%B8%B8%E6%88%AA%E5%9B%BE20151230203809.jpg" alt="enter image description here"></p>
-<p>想当年的巴别塔，如果有这样的做语言转换的翻译人，估计也建好了把。</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/a08b87d6277f9e2fe1bb18c01e30e924b999f368.jpg" alt="enter image description here"><br>前段时间的文章都配图，今天写完才觉得少了什么，想起来要图，所以今天我们就补一只豆逼的哈士奇在这里吧。哈哈</p>
+<p>今天我们来聊聊那个LRU（Least Recently Used 近期最少使用算法）在我们开发过程的实际应用和我们的安卓系统在support包有提供的一种实现<code>LruCache</code>。</p>
+<p>在开始讲它之前，我们来看下他的基本使用。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/30/设计模式系列3---搞转换的适配器模型/#more" rel="contents">
+            <a class="btn" href="/2016/01/07/源码探索系列17---LRU与LruCache/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -592,8 +573,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/30/设计模式系列2---幕后黑手的代理模式/" itemprop="url">
-                设计模式系列2---幕后黑手的代理模式
+              <a class="post-title-link" href="/2016/01/06/源码探索系列---中篇开题/" itemprop="url">
+                源码探索系列---中篇开题
               </a>
             
           
@@ -603,8 +584,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-30T17:21:27+08:00" content="2015-12-30">
-            2015-12-30
+          <time itemprop="dateCreated" datetime="2016-01-06T19:06:00+08:00" content="2016-01-06">
+            2016-01-06
           </time>
         </span>
 
@@ -629,8 +610,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/30/设计模式系列2---幕后黑手的代理模式/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/设计模式系列2---幕后黑手的代理模式/" itemprop="commentsCount"></span>
+              <a href="/2016/01/06/源码探索系列---中篇开题/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/06/源码探索系列---中篇开题/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -645,10 +626,13 @@
 
       
         
-          <p> 今天我们来说说那个代理模式，他的一大功效就是成了挡子弹的人，代替幕后黑手出来干活。<br> 为何这么说呢？<br> 因为人如其名，代理，就是中间人代理商这样的，<br> 我们不用过问到底背后怎么做，只需要找到这个代理人，他可以帮我们搞定所有。</p>
-<p>假设有这么一个人，他可以制造茶叶蛋，炸弹，手枪，火箭，电脑病毒等等。嗯，是个人才。<br>现在他突然手头紧了，想找个朋友帮他看有没什么门路，卖点东西出去，但为了给自己留点后路，他就同他朋友说他会做<code>茶叶蛋</code>，是个十分正经的守法好人民，同时希望帮他卖一点，虽然这朋友并不知道他如意算盘背后是给他背后做的事业提供资金来源。</p>
+          <h2 id=""><a href="#" class="headerlink" title=""></a> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/2014021021414608237.jpg" alt="enter image description here">  </h2><h2 id="u79BB_u5F00_uFF0C_u662F_u4E3A_u4E86_u66F4_u597D_u7684_u91CD_u9022"><a href="#u79BB_u5F00_uFF0C_u662F_u4E3A_u4E86_u66F4_u597D_u7684_u91CD_u9022" class="headerlink" title="离开，是为了更好的重逢"></a> <strong>离开，是为了更好的重逢</strong></h2><p>在写设计模式系列，暂停了对安卓系统的源码探索系列的更新的这对时间。</p>
+<p>重新整理了下心情，打算重新继续开始写第17篇文章。</p>
+<p>但越到后面越不容易，毕竟从<code>UI</code>看到<code>Framework</code>，再探索下去就是<code>HAL</code>层面，越到后面对能力的要求越高，同时耗费的时间和精力也必然会越多。一个不小不大的问题是对于过于底层的内容，暂时还不想去看。</p>
+<p>写安卓程序也有两年多了，靠自学入门，平时的一点努力和当初一位做了六年的资深安卓开发人员指点，现在对基础的安卓开发基本没太大问题了，除了复杂的自定义控件依然觉得…</p>
+<p>所以学到现在，显然也属于一段瓶颈期了，毕竟大多数APP套用下框架，补以一些第三方库，基本很快就可以开发完成，因此开发完一个APP所带来的兴奋也不再那么高了。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/30/设计模式系列2---幕后黑手的代理模式/#more" rel="contents">
+            <a class="btn" href="/2016/01/06/源码探索系列---中篇开题/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -674,7 +658,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/3/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/3/">&raquo;</a>
   </nav>
 
  </div>
@@ -708,21 +692,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-count">75</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

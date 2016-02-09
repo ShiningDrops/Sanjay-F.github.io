@@ -36,7 +36,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shorticon icon" type="image/x-icon" href="/fav.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="SanjayF&apos;s  github  blog">
@@ -77,7 +77,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ceb5544cc01478679a4a6bc9f79ca0eb";
+      hm.src = "//hm.baidu.com/hm.js?18f6d52faaf2600c05e8045494b5935e";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/" itemprop="url">
-                源码探索系列13---Window的PhoneWindow与WindowManager
+              <a class="post-title-link" href="/2016/01/04/设计模式系列17---深入了解的访问者模式/" itemprop="url">
+                设计模式系列17---深入了解的访问者模式
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-28T17:36:00+08:00" content="2015-12-28">
-            2015-12-28
+          <time itemprop="dateCreated" datetime="2016-01-04T19:05:00+08:00" content="2016-01-04">
+            2016-01-04
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/" itemprop="commentsCount"></span>
+              <a href="/2016/01/04/设计模式系列17---深入了解的访问者模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列17---深入了解的访问者模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,116 +255,17 @@
 
       
         
-          <p>关于Window，PhoneWindow和WindowManager三者的关系是：</p>
-<blockquote>
-<p>Window是一个抽象类，他的具体实现是PhoneWindow<br>我们通过WindowManager来管理Window。</p>
-</blockquote>
-<p>我们的所有的界面，例如Activity，Toast，Dialog等都是靠Window来呈现，因此他是View的管理者咯。</p>
-<p>很久前用过他的一个功能就是拿来做消息提醒，当有用户发来特定消息时候，就跑出来一个小悬浮窗来提示用户。现在看得多的就是各种管家关于内存的提示！这真的很让人纠结的安卓机啊！特别是某米的手机，当年发现他不支持这个功能！搞到得单独为他开发一个别的方式….</p>
-<p>好了，说这么多，我们该从哪里开始说起呢？</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/12/27/源码探索系列12---关于事件分发机制/" itemprop="url">
-                源码探索系列12---关于事件分发机制
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-12-27T21:36:00+08:00" content="2015-12-27">
-            2015-12-27
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/android/" itemprop="url" rel="index">
-                  <span itemprop="name">android</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/27/源码探索系列12---关于事件分发机制/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/27/源码探索系列12---关于事件分发机制/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>关于View的事件分发，实质就是关于MotionEvent时间的分发<br>再简单点说就是通过一堆判断，最后决定这个MotionEvent给谁用的问题。</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/u=3692463948,2718815047&amp;fm=21&amp;gp=0.jpg" alt="enter image description here"></p>
+<p>我们有巡视组，他的主要工作就是巡视各个地方的一些重要点，看下他们的工作展开情况，整个巡视过程对重点对象深入的调查，如</p>
 <ul>
-<li><p><strong>三巨头</strong><br>分发过程中有主要涉及到三个人：<br><code>dispatchTouchEvent()</code>,<code>onInterceptTouchEvent()</code>,<code>onTouchEvent()</code><br>这三者的关系如下</p>
-<pre><code> public boolean dispatchTouchEvent(MotionEvent ev) {
-      boolean belongToMe=false;
-      if(onInterceptTouchEvent(ev)){
-           belongToMe=onTouchEvent(ev);
-      }else{
-          belongToMe=child.dispatchTouchEvent(ev);
-      }
-      return belongToMe;
-}
-</code></pre></li>
+<li>调阅、复制有关文件、档案、会议记录等资料；</li>
+<li>以适当方式对被巡视地区、单位的下属单位或者部门进行走访调研；</li>
+<li>听取被巡视地区、单位党委（党组）的工作汇报和有关部门的专题汇报；</li>
 </ul>
+<p>除了上面的，还有别的很多内容，所以我们的巡视组可以对被调查对象有深入的了解，如果有猫腻也可以很快的被发现。</p>
+<p>那么问题来了，我们该怎么做这样的一个模型呢？</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/27/源码探索系列12---关于事件分发机制/#more" rel="contents">
+            <a class="btn" href="/2016/01/04/设计模式系列17---深入了解的访问者模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -397,8 +298,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/27/源码探索系列11---关于View的绘制/" itemprop="url">
-                源码探索系列11---关于View的绘制
+              <a class="post-title-link" href="/2016/01/04/设计模式系列16---响应请求的责任链模式/" itemprop="url">
+                设计模式系列16---响应请求的责任链模式
               </a>
             
           
@@ -408,8 +309,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-27T02:36:00+08:00" content="2015-12-27">
-            2015-12-27
+          <time itemprop="dateCreated" datetime="2016-01-04T17:31:00+08:00" content="2016-01-04">
+            2016-01-04
           </time>
         </span>
 
@@ -434,8 +335,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/27/源码探索系列11---关于View的绘制/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/27/源码探索系列11---关于View的绘制/" itemprop="commentsCount"></span>
+              <a href="/2016/01/04/设计模式系列16---响应请求的责任链模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列16---响应请求的责任链模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -450,9 +351,15 @@
 
       
         
-          <p>我们开发过程，基本需要自定义View，画一些自己的小插件出来<br>这需要我们掌握整个View的绘画过程和一些别的小技巧。<br>这里总结下整个View的源码中涉及到的一些绘制过程的核心部分，<br>之后再来看下整体的内容，毕竟整个源码有近2W1行，不是随便一时半会能搞定的，还是得下不少功夫。</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/Image.jpg" alt="enter image description here"></p>
+<p> 所谓责任落实到位，落实到人，就是要找对特定事情有处理权限的人。</p>
+<p> 我们以法院为例子，小事情就在基层人民法院处理了，大一点的事情就找地市级的中级法院，如果事情闹大的就省级的高级人民法院，如果这事件特别重大，那就是最高人民法院了。</p>
+<p>所以我们看下四个级别：</p>
+<pre><code>最高人民法院 &gt; 高级人民法院  &gt; 中级人民法院 &gt; 基层人民法院
+</code></pre><p>那么问题来了，当年窦娥冤情换成现在是归谁管呢？可以跳级跑去告御状吗?</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/F2004111210514300000.jpg" alt="enter image description here"><br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/27/源码探索系列11---关于View的绘制/#more" rel="contents">
+            <a class="btn" href="/2016/01/04/设计模式系列16---响应请求的责任链模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -485,8 +392,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/25/开源系列1---造个图片选择器/" itemprop="url">
-                开源系列1---造个图片选择器
+              <a class="post-title-link" href="/2016/01/04/设计模式系列15---构表分离的建造者模型/" itemprop="url">
+                设计模式系列15---构表分离的建造者模型
               </a>
             
           
@@ -496,8 +403,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-25T11:41:00+08:00" content="2015-12-25">
-            2015-12-25
+          <time itemprop="dateCreated" datetime="2016-01-04T14:26:00+08:00" content="2016-01-04">
+            2016-01-04
           </time>
         </span>
 
@@ -522,8 +429,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/25/开源系列1---造个图片选择器/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/25/开源系列1---造个图片选择器/" itemprop="commentsCount"></span>
+              <a href="/2016/01/04/设计模式系列15---构表分离的建造者模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列15---构表分离的建造者模型/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -538,14 +445,13 @@
 
       
         
-          <p>打算开个开源系列，用来分享在项目过程中些的一些小轮子。<br>在这年的末尾，挤下时间，看能改几个还勉强过得去的出来分享给大家。<br>能力有些，实现得也不算很优雅。<br>还望各大神指点。</p>
-<h1 id="u6211_u8981_u9020_u8F6E_u5B50"><a href="#u6211_u8981_u9020_u8F6E_u5B50" class="headerlink" title="我要造轮子"></a>我要造轮子</h1><p>作为一名爱折腾人员，重复造轮子这种事还是常做的。<br>没办法啊，做的过程才能发现问题嘛！最少我在做的过程就遇到啦！<br>例如阴影效果，图片如何压缩显示的问题（蹩脚的写了一个ImageLoader实在不怎样，改用Fresco!），排列等等问题</p>
-<p> <a href="https://github.com/Sanjay-F/PhotoSelector">项目的下载地址请点击这里</a></p>
-<p>我们直接上效果图，这个是完成后的样子，目前改得勉强像一回事了。<br>就先粘贴上来，有需要的就拿去再根据自己需要改一个。</p>
-<p> <img src="http://img.blog.csdn.net/20151224225205588" alt="这里写图片描述">     —  <img src="http://img.blog.csdn.net/20151224225846858" alt="这里写图片描述"></p>
-<p><img src="http://img.blog.csdn.net/20151224233556670" alt="这里写图片描述"></p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/1110012133dbbfcc54o.jpg" alt="enter image description here"></p>
+<p> 现在来讲一件很有意思的故事，上面的画很纯洁，只有一种蓝色。但不得不说这图片还是有色差，不能很好的还原实际的色彩，如果有你机会，可以去看下他的<code>IKB</code>色彩是多么的蓝。<br>这种蓝被叫做<code>国际克莱因蓝</code>（international klein blue，缩写IKB）,以<code>伊夫·克莱因</code>（Yves Klein）的名字来命名的。</p>
+<p>这一种独特的天青石蓝色是在他的化学家友人<code>EdouardAdam</code>的帮助下合成的。<br>克莱因相信，只有最<strong>单纯的色彩</strong>才能唤起最强烈的心灵感受力。</p>
+<p>一些艺术家使用各种色彩以求获得艺术生命力，而克莱因宁愿回归单纯。<br>“克莱因蓝”的 RGB 比值是0:47:147，但是明确的数据并不能减少人们面对它时那种震惊——蓝色本身象征着天空和海洋，象征着没有界限，又因为“克莱因蓝”太过纯净，以至于很难找到可与之搭配的色彩进入人们的视野，因此，它的冲击力格外强烈。<br>这种蓝被誉为一种理想之蓝、绝对之蓝，其明净空旷往往使人迷失其中。<br>克莱因曾说：“表达这种感觉，不用解释，也无需语言，就能让心灵感知——我相信，这就是引导我画单色画的感觉。”</p>
+<p>当然啦，现在他的画那是厉害啊，例如他的《IKB 92》卖了一个多亿。也像这个一样，纯蓝色！！！</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/25/开源系列1---造个图片选择器/#more" rel="contents">
+            <a class="btn" href="/2016/01/04/设计模式系列15---构表分离的建造者模型/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -578,8 +484,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/23/源码探索系列10---替代Listview的RecycleView/" itemprop="url">
-                源码探索系列10---替代Listview的RecycleView
+              <a class="post-title-link" href="/2016/01/04/设计模式系列14---管流程不管细节的模板方法模式/" itemprop="url">
+                设计模式系列14---管流程不管细节的模板方法模式
               </a>
             
           
@@ -589,8 +495,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-23T01:22:00+08:00" content="2015-12-23">
-            2015-12-23
+          <time itemprop="dateCreated" datetime="2016-01-04T00:52:00+08:00" content="2016-01-04">
+            2016-01-04
           </time>
         </span>
 
@@ -615,8 +521,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/23/源码探索系列10---替代Listview的RecycleView/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/23/源码探索系列10---替代Listview的RecycleView/" itemprop="commentsCount"></span>
+              <a href="/2016/01/04/设计模式系列14---管流程不管细节的模板方法模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列14---管流程不管细节的模板方法模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -631,14 +537,102 @@
 
       
         
-          <p> 自从有了Recycleview，很多原本是我们的Listview业务都被替代了，关于两者的简单比较，<a href="http://blog.csdn.net/sanjay_f/article/details/48830311">可以看这篇文章</a>。我们今天就去看看他背后故事，下次再写Listview，这名征战多年的老将。</p>
-<p>一些不要搞懂的问题</p>
-<ol>
-<li>为何谷歌推荐用这个，背后的效率是高在哪里？</li>
-<li>LayoutManager是怎么去弄不同布局的</li>
-</ol>
+          <p> 写了这么久，花的时间最多的是在选故事，找图上，写一篇能看的文章真的不容易啊。</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/201206251132405977.jpg" alt="enter image description here"><br>今天来介绍一款“高端智能”的机器人—炒菜机器侠。<br>一个可以会帮我们炒菜的机器人，懒人必备，价格不要你的2999，不要1999，只要899！<br>心动了嘛？赶紧拿起手头的手机，扫码购买吧！</p>
+<p>我们的炒菜机器人，只要你给他材料，就可以煮出你想要的菜。</p>
+<p>什么扬州炒饭，潮州炒饭都不是问题!</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/23/源码探索系列10---替代Listview的RecycleView/#more" rel="contents">
+            <a class="btn" href="/2016/01/04/设计模式系列14---管流程不管细节的模板方法模式/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2016/01/03/设计模式系列13---感知变化的观察者模型/" itemprop="url">
+                设计模式系列13---感知变化的观察者模型
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2016-01-03T23:18:00+08:00" content="2016-01-03">
+            2016-01-03
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/01/03/设计模式系列13---感知变化的观察者模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/设计模式系列13---感知变化的观察者模型/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/33a603bc503a96dd46b3cc65667bb656.jpg" alt="enter image description here"><br>电影《模仿游戏》中，讲述了我们的计算机科学之父<code>图灵</code>通过制造背后那个大机器，来协助盟军破译德国密码系统<code>“英格玛”</code>，从而扭转二战战局的经历。</p>
+<p>如果没图灵用这大机器来破译情报，知道敌军动向，估计整个二战战局可能都被改写！<br>尽管历史没假设，事实就是事实。</p>
+<p>今天我们要说的观察者就是这样的功效，他监视着被观察者，一有什么风吹草动就打报告。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/03/设计模式系列13---感知变化的观察者模型/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -664,7 +658,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/5/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/5/">&raquo;</a>
   </nav>
 
  </div>
@@ -698,21 +692,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-count">75</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

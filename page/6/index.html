@@ -36,7 +36,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shorticon icon" type="image/x-icon" href="/fav.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="SanjayF&apos;s  github  blog">
@@ -77,7 +77,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ceb5544cc01478679a4a6bc9f79ca0eb";
+      hm.src = "//hm.baidu.com/hm.js?18f6d52faaf2600c05e8045494b5935e";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/15/源码探索系列3---四大金刚之Activity的启动过程完全解析/" itemprop="url">
-                源码探索系列3---四大金刚之Activity的启动过程完全解析
+              <a class="post-title-link" href="/2016/01/02/设计模式系列7---金点子多多的策略模式/" itemprop="url">
+                设计模式系列7---金点子多多的策略模式
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-15T01:32:00+08:00" content="2015-12-15">
-            2015-12-15
+          <time itemprop="dateCreated" datetime="2016-01-02T00:40:00+08:00" content="2016-01-02">
+            2016-01-02
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/15/源码探索系列3---四大金刚之Activity的启动过程完全解析/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/15/源码探索系列3---四大金刚之Activity的启动过程完全解析/" itemprop="commentsCount"></span>
+              <a href="/2016/01/02/设计模式系列7---金点子多多的策略模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/02/设计模式系列7---金点子多多的策略模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,40 +255,42 @@
 
       
         
-          <p>在不同版本API，底层实现有些不一样，所以这里贴出现在在看的API版本号<br>API: 23</p>
-<hr>
-<p>关于Activity的四个启动flag，这里下次再说。<br>先说下我们熟悉的一句吧</p>
-<pre><code>startActivity(new Intent(this,Test2Activity.class));
-</code></pre><p>相信我们对这句太熟悉不过了，不过说到这里，我想说下关于写Intent的一个感觉好的实践<br>相信你已写腻了一堆这样的<code>intent</code>，用起来确实很不好的，就像下面这样</p>
-<pre><code>Intent newIntent= new Intent(this,Test2Activity.class);
-        newIntent.putExtra(&quot;data1&quot;, &quot;trialData1&quot;);
-        Bundle bundle=new Bundle();
-        bundle.putSerializable(&quot;key&quot;,&quot;trialData&quot;); 
-        startActivity(newIntent);
-</code></pre><p>像这种方式我在很多开源项目看到了很多这样的写法，这种不好的方式在于，很多我们要跳到同一个Activity里面去时候，重复写了，这很显然不适合<code>DRY原则</code>，而且我们在另外一个Activity获取数据时候，也需要记住这些Key，这不太好！看到的另外一种方式就是直接写一个<code>IntentUtil</code>类，里面写满各种Intent，感觉这种也不是很好！虽然没重复了，不过在获取数据方面还不是很好，还需要定义一些Constant数据，这里提供我个人觉得好的方式，在我们的Activity里面写一个静态的<code>makeIntent（）</code>函数。<br>如下：</p>
-<pre><code>public class Test2Activity extends AppCompatActivity {
+          <p>编这个策略模式的故事真的不好想，他和前面的桥接模式很类似，虽然桥接是结构模式，而策略是行为模式。</p>
+<p>这次的故事真的不容易编啊，我们来看下一个我们变成遇到的情况吧。</p>
+<pre><code> public class SortHelper{
 
+    public static final int SORT_HEAP=0;
+    public static final int SORT_BIN=1;
+    public static final int SORT_SHELL=2;
 
-    public static final String EXTRA_DATA = &quot;extra_data&quot;;
-
-    public static Intent makeIntent(Context mContext, String data) {
-        return new Intent(mContext, Test2Activity.class).putExtra(EXTRA_DATA, data);
+    public void sort(int type){
+        if(type==SORT_HEAP){
+            HeapSort();
+        }else if(type==SORT_BIN){
+            BinSort();
+        }else if(type==SORT_SHELL){
+            ShellSort();
+        }
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test2);
-         //获取传过来的数据
-        String result = getIntent().getStringExtra(EXTRA_DATA);
+    public void HeapSort(){
+        System.out.println(&quot;this is heap sort&quot;);
+
+    }
+
+    public void BinSort(){
+        System.out.println(&quot;this is heap sort&quot;);
+
+    }
+    public void ShellSort(){
+        System.out.println(&quot;this is shell sort&quot;);
+
     }
 }
-</code></pre><p>之后我们需要调整到这个界面，只需要这么写</p>
-<pre><code>startActivity(Test2Activity.makeIntent(this,&quot;data&quot;));
-</code></pre><p>通过这个静态方法，我们在数据里面读取方面都很简单，而且启动的时候也知道是要跳到那个界面去,重要是看起来很简单！而且不需要去定义一个常量类来记录这些数据的<code>Key</code></p>
-<p>最后的一个大杀器就是直接写成模板。</p>
+</code></pre><p>在我们的这个排序小助手类，我们根据不同的算法来选择不同的实现。但这个有一些问题，如果我们以后加了新的方法怎么办？<br>一种方法淡然是直接简单的修改，加多了<code>else if</code>，然后加多新的方法，但这不太像ocp原则啊，我们对修改尽量封闭的。而且当条件多了的时候，整个就恨臃肿，不容易维护了。</p>
+<p>为此我们需要一些调整，这时候策略模式登场</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/15/源码探索系列3---四大金刚之Activity的启动过程完全解析/#more" rel="contents">
+            <a class="btn" href="/2016/01/02/设计模式系列7---金点子多多的策略模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -321,8 +323,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/09/源码探索系列2---深入解析AsyncTask/" itemprop="url">
-                源码探索系列2---深入解析AsyncTask
+              <a class="post-title-link" href="/2016/01/01/设计模式系列6---分隔的装饰模式/" itemprop="url">
+                设计模式系列6---分隔与包装的装饰模式
               </a>
             
           
@@ -332,8 +334,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-09T02:04:00+08:00" content="2015-12-09">
-            2015-12-09
+          <time itemprop="dateCreated" datetime="2016-01-01T00:15:00+08:00" content="2016-01-01">
+            2016-01-01
           </time>
         </span>
 
@@ -358,8 +360,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/09/源码探索系列2---深入解析AsyncTask/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/09/源码探索系列2---深入解析AsyncTask/" itemprop="commentsCount"></span>
+              <a href="/2016/01/01/设计模式系列6---分隔的装饰模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/01/设计模式系列6---分隔的装饰模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -374,62 +376,12 @@
 
       
         
-          <p>在解析前，我们先来看下一般我们使用的情况是怎样的<br>下面写了一个简单的demo，用来做个简单的任务，从1数到100，同时调用<code>publishProgress(i);</code>来更新下进度。<br>我想用过的人自己直接阅读下面代码没有任何问题。</p>
-<pre><code>class MyDemoAsyncTask extends AsyncTask&lt;Integer, Integer, String&gt; {
-
-        private TextView textView;
-        private ProgressBar progressBar;
-
-        public MyDemoAsyncTask(TextView textView, ProgressBar progressBar) {
-            super();
-            this.textView = textView;
-            this.progressBar = progressBar;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            textView.setText(&quot;开始执行异步线程&quot;);
-        }
-
-        @Override
-        protected String doInBackground(Integer... params) {
-            for (int i = 1; i &lt;= 100; i += 1) {
-                publishProgress(i);         
-               try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-            return &quot;resultString&quot;;
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            progressBar.setProgress(values[0]);
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            textView.setText(&quot;异步操作执行结束&quot; + result);
-        }
-    }
-</code></pre><h1 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题</h1><p>好了，这样一个demo，有几点需要解决的问题。</p>
-<ol>
-<li><p>为何他只能执行一次，再调用execute()就会出错</p>
-</li>
-<li><p>doInBackground()是怎么做到在后台执行的</p>
-</li>
-<li><p>为何 onPreExecute()，onProgressUpdate(）和onPostExecute(）能运行在主线程</p>
-</li>
-<li><p>为何Task的实例必须在UI thread中创建,execute方法必须在UI thread中调用；</p>
-</li>
-<li><p>为何不能手动的调用onPreExecute()，onPostExecute()，doInBackground(),，onProgressUpdate()这几个方法；</p>
-</li>
-</ol>
-<p>带着这么几个问题，我们开始深入的看下AsyncTask的源代码。</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83.jpg" alt="enter image description here"></p>
+<p>在说完门面，需要提到一个他的近亲，就是同属于结构模式的装饰(<strong>Decorator</strong>)。</p>
+<p>按照开头写故事思路，这故事真是憋了好久才想到套娃的案例。</p>
+<p>应该很多人都有看过套娃吧？没看过的就看上面的图，挺好懂得，就是一个嵌套一个的，挺有意思的。<br>不断的拆开这些套娃，发现里面还有更小的套娃，在拆开发现还有更更小的套娃….<br>打开过程是挺惊喜的，不过装回去就麻烦了，呵呵。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/09/源码探索系列2---深入解析AsyncTask/#more" rel="contents">
+            <a class="btn" href="/2016/01/01/设计模式系列6---分隔的装饰模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -462,8 +414,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/08/源码探索系列1---Handler与HandlerLeak的那些事/" itemprop="url">
-                源码探索系列1---Handler与HandlerLeak的那些事
+              <a class="post-title-link" href="/2015/12/31/设计模式系列5---多变灵活的桥接/" itemprop="url">
+                设计模式系列5---多变灵活的桥接
               </a>
             
           
@@ -473,8 +425,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-08T23:55:00+08:00" content="2015-12-08">
-            2015-12-08
+          <time itemprop="dateCreated" datetime="2015-12-31T23:26:00+08:00" content="2015-12-31">
+            2015-12-31
           </time>
         </span>
 
@@ -499,8 +451,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/08/源码探索系列1---Handler与HandlerLeak的那些事/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/08/源码探索系列1---Handler与HandlerLeak的那些事/" itemprop="commentsCount"></span>
+              <a href="/2015/12/31/设计模式系列5---多变灵活的桥接/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/31/设计模式系列5---多变灵活的桥接/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -515,10 +467,35 @@
 
       
         
-          <p>开始学安卓的时候，我对一些异步操作都是用Handler和AsyncTask的。</p>
-<p>现在那个Handler被挂上了泄漏的名字！<br>最近在设计一个功能的时候，像借鉴于handler的设计模式，所以顺便顺便写篇文章记录下。</p>
+          <table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>《桥接》 —  SanjayF</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">小时候，梦想是当一名宇航员，驾驭飞船，太空探索。</td>
+</tr>
+<tr>
+<td style="text-align:center">长大后，梦想是当一名渔船夫，划着扁舟，荡漾湖面。</td>
+</tr>
+<tr>
+<td style="text-align:center">后来啊，梦想是当一名大土豪，开着汽车，周游列国。</td>
+</tr>
+<tr>
+<td style="text-align:center">而现在，梦想是当一名好码农，敲着代码，写完桥接。</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="http://7xl9zd.com1.z0.glb.clouddn.com/19304468_19304468_1364439264237_mthumb.jpg" alt="enter image description here"></td>
+</tr>
+<tr>
+<td style="text-align:center">图： 周庄的桥</td>
+</tr>
+</tbody>
+</table>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/08/源码探索系列1---Handler与HandlerLeak的那些事/#more" rel="contents">
+            <a class="btn" href="/2015/12/31/设计模式系列5---多变灵活的桥接/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -551,8 +528,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/07/Android测试教程13--模拟服务器MockServer之Moco详细介绍/" itemprop="url">
-                Android测试教程13--模拟服务器MockServer之Moco详细介绍
+              <a class="post-title-link" href="/2015/12/31/设计模式系列4---对外包办的门面模型/" itemprop="url">
+                设计模式系列4---对外包办的门面模型
               </a>
             
           
@@ -562,8 +539,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-07T15:33:00+08:00" content="2015-12-07">
-            2015-12-07
+          <time itemprop="dateCreated" datetime="2015-12-31T16:26:00+08:00" content="2015-12-31">
+            2015-12-31
           </time>
         </span>
 
@@ -588,8 +565,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/07/Android测试教程13--模拟服务器MockServer之Moco详细介绍/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/07/Android测试教程13--模拟服务器MockServer之Moco详细介绍/" itemprop="commentsCount"></span>
+              <a href="/2015/12/31/设计模式系列4---对外包办的门面模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/31/设计模式系列4---对外包办的门面模型/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -604,9 +581,14 @@
 
       
         
-          <p> 前面一篇介绍了如何用mockito来测试我们的一些异步任务，例如网络请求时候的异步回调。<br>现在做进一步的介绍，一个模拟我们的服务器的东东–<a href="https://github.com/dreamhead/moc">moco</a></p>
+          <p>说到门面这个词， 在我国的文化就很有内涵啦！<br>不过<code>Facade</code> 这个词有时候翻译为外观。<br>到底该怎么理解这个门面模型呢？</p>
+<p>我们可以看一个公司的架构 </p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/20120725112047797.jpg" alt="enter image description here"></p>
+<p><strong>董事长</strong>同他的<strong>总经理</strong>说他要把今年的销售额翻<code>30</code>倍吧。总经理听了脸都青了，但没办法，还是得干活，说行，然后就把指标发下去了，让下面的干活去。即把实际做的事情分割给不同部门，然后自己又在办公室继续玩电脑了。</p>
+<p>这样对于发号施令的董事长，不需要知道具体的细节，只需要记得找总经理负责这事就好了。<br>就是苦了这个总经理，需要了解所有的部门情况，分割不同的事情给下面的人干活去。</p>
+<p>所以我们可以简化这个流程成这样的，老板说要去赚钱，总经理找了技术部开发了个杀手级应用，然后销售部门就负责去卖，从而达到赚钱的效果。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/07/Android测试教程13--模拟服务器MockServer之Moco详细介绍/#more" rel="contents">
+            <a class="btn" href="/2015/12/31/设计模式系列4---对外包办的门面模型/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -639,8 +621,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/05/Android测试教程12--模拟读取的文件数据库/" itemprop="url">
-                Android测试教程12--模拟读取的文件/数据库
+              <a class="post-title-link" href="/2015/12/30/设计模式系列3---搞转换的适配器模型/" itemprop="url">
+                设计模式系列3---搞转换的适配器模型
               </a>
             
           
@@ -650,8 +632,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-05T16:13:00+08:00" content="2015-12-05">
-            2015-12-05
+          <time itemprop="dateCreated" datetime="2015-12-30T21:26:00+08:00" content="2015-12-30">
+            2015-12-30
           </time>
         </span>
 
@@ -676,8 +658,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/05/Android测试教程12--模拟读取的文件数据库/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/05/Android测试教程12--模拟读取的文件数据库/" itemprop="commentsCount"></span>
+              <a href="/2015/12/30/设计模式系列3---搞转换的适配器模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/设计模式系列3---搞转换的适配器模型/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -692,9 +674,13 @@
 
       
         
-          <p> 有时我们需要对文件或数据库进行测试，但我们又不想破坏应用程序或设备原有的数据。<br>此时我们就需要一个Mock来替代他们，这里的Mock不是android.test.mock，<br>但也是android.test包下面的，<code>RenamingDelegatingContext</code>的类。</p>
+          <p>用过苹果手机的人对这两样东西应该很熟悉</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/adapter.jpg" alt="enter image description here">  <img src="http://7xl9zd.com1.z0.glb.clouddn.com/charge_apple.jpg" alt="enter image description here"></p>
+<p>我们常常需要买多左边那个适配器来用，要不然以苹果这插头，没几个排插能插上的。<br>但有了这转换器的话，只要满足两端标准，就可以<strong>循环利用</strong>，很”环保”.</p>
+<p>例如这样： <img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E5%82%B2%E6%B8%B8%E6%88%AA%E5%9B%BE20151230203716.jpg" alt="enter image description here">    —   或者这个： <img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E5%82%B2%E6%B8%B8%E6%88%AA%E5%9B%BE20151230203809.jpg" alt="enter image description here"></p>
+<p>想当年的巴别塔，如果有这样的做语言转换的翻译人，估计也建好了把。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/05/Android测试教程12--模拟读取的文件数据库/#more" rel="contents">
+            <a class="btn" href="/2015/12/30/设计模式系列3---搞转换的适配器模型/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -720,7 +706,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/7/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/7/">&raquo;</a>
   </nav>
 
  </div>
@@ -754,21 +740,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">54</span>
+              <span class="site-state-item-count">75</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

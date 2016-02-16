@@ -46,7 +46,7 @@
 时间，时间，还是时间。不知不觉de过了一年，从">
 <meta property="og:type" content="article">
 <meta property="og:title" content="春节间的2015年的小结">
-<meta property="og:url" content="http://yoursite.com/2016/02/15/春节间的2015年的小结/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/02/16/春节间的2015年的小结/index.html">
 <meta property="og:site_name" content="SanjayF's blog">
 <meta property="og:description" content="乱折腾了一年，又是一年，到了今天开始七天的年假。一年前，还在做所谓的创业，还在坚持着渺茫的希望。像很多人说的那样的一句话:”那时候还很好，很想回到过去。”
 但我不要，我不想回去。记得过去，更好的走下去。成长，没有后退的路。
@@ -60,9 +60,10 @@
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/dog.png">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/240391-1305140R34323.jpg">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-02-09%2012.38.49.png">
+<meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/blog_android-system-architecture1.jpg">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/blog_%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-02-14%2013.12.44.png">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/blog_20120507203733_SKeyX.thumb.700_0.jpeg">
-<meta property="og:updated_time" content="2016-02-15T14:23:24.000Z">
+<meta property="og:updated_time" content="2016-02-16T15:13:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="春节间的2015年的小结">
 <meta name="twitter:description" content="乱折腾了一年，又是一年，到了今天开始七天的年假。一年前，还在做所谓的创业，还在坚持着渺茫的希望。像很多人说的那样的一句话:”那时候还很好，很想回到过去。”
@@ -231,8 +232,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-02-15T22:23:24+08:00" content="2016-02-15">
-            2016-02-15
+          <time itemprop="dateCreated" datetime="2016-02-16T23:13:49+08:00" content="2016-02-16">
+            2016-02-16
           </time>
         </span>
 
@@ -257,8 +258,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/02/15/春节间的2015年的小结/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/15/春节间的2015年的小结/" itemprop="commentsCount"></span>
+              <a href="/2016/02/16/春节间的2015年的小结/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/春节间的2015年的小结/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -438,6 +439,17 @@
 <p> 今天和一个小伙伴闲聊，从司法考试说到去加拿大读硕。内心又是一点点的憧憬，也想去看看，体验那是什么感觉。做律师也是挺好的职业，接几个案子，然后觉得累的时候可以不上班在家待着，没有强制的上班要求，完全的是做完一个项目，就可以休息几天的类型。很久前在地铁遇到chancy，他刚去完飞机场那边的菠萝会会议，闲聊说到工作这件事。他更喜欢可以做项目制的这种，做完可以休息一段时间，不用一直每天都要上班，那样很累。是的，这种项目制的形式，某种程度真的挺不赖的。</p>
 <p>王石都已经60岁了，还跑去英国游学，结结巴巴的几句英文，就那样坚持过来，三年过去了。</p>
 <p>还有很多时间。是的，时间，时间，我剩下的是有很多可能性的时间。</p>
+<h1 id="u5F00_u53D1"><a href="#u5F00_u53D1" class="headerlink" title="开发"></a>开发</h1><p>写了这么久，终于想写点关于开发的事情了。<br>从大三开始写安卓到现在，出现了点瓶颈问题，大部分时间都是应用层级别的，没有深入的去做什么大而深入的东西，对性能的优化提升方面没下功夫。</p>
+<p>前段时间开始写的探索源码系列，有一个绕不过去的地方就是NDK,遇到各种native 方法。<br>开发这么久，弄完一些所谓的架构，把代码写得稍微不像一个写“屎一样的代码“的人后，开始捣腾的就是写c/c++代码了，为了优化性能，提高程序的健壮性，不得不封装出各种.so库，同时利用linux的一些特性来做一些优化的内容。</p>
+<p>初始学习安卓开发的时候，入门第一章说的往往是安卓体系。如下图</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/blog_android-system-architecture1.jpg" alt="enter image description here"></p>
+<p>如果说开发是打怪，那么一开始打的就是applications级别的小怪。最后面的就是linux kernel级别的大怪兽。<br>java的现在流行的微服务中的Docker和虚拟机vmware的一个区别就是运行的是在kernel，两者的性能当然是不一样的。</p>
+<p>所以做到后面深入的话，无可避免的需要做的一件事情就是升级打大怪，毕竟做太久应用层的东西，容易让人觉得累，还没有太大的成就感，虽然一般老板才不管你这个，只要做出来就行，呵呵。</p>
+<p>这段时间抽空学习了ios的内容，感觉到了自己当初学习安卓开发的经历感觉，入门的做一个从网络加载数据回来，保存本地，然后显示的软件app，然后学习定制view的内容，再深入的看一些源码，然后尝试做一个类似的东西。对于一些不那么重要的内容，等到开发需要的时候再看下知道怎么用就好了，一个熟悉的套路。<br>学的过程，不得不说有一些组件确实不错，例如那个选日期的，那确实看起来比安卓的漂亮些，另外我也很奇怪为何安卓这么久也不提供一个官方的下拉刷新和上拉加载更多的listview，虽然有SwipeRefreshLayout这个轮子了。</p>
+<p>有时候觉得自己好像一个打水的和尚，捡东西的小孩，什么都想学，可又没花多少时间，同时平时工作又没有实际的运用到，最后成了“前女友“一样存在的东西－－爱过，哈哈哈。</p>
+<p>这一年想学的内容真的是乱七八糟，希望自己就这样顺利度过吧。哈哈。<br>学习一些优化方面的内容，然后就开始继续深入服务器方面的内容。</p>
+<p>这个给我的感觉才是皇冠上的明珠，服务器永生。</p>
+<p>毕竟什么服务最终都是交给他，但他的表现形式可以多样，可以是WEB ，IOS，ANDROID，PC，智能XXx…</p>
 <h1 id="u76EE_u6807_uFF0C_u65B0_u7684_u8D77_u70B9"><a href="#u76EE_u6807_uFF0C_u65B0_u7684_u8D77_u70B9" class="headerlink" title="目标，新的起点"></a>目标，新的起点</h1><blockquote>
 <p>新目标的出现，总在一段浑浑噩噩的发展过后。</p>
 </blockquote>
@@ -493,6 +505,12 @@
 <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/blog_20120507203733_SKeyX.thumb.700_0.jpeg" alt="禁闭岛"></p>
 <p>说上面这句话，突然觉得自己这是个糟糕的过程，打破了改进的壁画，没有进一步的迭代的可能。自我放弃得像禁闭岛中的男主角一样还是治不好。</p>
 <hr>
+<p>这两个月的阅读量发现自己急剧的下跌啊，每个月从15本左右锐减成现在5的本左右。<br>一来时觉得身体累了，想好好休息一段时间。<br>二来是心还是不静，不能持续的看点“课外书“，专业能力的提升，涨工资，成了一个迫切的想法。<br>三来是最近的加班确实多了，整个人斗志开始有了低迷。</p>
+<p>说着么多，一个字就是<strong>“懒“</strong>嘛。哈哈哈哈哈</p>
+<p>写到这里，很多内容都不知道自己原本想写的是什么了。哈哈哈哈哈</p>
+<p>-</p>
+<pre><code>- . 。🐟
+</code></pre><hr>
 <p>未完待续…</p>
 </span>
       
@@ -532,10 +550,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/15/春节间的2015年的小结/"
+        <div class="ds-share flat" data-thread-key="2016/02/16/春节间的2015年的小结/"
      data-title="春节间的2015年的小结"
      data-content=""
-     data-url="http://yoursite.com/2016/02/15/春节间的2015年的小结/">
+     data-url="http://yoursite.com/2016/02/16/春节间的2015年的小结/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -565,8 +583,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/02/15/春节间的2015年的小结/"
-                   data-title="春节间的2015年的小结" data-url="http://yoursite.com/2016/02/15/春节间的2015年的小结/">
+              <div class="ds-thread" data-thread-key="2016/02/16/春节间的2015年的小结/"
+                   data-title="春节间的2015年的小结" data-url="http://yoursite.com/2016/02/16/春节间的2015年的小结/">
               </div>
             
           </div>
@@ -648,7 +666,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u5F00_u7BC7"><span class="nav-number">1.</span> <span class="nav-text">开篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u7530_u56ED"><span class="nav-number">1.1.</span> <span class="nav-text">田园</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u65CB_u98CE_u6562_u6B7B_u961F"><span class="nav-number">1.1.1.</span> <span class="nav-text">旋风敢死队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u9A91_u884C_u897F_u85CF"><span class="nav-number">1.1.2.</span> <span class="nav-text">骑行西藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5EA6_u8FC7_u5BD2_u51AC"><span class="nav-number">1.1.3.</span> <span class="nav-text">度过寒冬</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u575A_u6301"><span class="nav-number">1.1.4.</span> <span class="nav-text">坚持</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u6709_u5931_u5FC5_u6709_u5F97"><span class="nav-number">2.</span> <span class="nav-text">有失必有得</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5F97"><span class="nav-number">2.1.</span> <span class="nav-text">得</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F4D_u7F6E"><span class="nav-number">2.1.1.</span> <span class="nav-text">位置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u96C6_u4E0E_u5206"><span class="nav-number">2.2.</span> <span class="nav-text">集与分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u96C6"><span class="nav-number">2.2.1.</span> <span class="nav-text">集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5206"><span class="nav-number">2.2.2.</span> <span class="nav-text">分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5F8B_u5E08"><span class="nav-number">2.3.</span> <span class="nav-text">律师</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u540D_u5B57_u7684_u529B_u91CF"><span class="nav-number">3.</span> <span class="nav-text">名字的力量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u80CC_u666F"><span class="nav-number">3.1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Growth_Hacking"><span class="nav-number">3.1.1.</span> <span class="nav-text">Growth Hacking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eBay_Germany"><span class="nav-number">3.1.2.</span> <span class="nav-text">eBay Germany</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u63A2_u8BA8"><span class="nav-number">3.2.</span> <span class="nav-text">探讨</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u53D1_u5C55"><span class="nav-number">4.</span> <span class="nav-text">发展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5207_u5165_u70B9"><span class="nav-number">4.1.</span> <span class="nav-text">切入点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6307_u5BFC"><span class="nav-number">4.2.</span> <span class="nav-text">指导</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u91CE_u5FC3"><span class="nav-number">5.</span> <span class="nav-text">野心</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u80CC_u666F-1"><span class="nav-number">5.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u805A_u4F1A"><span class="nav-number">5.2.</span> <span class="nav-text">聚会</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u76EE_u6807_uFF0C_u65B0_u7684_u8D77_u70B9"><span class="nav-number">6.</span> <span class="nav-text">目标，新的起点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u90A3_u4E48_uFF0C_u65B0_u7684_u8D77_u70B9_u662F_uFF1F"><span class="nav-number">6.1.</span> <span class="nav-text">那么，新的起点是？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u540E_u8BB0"><span class="nav-number">7.</span> <span class="nav-text">后记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u5F00_u7BC7"><span class="nav-number">1.</span> <span class="nav-text">开篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u7530_u56ED"><span class="nav-number">1.1.</span> <span class="nav-text">田园</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u65CB_u98CE_u6562_u6B7B_u961F"><span class="nav-number">1.1.1.</span> <span class="nav-text">旋风敢死队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u9A91_u884C_u897F_u85CF"><span class="nav-number">1.1.2.</span> <span class="nav-text">骑行西藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5EA6_u8FC7_u5BD2_u51AC"><span class="nav-number">1.1.3.</span> <span class="nav-text">度过寒冬</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u575A_u6301"><span class="nav-number">1.1.4.</span> <span class="nav-text">坚持</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u6709_u5931_u5FC5_u6709_u5F97"><span class="nav-number">2.</span> <span class="nav-text">有失必有得</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5F97"><span class="nav-number">2.1.</span> <span class="nav-text">得</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F4D_u7F6E"><span class="nav-number">2.1.1.</span> <span class="nav-text">位置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u96C6_u4E0E_u5206"><span class="nav-number">2.2.</span> <span class="nav-text">集与分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u96C6"><span class="nav-number">2.2.1.</span> <span class="nav-text">集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5206"><span class="nav-number">2.2.2.</span> <span class="nav-text">分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5F8B_u5E08"><span class="nav-number">2.3.</span> <span class="nav-text">律师</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u540D_u5B57_u7684_u529B_u91CF"><span class="nav-number">3.</span> <span class="nav-text">名字的力量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u80CC_u666F"><span class="nav-number">3.1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Growth_Hacking"><span class="nav-number">3.1.1.</span> <span class="nav-text">Growth Hacking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eBay_Germany"><span class="nav-number">3.1.2.</span> <span class="nav-text">eBay Germany</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u63A2_u8BA8"><span class="nav-number">3.2.</span> <span class="nav-text">探讨</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u53D1_u5C55"><span class="nav-number">4.</span> <span class="nav-text">发展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5207_u5165_u70B9"><span class="nav-number">4.1.</span> <span class="nav-text">切入点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6307_u5BFC"><span class="nav-number">4.2.</span> <span class="nav-text">指导</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u91CE_u5FC3"><span class="nav-number">5.</span> <span class="nav-text">野心</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u80CC_u666F-1"><span class="nav-number">5.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u805A_u4F1A"><span class="nav-number">5.2.</span> <span class="nav-text">聚会</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u5F00_u53D1"><span class="nav-number">6.</span> <span class="nav-text">开发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u76EE_u6807_uFF0C_u65B0_u7684_u8D77_u70B9"><span class="nav-number">7.</span> <span class="nav-text">目标，新的起点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u90A3_u4E48_uFF0C_u65B0_u7684_u8D77_u70B9_u662F_uFF1F"><span class="nav-number">7.1.</span> <span class="nav-text">那么，新的起点是？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u540E_u8BB0"><span class="nav-number">8.</span> <span class="nav-text">后记</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

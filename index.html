@@ -202,6 +202,114 @@
           
           
             
+              <a class="post-title-link" href="/2016/09/27/源码探索系列44---关于AM的forceStopPackage/" itemprop="url">
+                源码探索系列44---关于AM的forceStopPackage
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2016-09-27T23:25:00+08:00" content="2016-09-27">
+            2016-09-27
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/09/27/源码探索系列44---关于AM的forceStopPackage/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/27/源码探索系列44---关于AM的forceStopPackage/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>最近想寻找什么方法能够彻底的关闭别人的app！<br>这听起来就很流氓，居然是关闭别人的，而且还要是关闭 <code>前台进程（Foreground process)</code>，这想法真大胆。查了下目前的资料，</p>
+<ol>
+<li><p>类似各种xx大师，管家的一键加速功能，这种根据各个进程adj评分去关闭方案，似乎对于前台进程是鞭长莫及。<br>按照我们熟悉的</p>
+</li>
+<li><p>forceStopPackage  这个是AM的隐藏方法，实际上由于签名，uid等限制条件，并不能真的关闭第三方，别人的程序。另外AM还有别的方法听起来像可以关闭别人进程的，如<code>killBackgroundProcesses</code>，<code>removeTask</code>等。</p>
+</li>
+<li><p>Process.killProcess()<br>在process这个类里面，由几个方法可以调用去关闭，其中有一个的注释很有意思，打算贴出来。</p>
+<pre><code> /**
+ * @hide
+ * Private impl for avoiding a log message...  DO NOT USE without doing
+ * your own log, or the Android Illuminati （安卓光明会）will find you some night and beat you up.
+ * 这段注释很调皮😝，特拿出来哈
+ */
+public static final void killProcessQuiet(int pid) {
+    sendSignalQuiet(pid, SIGNAL_KILL);
+}
+
+public static final native void sendSignalQuiet(int pid, int signal);
+</code></pre></li>
+</ol>
+<p>对于上面的所有，这篇文章主要记录<code>forceStopPackage（）</code>背后执行的内容，别的方法之后再考虑写。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/27/源码探索系列44---关于AM的forceStopPackage/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2016/09/09/源码探索系列43---关于FragmentStatePagerAdapter和FragmentPagerAdapter/" itemprop="url">
                 源码探索系列43---关于FragmentStatePagerAdapter和FragmentPagerAdapter
               </a>
@@ -569,97 +677,6 @@ public void destroyItem(ViewGroup container, int position, Object object)
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2016/06/19/源码探索系列40---关于Dalvik的内存分配过程/" itemprop="url">
-                源码探索系列40---关于Dalvik的内存分配过程
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2016-06-19T12:55:46+08:00" content="2016-06-19">
-            2016-06-19
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/android/" itemprop="url" rel="index">
-                  <span itemprop="name">android</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/06/19/源码探索系列40---关于Dalvik的内存分配过程/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/19/源码探索系列40---关于Dalvik的内存分配过程/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>我们新建一个对象后，到底我们的虚拟机是怎么分配空间的呢？<br>我们以前都听说是一些基本数据类型会被放到栈。如果是对象的话，会放到堆里面去，对这个对象的引用是放到栈里面去的。类似下面这张图一样，我们的data这个变量是放在左边的栈，然后实际的内存空间即data引用的这部分，是放在右边的堆里面的。</p>
-<p>那么实际是这样吗？真的是这样吗？</p>
-<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/dalvik_%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A0%86%E4%B8%8E%E6%A0%88%20%281%29.png" alt="enter image description here"></p>
-<p>我们带着疑问，来看下dalvik为对象分配内存过程是怎样的，最后来回复这个问题。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/19/源码探索系列40---关于Dalvik的内存分配过程/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -698,7 +715,7 @@ public void destroyItem(ViewGroup container, int position, Object object)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">102</span>
+              <span class="site-state-item-count">103</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -712,7 +729,7 @@ public void destroyItem(ViewGroup container, int position, Object object)
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">116</span>
+              <span class="site-state-item-count">118</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

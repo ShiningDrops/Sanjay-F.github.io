@@ -49,7 +49,7 @@
 现在那个Handler被挂上了泄漏的名字！最近在设计一个功能的时候，像借鉴于handler的设计模式，所以顺便顺便写篇文章记录下。">
 <meta property="og:image" content="http://pic002.cnblogs.com/images/2012/328668/2012060815460614.jpg">
 <meta property="og:image" content="http://img.blog.csdn.net/20151208214652271">
-<meta property="og:updated_time" content="2016-01-02T13:13:51.000Z">
+<meta property="og:updated_time" content="2016-06-11T16:23:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="源码探索系列1---Handler与HandlerLeak的那些事">
 <meta name="twitter:description" content="开始学安卓的时候，我对一些异步操作都是用Handler和AsyncTask的。
@@ -561,7 +561,12 @@ private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMilli
                 ....
         }
     }
-</code></pre><p>好了，节选了一部分代码，我们可以看到，这个next方法就是一个无限循环的方法，如果消息队列有消息，而且时间到了，那么就返回，如果时间还没到，那就等待下一次的唤醒。如果没有消息，那么就一直堵塞在哪里</p>
+</code></pre><p>好了，节选了一部分代码，我们可以看到，这个next方法就是一个无限循环的方法，如果消息队列有消息，而且时间到了，那么就返回，如果时间还没到，那就等待下一次的唤醒。如果没有消息，那么就一直堵塞在哪里。</p>
+<blockquote>
+<p>那么为何这个死循环没有卡死程序呢？</p>
+</blockquote>
+<p>我们的安卓是基于Linux的，其中有<code>pipe/epoll</code>机制，所以在主线程的MessageQueue没有消息时，便<strong>阻塞</strong><code>queue.next()</code>中的<code>nativePollOnce()</code>方法。此时主线程会释放CPU资源进入<code>休眠状态</code>，直到下个消息到达或者有事务<strong>发生</strong>，通过往pipe管道写端写入数据来唤醒主线程工作。<br>所以可以简单的理解epoll机制是一种 <strong>观察者模型</strong>，（背后是一种IO多路复用机制，可以同时监控多个描述符，当描述符就绪，则通知相应 <strong>消费者</strong>进行特定操作。<br>所以实质上，主线程其实基本是<strong>休眠状态</strong>，并不会消耗大量CPU资源。从而卡死程度！</p>
+<hr>
 <pre><code>if (now &lt; msg.when) {
   // Next message is not ready.  Set a timeout to wake up when it is ready.
    nextPollTimeoutMillis = (int) Math.min(msg.when - now, Integer.MAX_VALUE);
@@ -786,7 +791,7 @@ MessageQueue(boolean quitAllowed) {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -800,7 +805,7 @@ MessageQueue(boolean quitAllowed) {
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/02/22/写在自己的第一本译本前/" itemprop="url">
-                写在自己的第一本译本前
+              <a class="post-title-link" href="/2016/09/09/源码探索系列43---关于FragmentStatePagerAdapter和FragmentPagerAdapter/" itemprop="url">
+                源码探索系列43---关于FragmentStatePagerAdapter和FragmentPagerAdapter
               </a>
             
           
@@ -213,97 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-02-22T23:40:00+08:00" content="2016-02-22">
-            2016-02-22
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/编程人生/" itemprop="url" rel="index">
-                  <span itemprop="name">编程人生</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/02/22/写在自己的第一本译本前/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/22/写在自己的第一本译本前/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/blog_51oZlMkZlaL.jpg" alt="enter image description here"></p>
-<p>最近重新看了一遍<a href="http://www.amazon.com/True-Believer-Movements-Perennial-Paperback/dp/0060505915/ref=sr_1_1?ie=UTF8&amp;qid=1456151315&amp;sr=8-1&amp;keywords=The%20True%20Believer">《The True Believer —Thoughts on the Nature of Mass Movements》</a>，现在是第三遍了，每次都可以得到一些宁静。大概可能是因为在这里面可以找到一个解释，来安慰自己无知的内心吧。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/22/写在自己的第一本译本前/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2016/02/18/源码探索系列23---那个做布局性能优化的ViewStub/" itemprop="url">
-                源码探索系列23---那个做布局性能优化的ViewStub
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2016-02-18T23:25:00+08:00" content="2016-02-18">
-            2016-02-18
+          <time itemprop="dateCreated" datetime="2016-09-09T13:11:00+08:00" content="2016-09-09">
+            2016-09-09
           </time>
         </span>
 
@@ -328,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/02/18/源码探索系列23---那个做布局性能优化的ViewStub/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/源码探索系列23---那个做布局性能优化的ViewStub/" itemprop="commentsCount"></span>
+              <a href="/2016/09/09/源码探索系列43---关于FragmentStatePagerAdapter和FragmentPagerAdapter/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/09/源码探索系列43---关于FragmentStatePagerAdapter和FragmentPagerAdapter/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -344,21 +255,23 @@
 
       
         
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/blog_%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-02-18%2023.22.53.png" alt="enter image description here"></p>
-<p>ViewStub在以开始学安卓的时候就有听说过了，但至今使用的次数都不多，只是在一些加载失败显示错误界面之类的情况用到。虽然他是布局优化的工具之一,不过不得不说，他的实际使用频率还是偏低，可能是我优化的不够多。逃..<br>他的使用形式是下面这样，在xml中</p>
-<pre><code>&lt;ViewStub
-    android:id=&quot;@+id/am_demoStub_vs&quot;
-    android:layout=&quot;@layout/content_main&quot;
-    android:layout_width=&quot;match_parent&quot;
-    android:layout_height=&quot;wrap_content&quot;/&gt;
-</code></pre><p>然后在我们的代码。</p>
-<pre><code>if (demoStubView == null) {
-   ViewStub mViewStub = (ViewStub) view.findViewById(R.id.am_demoStub_vs);
-   demoStubView = mViewStub.inflate();
-}
+          <p>对于这两个adapter的区别，我们在对代码做一次遍历后给出</p>
+<p>为了便于沟通，我们把前者缩写成<code>FPA</code>,后者缩写成<code>FSPA</code></p>
+<p>现在我们先来看下简单的使用情况</p>
+<pre><code>public abstract class FragmentPagerAdapter extends PagerAdapter 
+public abstract class FragmentStatePagerAdapter extends PagerAdapter 
+</code></pre><p>通过这两个类的声明，我们知道他们都是继承与PagerAdapter的抽象类，需要实现两个接口</p>
+<pre><code>public abstract Fragment getItem(int position);
+//返回对应的position要展示的Fragment
+
+public abstract int getCount();
+//返回要展示的总fragment数目
+</code></pre><p>我想应该你有写过类似的代码，直接自己继承与PagerAdapter，然后重写多下面两个函数来创建/销毁界面</p>
+<pre><code>public Object instantiateItem(ViewGroup container, int position)
+public void destroyItem(ViewGroup container, int position, Object object)
 </code></pre>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/18/源码探索系列23---那个做布局性能优化的ViewStub/#more" rel="contents">
+            <a class="btn" href="/2016/09/09/源码探索系列43---关于FragmentStatePagerAdapter和FragmentPagerAdapter/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -391,8 +304,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/02/16/春节间的2015年的小结/" itemprop="url">
-                春节间的2015年的小结
+              <a class="post-title-link" href="/2016/08/29/源码探索系列42---关于ViewPager/" itemprop="url">
+                源码探索系列42---关于ViewPager
               </a>
             
           
@@ -402,194 +315,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-02-16T23:13:49+08:00" content="2016-02-16">
-            2016-02-16
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/编程人生/" itemprop="url" rel="index">
-                  <span itemprop="name">编程人生</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/02/16/春节间的2015年的小结/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/春节间的2015年的小结/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/img8.jpg" alt="enter image description here"></p>
-<p>乱折腾了一年，又是一年，到了今天开始七天的年假。<br>一年前，还在做所谓的创业，还在坚持着渺茫的希望。<br>像很多人说的那样的一句话:”那时候还很好，很想回到过去。”</p>
-<p>但我不要，我不想回去。<br>记得过去，更好的走下去。<br>成长，没有后退的路。</p>
-<p>面对，作出选择，改进才是一条康庄大道。<br>就像这张我喜欢的w7默认墙纸一样，突破寒冷看到的那一缕光。</p>
-<pre><code>只要坚持,梦想总是可以实现的。
-</code></pre><p>时间，时间，还是时间。不知不觉de过了一年，从学校到社会的切换。写总结这种事，对于我这种粗人，多少觉得有点别扭。</p>
-<p>总结<br>到底要记录点什么？<br>得与失？<br>成长的故事？迷惑?</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/16/春节间的2015年的小结/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2016/01/28/学习Objective-C的一些事/" itemprop="url">
-                学习Objective-C的一些事
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2016-01-28T00:14:46+08:00" content="2016-01-28">
-            2016-01-28
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Objective-C/" itemprop="url" rel="index">
-                  <span itemprop="name">Objective-C</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/01/28/学习Objective-C的一些事/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/28/学习Objective-C的一些事/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/sg1024.jpg" alt="enter image description here"></p>
-<p>好久没来更新了，加了快一个月的班，终于快看到曙光了，呵，虽然只是搭建完功能框架和最紧急的需求功能。后面还有很多要加上去的功能在挥手。</p>
-<p>花了周日一天和两个工作日的晚上，总算看完了 <code>Programming in Objective-C</code>，整本五百多页，感觉应该是有扎实的<code>C</code>和<code>java</code>基础原因，整本读起来还是很轻松，加上基本没什么生词量。<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/objectivec.jpg" alt="enter image description here"><br>虽然这广州天气也是见了鬼了，居然冷到<br>            <strong>下雪</strong>   ，  <strong>下雪</strong>，<strong>下雪</strong><br>回去加个班，这风雨一吹，直接发起烧来，整个人真是跪了，不过感觉自己还是挺顽强的啊。<br>哈哈。这都能看的下书。</p>
-<p>部分涉及到<code>C</code>的基础的实在是在熟悉了，当初高三毕业暑假就在图书馆看这本<code>《C primer plus》</code></p>
-<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/41YXbLNwQjL._SY400_.jpg" alt="enter image description here"></p>
-<p>整个暑假朝八晚六的就这样耗在图书馆，边看边敲了两个多月才搞定！！加上读大学时候看了下K&amp;R的经典。基本学会了。想想当年好像混的还是尖子班，是啊，大学也分班。在A班期末考个96分，应该也是不错的吧。</p>
-<hr>
-<p>好了，我的好朋友Shelley提醒我要早点睡觉了，今天就不写了，洗澡睡觉。</p>
-<h1 id="u540E_u8BB0"><a href="#u540E_u8BB0" class="headerlink" title="后记"></a>后记</h1><p>今天没后记。</p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2016/01/17/关于BaseActivity的最佳实践/" itemprop="url">
-                关于BaseActivity的最佳实践
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2016-01-17T22:21:00+08:00" content="2016-01-17">
-            2016-01-17
+          <time itemprop="dateCreated" datetime="2016-08-29T23:11:00+08:00" content="2016-08-29">
+            2016-08-29
           </time>
         </span>
 
@@ -614,8 +341,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/17/关于BaseActivity的最佳实践/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/17/关于BaseActivity的最佳实践/" itemprop="commentsCount"></span>
+              <a href="/2016/08/29/源码探索系列42---关于ViewPager/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/29/源码探索系列42---关于ViewPager/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -630,16 +357,288 @@
 
       
         
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/P60117-133225.jpg" alt="与友人共躺琶洲塔江堤边畅谈人生"></p>
-<p>最近公司开新项目，一直加班，任务量很满，基本都排到过年后回来的二月底了。。。所以最近没什么时间写文章。<br>今天周日，终于有点时间缓冲，现在写点项目中遇到的内容，做点分享。</p>
-<p>今天说的是关于<code>BaseActivity</code>和<code>ActionBar</code>个人觉得的最佳实践。</p>
-<p>相信这个类名字对于很多人来说应该再熟悉不过了，毕竟开发就避免不了这两者，每个Activity顶部基本都会有一条<code>ActionBar</code>，当然我指的不是这个类本身，而是指代那个标题栏。<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/131734139647542.jpg" alt="enter image description here"></p>
-<p>我相信我们基本每个界面都有这个东西存在，而且有时候看到一些项目的这标题栏用的不是系统的<strong>Actionbar</strong>，</p>
-<p>而在<code>theme</code>里面写的是<code>noActionbar</code>的主题，<br>接着自己多写一个定制的bar的样式的<code>xml</code>文件，<br>最后再用<code>include</code>之类的来做。</p>
-<p>可能因为有时候那个<code>PM</code>的需求太不按常规Android风格出牌了，只能自己做一个，不知你们有没遇到过，但我是遇到不少了，例如要求title是居中,<strong>加粗</strong>的。<br>后来谷歌出了个<code>ToolBar</code>的东西，他确实带来了不少惊喜，让我们可以有更高的定制程度，毕竟人家就是一个viewGroup类来的，但即使有了一个ToolBar，有一样东西是少不了的，那就是</p>
-<p><strong>我们每个界面都需要单独的去添加这个view，同时各种的设置，那么问题来了，我们能否简化这部分工作呢？</strong></p>
+          <p>最近做内存优化的时候，想对首页做延迟加载的优化，在嵌套的情况下有点小问题，所以打算顺便就把这几个类的具体内容看下，屡下思路，然后试着自己改造封装一下，从而满足嵌套情况下的一些小问题。</p>
+<p>#起航<br>SDK23–support-v4</p>
+<pre><code>public class ViewPager extends ViewGroup 
+</code></pre><p>我们先来看下一个view的三个绘制步骤onMeasure，onLayout，onDraw三个函数。<br>再在去看下几个常用的接口，设置adapter的内容，以及选中特定页面的逻辑。<br>最后再看下对于touch事件的处理。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/17/关于BaseActivity的最佳实践/#more" rel="contents">
+            <a class="btn" href="/2016/08/29/源码探索系列42---关于ViewPager/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2016/07/18/关于压缩安装包大小问题/" itemprop="url">
+                关于压缩安装包大小问题
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2016-07-18T23:11:00+08:00" content="2016-07-18">
+            2016-07-18
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/07/18/关于压缩安装包大小问题/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/18/关于压缩安装包大小问题/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在很久很久的塞班时代，那时候的程序几十KB就算大了。<br>在不久的几年前，很多APP也是几M大小。<br>不过到了最近几年，都是几十M的。<br>你看那微信，支付宝，滴滴打车，都是50M差不多大小的巨兽</p>
+<p>对于要压缩我们的apk大小，需要一些指导的思想，告诉我们往哪里找空间</p>
+<p><img src="http://ww4.sinaimg.cn/large/6d17e381gw1eqvmdlfzdoj20s206y76z.jpg" alt="enter image description here"></p>
+<p>这张图片告诉我们一个方向</p>
+<ol>
+<li>压缩项目代码量，删除过时没用的</li>
+<li>降低我们的资源文件大小，例如图片,用混淆等</li>
+<li>下载的第三方库和so等文件尝试用更小的</li>
+<li>一些assets的内容不用的移除</li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/18/关于压缩安装包大小问题/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2016/06/22/源码探索系列41---关于DVM的Heap堆创建过程/" itemprop="url">
+                源码探索系列41---关于DVM的Heap堆创建过程
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2016-06-22T12:54:46+08:00" content="2016-06-22">
+            2016-06-22
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/06/22/源码探索系列41---关于DVM的Heap堆创建过程/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/22/源码探索系列41---关于DVM的Heap堆创建过程/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在上一篇的<a href="http://sanjay-f.github.io/2016/06/19/%E6%BA%90%E7%A0%81%E6%8E%A2%E7%B4%A2%E7%B3%BB%E5%88%9740---%E5%85%B3%E4%BA%8EDalvik%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E8%BF%87%E7%A8%8B/">关于Dalvik的内存分配过程</a>，我们简单的看了下<code>new</code>一个对象时候的内存分配情况，期间我们多次的看到了HeapStruce的东西，他是负责存我们的Heap信息的，其中一些内容还是挺一笔带过的，这里来做更进一步的了解。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/22/源码探索系列41---关于DVM的Heap堆创建过程/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2016/06/19/源码探索系列40---关于Dalvik的内存分配过程/" itemprop="url">
+                源码探索系列40---关于Dalvik的内存分配过程
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2016-06-19T12:55:46+08:00" content="2016-06-19">
+            2016-06-19
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/06/19/源码探索系列40---关于Dalvik的内存分配过程/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/19/源码探索系列40---关于Dalvik的内存分配过程/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>我们新建一个对象后，到底我们的虚拟机是怎么分配空间的呢？<br>我们以前都听说是一些基本数据类型会被放到栈。如果是对象的话，会放到堆里面去，对这个对象的引用是放到栈里面去的。类似下面这张图一样，我们的data这个变量是放在左边的栈，然后实际的内存空间即data引用的这部分，是放在右边的堆里面的。</p>
+<p>那么实际是这样吗？真的是这样吗？</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/dalvik_%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A0%86%E4%B8%8E%E6%A0%88%20%281%29.png" alt="enter image description here"></p>
+<p>我们带着疑问，来看下dalvik为对象分配内存过程是怎样的，最后来回复这个问题。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/19/源码探索系列40---关于Dalvik的内存分配过程/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -665,7 +664,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
   </nav>
 
  </div>
@@ -699,7 +698,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -713,7 +712,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

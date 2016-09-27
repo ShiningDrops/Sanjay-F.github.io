@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/05/设计模式系列19---可复原的备忘模式/" itemprop="url">
-                设计模式系列19---可复原的备忘模式
+              <a class="post-title-link" href="/2016/04/21/源码探索系列32---万物初生/" itemprop="url">
+                源码探索系列32---万物初生System Servers
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-05T12:06:00+08:00" content="2016-01-05">
-            2016-01-05
+          <time itemprop="dateCreated" datetime="2016-04-21T00:54:46+08:00" content="2016-04-21">
+            2016-04-21
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/05/设计模式系列19---可复原的备忘模式/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/05/设计模式系列19---可复原的备忘模式/" itemprop="commentsCount"></span>
+              <a href="/2016/04/21/源码探索系列32---万物初生/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/21/源码探索系列32---万物初生/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,13 +255,9 @@
 
       
         
-          <p> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/4a36acaf2edda3ccc6d433be01e93901213f9278.jpg" alt="enter image description here"></p>
-<p>玩游戏我们都知道有个东西叫<code>自动存档</code>，在我们遇到大Boss要打的时候，更是如此，一定要存档！<br>如果没有存档，死了就要你重新开始，如果是些大型游戏，已经花费了你很多时间，遇到大Boss，然后你被打死了，又没有存档，估计你就想直接把这个游戏卸载了。</p>
-<p>有时偷懒，还去下载别人的通关档案回来覆盖本地的。<br>哈，我就曾经做过！还有一些已经刷满无限金币等的存档！<br>曾经还遇到过必须被大Boss打死才能继续的剧情，但因为外挂太牛逼，活生生把大Boss给打死了！搞到后面都没法继续，只能自己手动滚回某个档案，装怂，去被boss虐下。</p>
-<p>所以很好理解，这个自动存档会保存我们当前的角色的状态，然后如果被大Boss打死了，就自动恢复到这个存档点状态，我们还可以继续去打大Boss，直到我们过关为止。</p>
-<p>那么问题来了，我们该怎么用代码实现呢？<br>
+          <p>不知你是否也和我一样，会好奇整个系统给的启动过程是怎样的？<br>今天我们先来看下整个过程重要的一个环节SystemServer的内容<br><img src="http://7xl9zd.com1.z0.glb.clouddn.com/32_android_boot.png" alt="enter image description here"></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/05/设计模式系列19---可复原的备忘模式/#more" rel="contents">
+            <a class="btn" href="/2016/04/21/源码探索系列32---万物初生/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -294,8 +290,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/04/设计模式系列18---有状态的状态模式/" itemprop="url">
-                设计模式系列18---有状态的状态模式
+              <a class="post-title-link" href="/2016/04/17/源码探索系列31---插件化基础之Service组件管理/" itemprop="url">
+                源码探索系列31---插件化基础之Service组件管理
               </a>
             
           
@@ -305,8 +301,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-04T23:42:00+08:00" content="2016-01-04">
-            2016-01-04
+          <time itemprop="dateCreated" datetime="2016-04-17T17:27:46+08:00" content="2016-04-17">
+            2016-04-17
           </time>
         </span>
 
@@ -331,8 +327,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/04/设计模式系列18---有状态的状态模式/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列18---有状态的状态模式/" itemprop="commentsCount"></span>
+              <a href="/2016/04/17/源码探索系列31---插件化基础之Service组件管理/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/17/源码探索系列31---插件化基础之Service组件管理/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -347,19 +343,10 @@
 
       
         
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/53715814201004022126431684313353485_004.jpg" alt="enter image description here"></p>
-<p> 今天我们来聊聊个红绿灯，我们知道有个口诀叫：</p>
-<blockquote>
-<p>红灯停<br>绿灯行<br>黄灯亮了等一等</p>
-</blockquote>
-<p> 但这不是我们关注的重点，我们关注的点是我们红绿灯的状态！</p>
-<p>一般是 <strong>绿灯 -&gt;  黄灯-&gt; 红灯</strong> 的顺序。</p>
-<blockquote>
-<p>绿灯能且只能跑到黄灯<br>黄灯能且只能跑到红灯<br>红灯能且只能跑到绿灯</p>
-</blockquote>
-<p>不过曾经深圳尝试改革，直接从<code>绿灯</code>跳成了<code>红灯</code>，消失一出，当时一片哗然，在试行了一段时间后，发现不妥就又恢复了。</p>
+          <p>今天我们来看下四大金刚之一的另外一个Sevice。<br>他和Activity一样，也需要提前占坑，然后HOOK才可以使用。<br>就让我们来看性下整个过程会涉及到的过程，顺便温习下Service的启动流程吧。</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/service.png" alt="enter image description here"></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/04/设计模式系列18---有状态的状态模式/#more" rel="contents">
+            <a class="btn" href="/2016/04/17/源码探索系列31---插件化基础之Service组件管理/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -392,8 +379,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/04/设计模式系列17---深入了解的访问者模式/" itemprop="url">
-                设计模式系列17---深入了解的访问者模式
+              <a class="post-title-link" href="/2016/04/14/源码探索系列30---插件包PackageManagerService-PMS/" itemprop="url">
+                源码探索系列30---插件包PackageManagerService/PMS
               </a>
             
           
@@ -403,8 +390,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-04T19:05:00+08:00" content="2016-01-04">
-            2016-01-04
+          <time itemprop="dateCreated" datetime="2016-04-14T19:53:46+08:00" content="2016-04-14">
+            2016-04-14
           </time>
         </span>
 
@@ -429,8 +416,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/04/设计模式系列17---深入了解的访问者模式/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列17---深入了解的访问者模式/" itemprop="commentsCount"></span>
+              <a href="/2016/04/14/源码探索系列30---插件包PackageManagerService-PMS/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/14/源码探索系列30---插件包PackageManagerService-PMS/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -445,17 +432,10 @@
 
       
         
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/u=3692463948,2718815047&amp;fm=21&amp;gp=0.jpg" alt="enter image description here"></p>
-<p>我们有巡视组，他的主要工作就是巡视各个地方的一些重要点，看下他们的工作展开情况，整个巡视过程对重点对象深入的调查，如</p>
-<ul>
-<li>调阅、复制有关文件、档案、会议记录等资料；</li>
-<li>以适当方式对被巡视地区、单位的下属单位或者部门进行走访调研；</li>
-<li>听取被巡视地区、单位党委（党组）的工作汇报和有关部门的专题汇报；</li>
-</ul>
-<p>除了上面的，还有别的很多内容，所以我们的巡视组可以对被调查对象有深入的了解，如果有猫腻也可以很快的被发现。</p>
-<p>那么问题来了，我们该怎么做这样的一个模型呢？</p>
+          <p><strong>PMS</strong>主要管理了手机上的所有APK,可提供一些例如安装与卸载，查询包的信息（如我们在AndroidManifest.xml写的内容），清数据等功能。</p>
+<p>做插件化，想欺骗系统不让他们知道我们悄悄安装多了个APP，对PMS做点手脚当然不可避免的啊，今天就让我们来看下他在插件化过程担当的角色和作用吧！</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/04/设计模式系列17---深入了解的访问者模式/#more" rel="contents">
+            <a class="btn" href="/2016/04/14/源码探索系列30---插件包PackageManagerService-PMS/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -488,8 +468,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/04/设计模式系列16---响应请求的责任链模式/" itemprop="url">
-                设计模式系列16---响应请求的责任链模式
+              <a class="post-title-link" href="/2016/04/01/源码探索系列29---插件化基础之启动插件的Activity/" itemprop="url">
+                源码探索系列29---插件化基础之启动插件的Activity
               </a>
             
           
@@ -499,8 +479,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-04T17:31:00+08:00" content="2016-01-04">
-            2016-01-04
+          <time itemprop="dateCreated" datetime="2016-04-01T17:41:46+08:00" content="2016-04-01">
+            2016-04-01
           </time>
         </span>
 
@@ -525,8 +505,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/04/设计模式系列16---响应请求的责任链模式/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列16---响应请求的责任链模式/" itemprop="commentsCount"></span>
+              <a href="/2016/04/01/源码探索系列29---插件化基础之启动插件的Activity/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/01/源码探索系列29---插件化基础之启动插件的Activity/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -541,15 +521,9 @@
 
       
         
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/Image.jpg" alt="enter image description here"></p>
-<p> 所谓责任落实到位，落实到人，就是要找对特定事情有处理权限的人。</p>
-<p> 我们以法院为例子，小事情就在基层人民法院处理了，大一点的事情就找地市级的中级法院，如果事情闹大的就省级的高级人民法院，如果这事件特别重大，那就是最高人民法院了。</p>
-<p>所以我们看下四个级别：</p>
-<pre><code>最高人民法院 &gt; 高级人民法院  &gt; 中级人民法院 &gt; 基层人民法院
-</code></pre><p>那么问题来了，当年窦娥冤情换成现在是归谁管呢？可以跳级跑去告御状吗?</p>
-<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/F2004111210514300000.jpg" alt="enter image description here"><br>
+          <p>昨天的那篇简答的描述了如何利用HOOK来劫持Intent事件，从何来控制关于Activity的开启，<br>在这个基础上，我们需要来看下怎么开启我们的插件中的Activity</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/04/设计模式系列16---响应请求的责任链模式/#more" rel="contents">
+            <a class="btn" href="/2016/04/01/源码探索系列29---插件化基础之启动插件的Activity/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -582,8 +556,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/04/设计模式系列15---构表分离的建造者模型/" itemprop="url">
-                设计模式系列15---构表分离的建造者模型
+              <a class="post-title-link" href="/2016/03/28/源码探索系列28---插件化基础之代理Hook/" itemprop="url">
+                源码探索系列28---插件化基础之代理Hook
               </a>
             
           
@@ -593,8 +567,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-04T14:26:00+08:00" content="2016-01-04">
-            2016-01-04
+          <time itemprop="dateCreated" datetime="2016-03-28T18:41:46+08:00" content="2016-03-28">
+            2016-03-28
           </time>
         </span>
 
@@ -619,8 +593,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/04/设计模式系列15---构表分离的建造者模型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列15---构表分离的建造者模型/" itemprop="commentsCount"></span>
+              <a href="/2016/03/28/源码探索系列28---插件化基础之代理Hook/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/源码探索系列28---插件化基础之代理Hook/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -635,13 +609,10 @@
 
       
         
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/1110012133dbbfcc54o.jpg" alt="enter image description here"></p>
-<p> 现在来讲一件很有意思的故事，上面的画很纯洁，只有一种蓝色。但不得不说这图片还是有色差，不能很好的还原实际的色彩，如果有你机会，可以去看下他的<code>IKB</code>色彩是多么的蓝。<br>这种蓝被叫做<code>国际克莱因蓝</code>（international klein blue，缩写IKB）,以<code>伊夫·克莱因</code>（Yves Klein）的名字来命名的。</p>
-<p>这一种独特的天青石蓝色是在他的化学家友人<code>EdouardAdam</code>的帮助下合成的。<br>克莱因相信，只有最<strong>单纯的色彩</strong>才能唤起最强烈的心灵感受力。</p>
-<p>一些艺术家使用各种色彩以求获得艺术生命力，而克莱因宁愿回归单纯。<br>“克莱因蓝”的 RGB 比值是0:47:147，但是明确的数据并不能减少人们面对它时那种震惊——蓝色本身象征着天空和海洋，象征着没有界限，又因为“克莱因蓝”太过纯净，以至于很难找到可与之搭配的色彩进入人们的视野，因此，它的冲击力格外强烈。<br>这种蓝被誉为一种理想之蓝、绝对之蓝，其明净空旷往往使人迷失其中。<br>克莱因曾说：“表达这种感觉，不用解释，也无需语言，就能让心灵感知——我相信，这就是引导我画单色画的感觉。”</p>
-<p>当然啦，现在他的画那是厉害啊，例如他的《IKB 92》卖了一个多亿。也像这个一样，纯蓝色！！！</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160328184052.png" alt="enter image description here"></p>
+<p>代理有两种，一种是常见的静态代理模型，这个在<a href="http://sanjay-f.github.io/2015/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%B3%BB%E5%88%972---%E5%B9%95%E5%90%8E%E9%BB%91%E6%89%8B%E7%9A%84%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">设计模式系列2—幕后黑手的代理模式</a>就有写过，他可以让我们在调用实际的api时做一些别的工作，从而达到某种程度的AOP效果。<br>但当时并没有提到动态代理的概念，因为目前自己的开发需要用到的场景偏少。不过在DroidPlugin里面就很多，因为他需要hook很多的内容。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/04/设计模式系列15---构表分离的建造者模型/#more" rel="contents">
+            <a class="btn" href="/2016/03/28/源码探索系列28---插件化基础之代理Hook/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -667,7 +638,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/5/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/5/">&raquo;</a>
   </nav>
 
  </div>
@@ -701,7 +672,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -715,7 +686,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

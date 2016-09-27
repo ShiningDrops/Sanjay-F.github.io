@@ -51,7 +51,7 @@
 相信这个类名字对于很多人来说应该再熟悉不过了，毕竟开发就避免不了这两者，每个Activity顶部基本都会有一条ActionBar，当然我指的不是这个类本">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/P60117-133225.jpg">
 <meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/131734139647542.jpg">
-<meta property="og:updated_time" content="2016-02-09T07:29:16.000Z">
+<meta property="og:updated_time" content="2016-06-11T16:23:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于BaseActivity的最佳实践">
 <meta name="twitter:description" content="最近公司开新项目，一直加班，任务量很满，基本都排到过年后回来的二月底了。。。所以最近没什么时间写文章。今天周日，终于有点时间缓冲，现在写点项目中遇到的内容，做点分享。
@@ -326,7 +326,7 @@ xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
             contentView = (LinearLayout) findViewById(R.id.layout_center);
              contentView.removeAllViews();
 
-        } else if (layoutResID != R.layout.activity_main) {
+        } else if (layoutResID != R.layout.activity_base) {
             View addView = LayoutInflater.from(this).inflate(layoutResID, null);
             contentView.addView(addView);
             setActionBar(); 
@@ -499,7 +499,7 @@ protected void onDestroy() {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -513,7 +513,7 @@ protected void onDestroy() {
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

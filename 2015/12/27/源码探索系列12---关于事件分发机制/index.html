@@ -51,7 +51,9 @@
 
 三巨头分发过程中有主要涉及到三个人：dispatchTouchEvent(),onInterceptTouchEvent(),onTouchEvent()这三者的关系如下
  public boolean dispatchTouchEvent(Motio">
-<meta property="og:updated_time" content="2016-01-02T13:13:51.000Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20151227164259739">
+<meta property="og:image" content="http://7xl9zd.com1.z0.glb.clouddn.com/%E5%82%B2%E6%B8%B8%E6%88%AA%E5%9B%BE20160428104314.png">
+<meta property="og:updated_time" content="2016-06-11T16:23:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="源码探索系列12---关于事件分发机制">
 <meta name="twitter:description" content="关于View的事件分发，实质就是关于MotionEvent时间的分发再简单点说就是通过一堆判断，最后决定这个MotionEvent给谁用的问题。
@@ -271,16 +273,15 @@
           belongToMe=child.dispatchTouchEvent(ev);
       }
       return belongToMe;
-}
-</code></pre></li>
+}        
+</code></pre><a id="more"></a>
+<pre><code>但有点击事件产生的时候，    dispatchTouchEvent被调用，然后给onInterceptTouchEvent看下要不要拦截，拦截下来的就调用onTouchEvent处理下。如果不拦截，就传递给子view去做，重复这个流程。
+</code></pre><p>不过需要说的是，这个onInterceptTouchEvent()是ViewGroup的，View里面没有这个。<br><strong>另外</strong>这个事件还受<code>OnTouchListener</code>这个的影响，如果我们设置了监听，且他的<code>onTouch（）</code>事件返回真，那么事件是不会发到<code>onTouchEvent</code>里面去的。即前者有更高的优先级。</p>
+</li>
+<li><p><strong>传递顺序</strong><br>事件的传递顺序是从Activity传起，最后到我们的各种View里面去的，即使父传给子的关系。<br>如果传到底部的<code>onTouchEvent</code>也没有人出来处理这个MotionEvent的话，最终这个事件会像递归一样，跑回来Activity，然后他的<code>onTouchEvent</code>函数被调用.<br><img src="http://img.blog.csdn.net/20151227164259739" alt="图1"><br>即：<br>MotionEvent—-&gt;Activity-&gt;widnow-&gt;DecorView-&gt;ViewGroup-&gt;View-&gt;ViewGroup-&gt;DecorView-&gt;window-&gt;Activity;<br>就像下面这样的：</p>
+</li>
 </ul>
-<a id="more"></a>
-<p>但有点击事件产生的时候，    dispatchTouchEvent被调用，然后给onInterceptTouchEvent看下要不要拦截，拦截下来的就调用onTouchEvent处理下。如果不拦截，就传递给子view去做，重复这个流程。<br>不过需要说的是，这个onInterceptTouchEvent()是ViewGroup的，View里面没有这个。<br><strong>另外</strong>这个事件还受<code>OnTouchListener</code>这个的影响，如果我们设置了监听，且他的<code>onTouch（）</code>事件返回真，那么事件是不会发到<code>onTouchEvent</code>里面去的。即前者有更高的优先级。</p>
-<ul>
-<li><strong>传递顺序</strong><br>事件的传递顺序是从Activity传起，最后到我们的各种View里面去的，即使父传给子的关系。<br>如果传到底部的<code>onTouchEvent</code>也没有人出来处理这个MotionEvent的话，最终这个事件会像递归一样，跑回来Activity，然后他的<code>onTouchEvent</code>函数被调用. <pre><code>![图1](http://img.blog.csdn.net/20151227164259739)
-</code></pre></li>
-</ul>
-<p>即：MotionEvent—-&gt;Activity-&gt;widnow-&gt;DecorView-&gt;ViewGroup-&gt;View-&gt;ViewGroup-&gt;DecorView-&gt;window-&gt;Activity;<br>就像下面这样的：</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E5%82%B2%E6%B8%B8%E6%88%AA%E5%9B%BE20160428104314.png" alt="enter image description here"><br>HEXO到现在不支持时序图，也是挺郁闷的，下次得看下怎么改</p>
 <pre><code class="sequence">Note left of Activity: 我要去给Activity \n 送点击事件咯
 Note over Activity: 啊哈，我收到了MotionEvent 
 Activity-&gt;Widnow:dispatchTouchEvent 
@@ -745,7 +746,7 @@ return false;
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -759,7 +760,7 @@ return false;
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

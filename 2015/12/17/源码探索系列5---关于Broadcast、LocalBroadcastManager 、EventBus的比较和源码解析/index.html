@@ -57,7 +57,7 @@ EventBus ~ LocalBroadCast  &amp;gt; Bradocast
 
 运行的线程环境：    EventBus完胜！
  LocalBroadcastManager 所有调用都是在主">
-<meta property="og:updated_time" content="2016-01-02T13:13:51.000Z">
+<meta property="og:updated_time" content="2016-06-11T16:23:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="源码探索系列5---关于Broadcast、LocalBroadcastManager 、EventBus的比较和源码解析">
 <meta name="twitter:description" content="这篇文章将会对这三者做简单的综合性的比较，同时对LocalBroadCast深入到源码进行一个探索。看这个类为何相对BroadCast高效！
@@ -548,8 +548,7 @@ public void registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {
     }
 </code></pre><h2 id="u4E00_u4E9B_u89C2_u70B9_3A"><a href="#u4E00_u4E9B_u89C2_u70B9_3A" class="headerlink" title="一些观点:"></a>一些观点:</h2><p>对于这个本地广播LocalBroadcastManager，我们就有个大致的理解了，怎么说也把人家给看了遍了，<br>他的底层实现是基于Handler来做应用内的通信，自然安全性更好，相比与基于Binder的系统广播来说，效率更高。<br><strong>另外比较坑的是</strong>，<br><strong>另外比较坑的是</strong>，<br><strong>另外比较坑的是</strong>，<br>这个类要我们写的接收是<code>BroadcastReceiver</code>，但我们阅读完可以知道，完全没必要啊，自己定义一个接口都行啦 ，直接就是匹配然后就执行。这也很好解释他是没有优先级等概念的原因，这个就是”轻量级”的系统广播嘛。</p>
 <p>而且，像上面那也不是使用静态内部类的做法不是很好，虽然在这个上下文情况看是不会有大问题。<br>关于Handler的正确姿势，欢迎查看这篇文章<a href="http://blog.csdn.net/sanjay_f/article/details/50208847" target="_blank" rel="external">源码探索系列—Handler与HandlerLeak的那些事</a> </p>
-<p>#最后想说的</p>
-<p>虽然比较了这么多，但实际想说的是，<code>本地广播</code>和<code>EventBus</code>其实对于很多人写的那项目来说是差不多，只是写起来啰嗦点，像我这种追求简洁和效率点的（其实就是懒），应该都会用EventBus，最少从我看的很多项目里面有看到他的影子，就这样^_^。</p>
+<h1 id="u6700_u540E_u60F3_u8BF4_u7684"><a href="#u6700_u540E_u60F3_u8BF4_u7684" class="headerlink" title="最后想说的"></a>最后想说的</h1><p>虽然比较了这么多，但实际想说的是，<code>本地广播</code>和<code>EventBus</code>其实对于很多人写的那项目来说是差不多，只是写起来啰嗦点，像我这种追求简洁和效率点的（其实就是懒），应该都会用EventBus，最少从我看的很多项目里面有看到他的影子，就这样^_^。</p>
 <h1 id="u540E_u8BB0"><a href="#u540E_u8BB0" class="headerlink" title="后记"></a>后记</h1><p>不知道为啥，有个习惯就是有个后记，哈哈，虽然上面写的就是最后想说了。<br>想在还缺了EventBus的源码解析，虽然这库看了两次吧，不过也没记录过，因为网上分析这个太多而且写得太好了。虽然这个本地广播也有大把人写过，不过自己没看过，就顺便写在这里吧。<br>接下来有空再去看下系统广播是怎么实现，再 贴出来。</p>
 <p>参考来源：</p>
 <p><a href="http://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html" target="_blank" rel="external">LocalBroadcastManager</a></p>
@@ -672,7 +671,7 @@ public void registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -686,7 +685,7 @@ public void registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
@@ -714,7 +713,7 @@ public void registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u8D77_u822A"><span class="nav-number">1.</span> <span class="nav-text">起航</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-__u6BD4_u8F83"><span class="nav-number">2.</span> <span class="nav-text">1. 比较</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LocalBroadcastManager__u6E90_u7801_u89E3_u6790"><span class="nav-number">3.</span> <span class="nav-text">LocalBroadcastManager 源码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u83B7_u53D6_u5355_u4F8B"><span class="nav-number">3.1.</span> <span class="nav-text">获取单例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6CE8_u518C_u5E7F_u64AD"><span class="nav-number">3.2.</span> <span class="nav-text">注册广播</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6CE8_u9500"><span class="nav-number">3.3.</span> <span class="nav-text">注销</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u53D1_u9001_u5E7F_u64AD_u6D88_u606F"><span class="nav-number">3.4.</span> <span class="nav-text">发送广播消息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4E00_u4E9B_u89C2_u70B9_3A"><span class="nav-number">3.5.</span> <span class="nav-text">一些观点:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u540E_u8BB0"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u8D77_u822A"><span class="nav-number">1.</span> <span class="nav-text">起航</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-__u6BD4_u8F83"><span class="nav-number">2.</span> <span class="nav-text">1. 比较</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LocalBroadcastManager__u6E90_u7801_u89E3_u6790"><span class="nav-number">3.</span> <span class="nav-text">LocalBroadcastManager 源码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u83B7_u53D6_u5355_u4F8B"><span class="nav-number">3.1.</span> <span class="nav-text">获取单例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6CE8_u518C_u5E7F_u64AD"><span class="nav-number">3.2.</span> <span class="nav-text">注册广播</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6CE8_u9500"><span class="nav-number">3.3.</span> <span class="nav-text">注销</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u53D1_u9001_u5E7F_u64AD_u6D88_u606F"><span class="nav-number">3.4.</span> <span class="nav-text">发送广播消息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4E00_u4E9B_u89C2_u70B9_3A"><span class="nav-number">3.5.</span> <span class="nav-text">一些观点:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u6700_u540E_u60F3_u8BF4_u7684"><span class="nav-number">4.</span> <span class="nav-text">最后想说的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u540E_u8BB0"><span class="nav-number">5.</span> <span class="nav-text">后记</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

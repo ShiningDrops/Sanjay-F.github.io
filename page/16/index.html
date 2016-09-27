@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/08/22/用七牛为你的文章免费添加图片/" itemprop="url">
-                用七牛为你的文章免费添加图片
+              <a class="post-title-link" href="/2015/12/08/源码探索系列1---Handler与HandlerLeak的那些事/" itemprop="url">
+                源码探索系列1---Handler与HandlerLeak的那些事
               </a>
             
           
@@ -213,19 +213,34 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-08-22T17:55:46+08:00" content="2015-08-22">
-            2015-08-22
+          <time itemprop="dateCreated" datetime="2015-12-08T23:55:00+08:00" content="2015-12-08">
+            2015-12-08
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/22/用七牛为你的文章免费添加图片/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/22/用七牛为你的文章免费添加图片/" itemprop="commentsCount"></span>
+              <a href="/2015/12/08/源码探索系列1---Handler与HandlerLeak的那些事/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/08/源码探索系列1---Handler与HandlerLeak的那些事/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -240,11 +255,10 @@
 
       
         
-          <p>Hexo文章中的图片，可以外挂自别的地址，也可以放在本地，然后和静态文件一起发布（部署）到你的空间。<br>但这么干很苦逼的，现在建议外挂图片好，因为访问以国内为主，挂图片在github上会很慢的。<br>如果你想知道怎么实现这样的方式，看下面这个.</p>
-<h2 id="u672C_u5730_u5916_u6302_u65B9_u6CD5"><a href="#u672C_u5730_u5916_u6302_u65B9_u6CD5" class="headerlink" title="本地外挂方法"></a>本地外挂方法</h2><p>将图片放在source/images目录下，然后，直接修改hexo生成的文章的html文件：<br><code>&lt;img src=&quot;/images/photo.png&quot; style=&quot;width: 300px;&quot;/&gt;</code><br>这样还是很麻烦的，不过你厉害的话，可以考虑定制css简化这个。</p>
-<h2 id="u5916_u6302_u56FE_u7247_u5230_u4E03_u725B"><a href="#u5916_u6302_u56FE_u7247_u5230_u4E03_u725B" class="headerlink" title="外挂图片到七牛"></a>外挂图片到七牛</h2><p>七牛提供了个体验套餐，免费提供1G/月的流量和1G存储空间，普通用户够用了。让后认证的用户10GB免费存储，每月10GB免费下载流量，用做博客图片等资源存储，正合适。(但这套餐要验<code>证电话</code>和<code>身份证</code>，赫赫，后面就不解释了）</p>
+          <p>开始学安卓的时候，我对一些异步操作都是用Handler和AsyncTask的。</p>
+<p>现在那个Handler被挂上了泄漏的名字！<br>最近在设计一个功能的时候，像借鉴于handler的设计模式，所以顺便顺便写篇文章记录下。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/08/22/用七牛为你的文章免费添加图片/#more" rel="contents">
+            <a class="btn" href="/2015/12/08/源码探索系列1---Handler与HandlerLeak的那些事/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -277,8 +291,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/08/22/用hexo在github上挂博教程/" itemprop="url">
-                用hexo在github上挂博教程
+              <a class="post-title-link" href="/2015/12/07/Android测试教程13--模拟服务器MockServer之Moco详细介绍/" itemprop="url">
+                Android测试教程13--模拟服务器MockServer之Moco详细介绍
               </a>
             
           
@@ -288,8 +302,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-08-22T13:36:14+08:00" content="2015-08-22">
-            2015-08-22
+          <time itemprop="dateCreated" datetime="2015-12-07T15:33:00+08:00" content="2015-12-07">
+            2015-12-07
           </time>
         </span>
 
@@ -298,8 +312,8 @@
             &nbsp; | &nbsp; In
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/hexoSerial/" itemprop="url" rel="index">
-                  <span itemprop="name">hexoSerial</span>
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
                 </a>
               </span>
 
@@ -314,8 +328,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/22/用hexo在github上挂博教程/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/22/用hexo在github上挂博教程/" itemprop="commentsCount"></span>
+              <a href="/2015/12/07/Android测试教程13--模拟服务器MockServer之Moco详细介绍/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/07/Android测试教程13--模拟服务器MockServer之Moco详细介绍/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -330,15 +344,287 @@
 
       
         
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/ic_hexo.png" alt="这里写图片描述"></p>
-<h2 id="1-_u4E0B_u8F7D_msysgit__uFF0C_u5E76_u5B89_u88C5"><a href="#1-_u4E0B_u8F7D_msysgit__uFF0C_u5E76_u5B89_u88C5" class="headerlink" title="1.下载 msysgit ，并安装"></a>1.下载 msysgit ，并安装</h2><p><a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a></p>
-<h2 id="2-_u5B89_u88C5Node-js"><a href="#2-_u5B89_u88C5Node-js" class="headerlink" title="2.安装Node.js"></a>2.安装Node.js</h2><p>在 Windows 环境下安装 Node.js 非常简单，仅须下载安装文件并执行即可完成安装。<br>下载地址：<a href="https://nodejs.org/download">https://nodejs.org/download</a><br>因为我用的Windows的64位，所以下载地址在这：<br><a href="https://nodejs.org/dist/v0.12.7/x64/node-v0.12.7-x64.msi">https://nodejs.org/dist/v0.12.7/x64/node-v0.12.7-x64.msi</a></p>
-<p>安装好后，打开cmd，输入下面命令，看下是否正常<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span><span class="identifier"> </span><span class="title">-v</span> </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></p>
-<p>正常的话，效果如下，不行就百度下原因吧。<br><img src="http://img.blog.csdn.net/20150821161739705" alt="这里写图片描述"></p>
-<h2 id="3-_u5B89_u88C5hexo"><a href="#3-_u5B89_u88C5hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h2><p>利用 npm 命令即可安装。（<strong>先在任意位置点击鼠标右键，选择Git bash</strong>）<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo</span></span><br></pre></td></tr></table></figure></p>
-<p>在打印的日志里面，请记下安装的hexo的位置，然后再系统的环境变量<code>PATH</code>里面加多这个库的lib地址；</p>
+          <p> 前面一篇介绍了如何用mockito来测试我们的一些异步任务，例如网络请求时候的异步回调。<br>现在做进一步的介绍，一个模拟我们的服务器的东东–<a href="https://github.com/dreamhead/moc">moco</a></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/08/22/用hexo在github上挂博教程/#more" rel="contents">
+            <a class="btn" href="/2015/12/07/Android测试教程13--模拟服务器MockServer之Moco详细介绍/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/12/05/Android测试教程12--模拟读取的文件数据库/" itemprop="url">
+                Android测试教程12--模拟读取的文件/数据库
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-12-05T16:13:00+08:00" content="2015-12-05">
+            2015-12-05
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/05/Android测试教程12--模拟读取的文件数据库/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/05/Android测试教程12--模拟读取的文件数据库/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p> 有时我们需要对文件或数据库进行测试，但我们又不想破坏应用程序或设备原有的数据。<br>此时我们就需要一个Mock来替代他们，这里的Mock不是android.test.mock，<br>但也是android.test包下面的，<code>RenamingDelegatingContext</code>的类。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/05/Android测试教程12--模拟读取的文件数据库/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/12/04/Android测试教程11--Mock之mockito，异步测试/" itemprop="url">
+                Android测试教程11--Mock之mockito，异步测试
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-12-04T18:17:00+08:00" content="2015-12-04">
+            2015-12-04
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/04/Android测试教程11--Mock之mockito，异步测试/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/04/Android测试教程11--Mock之mockito，异步测试/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>#1. mockito是干什么的？</p>
+<p>Mock框架之一，其余的还有EasyMock，PowerMock等。</p>
+<blockquote>
+<p>Mock说白了就是打桩（Stub）或则模拟，当你调用一个不好在测试中创建的对象时，<br>Mock框架为你<strong>模拟</strong>一个和真实对象类似的替身来完成相应的行为</p>
+</blockquote>
+<p>就是利用他，我们可以创建一个傀儡，然后被mock的类要返回的数据我们都可以<strong>指定</strong>！<br>就像下面这样 :</p>
+<pre><code>User user = mock(User.class);
+when(user.getName(3)).thenReturn(&quot;张三&quot;);
+Log.e(TAG, &quot;name=&quot; + user.getName(3));
+assertEquals(&quot;张三&quot;, user.getName(3));
+</code></pre><p>我们mock了User这个类，要求他当被请求返回名字<code>getName()</code>的时候，就返回<code>张三</code></p>
+<p>很好懂吧？下面说点实际的运用</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/04/Android测试教程11--Mock之mockito，异步测试/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/12/03/Android测试教程10--monkey Test/" itemprop="url">
+                Android测试教程10--monkey Test
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-12-03T23:48:00+08:00" content="2015-12-03">
+            2015-12-03
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/03/Android测试教程10--monkey Test/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/Android测试教程10--monkey Test/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>#1，Monkey Test简介</p>
+<p>什么是monkey test？<br>如其名，像猴子一样，虽然不懂什么，但是可以乱点一通。<br>是的，他的一大特色就是可以乱点一通！！！！！！！<br>就在规定的次数范围内做任何随机的操作，随机操作包括点击、滑动、Application切换、横竖屏、应用关闭等等，用户能做的操作统统可以模拟；！！<br>所以简单说就是 <strong>“压力测试”</strong></p>
+<p><a href="http://developer.android.com/tools/help/monkey.html">官方介绍文档地址，点这里</a></p>
+<p>那要准备点什么吗？</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/03/Android测试教程10--monkey Test/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -364,7 +650,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/15/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span>
+    <a class="extend prev" rel="prev" href="/page/15/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/17/">&raquo;</a>
   </nav>
 
  </div>
@@ -398,7 +684,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -412,7 +698,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

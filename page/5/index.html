@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/04/设计模式系列14---管流程不管细节的模板方法模式/" itemprop="url">
-                设计模式系列14---管流程不管细节的模板方法模式
+              <a class="post-title-link" href="/2016/03/16/源码探索系列27---插件化基础之类加载器DexClassLoader/" itemprop="url">
+                源码探索系列27---插件化基础之类加载器DexClassLoader
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-04T00:52:00+08:00" content="2016-01-04">
-            2016-01-04
+          <time itemprop="dateCreated" datetime="2016-03-16T20:50:46+08:00" content="2016-03-16">
+            2016-03-16
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/04/设计模式系列14---管流程不管细节的模板方法模式/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/04/设计模式系列14---管流程不管细节的模板方法模式/" itemprop="commentsCount"></span>
+              <a href="/2016/03/16/源码探索系列27---插件化基础之类加载器DexClassLoader/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/16/源码探索系列27---插件化基础之类加载器DexClassLoader/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,12 +255,16 @@
 
       
         
-          <p> 写了这么久，花的时间最多的是在选故事，找图上，写一篇能看的文章真的不容易啊。</p>
-<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/201206251132405977.jpg" alt="enter image description here"><br>今天来介绍一款“高端智能”的机器人—炒菜机器侠。<br>一个可以会帮我们炒菜的机器人，懒人必备，价格不要你的2999，不要1999，只要899！<br>心动了嘛？赶紧拿起手头的手机，扫码购买吧！</p>
-<p>我们的炒菜机器人，只要你给他材料，就可以煮出你想要的菜。</p>
-<p>什么扬州炒饭，潮州炒饭都不是问题!</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/slide_4.jpg" alt="enter image description here"></p>
+<p>Java有个概念叫做<code>类加载器</code>（ClassLoader），它的作用就是<code>动态的装载Class文件</code>。借助<code>ClassLoader</code>这个类我们可以装载任何我们想要的Class文件，只需提供路径即可。</p>
+<p>像下面这样：</p>
+<pre><code>Class.forName(&quot;OurClassName&quot;);
+</code></pre><p>啊！这是反射，嗯！应该是下面这样</p>
+<pre><code>ClassLoader.loadClass(&quot;OurClassName&quot;)
+</code></pre><p>等等！<br>这Java不是可以import就可以了吗，为何还要这个类加载器？<br>因为用import的话得类文件必须在本地且编译的时候必须有这个类文件，否则报错。若想让程序在运行的时候<strong>动态调用</strong>怎么办呢？显然import不合要求，他已经写死的了，所以我们需要ClassLoader来做这件事。<br>利用它来加载Class文件到JVM，以供程序使用。<br>这也是我们能够通过加载补丁包来修复紧急的bug的一个基础</p>
+<p>反射和这个类加载有什么关系嘛？后面再讲<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/04/设计模式系列14---管流程不管细节的模板方法模式/#more" rel="contents">
+            <a class="btn" href="/2016/03/16/源码探索系列27---插件化基础之类加载器DexClassLoader/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -293,8 +297,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/03/设计模式系列13---感知变化的观察者模型/" itemprop="url">
-                设计模式系列13---感知变化的观察者模型
+              <a class="post-title-link" href="/2016/03/09/源码探索系列26---那个搭桥牵线的月老Binder(中)之Java层/" itemprop="url">
+                源码探索系列26---那个搭桥牵线的月老Binder(中)之Java层
               </a>
             
           
@@ -304,8 +308,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-03T23:18:00+08:00" content="2016-01-03">
-            2016-01-03
+          <time itemprop="dateCreated" datetime="2016-03-09T13:30:46+08:00" content="2016-03-09">
+            2016-03-09
           </time>
         </span>
 
@@ -330,8 +334,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/03/设计模式系列13---感知变化的观察者模型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/设计模式系列13---感知变化的观察者模型/" itemprop="commentsCount"></span>
+              <a href="/2016/03/09/源码探索系列26---那个搭桥牵线的月老Binder(中)之Java层/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/09/源码探索系列26---那个搭桥牵线的月老Binder(中)之Java层/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -346,11 +350,12 @@
 
       
         
-          <p> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/33a603bc503a96dd46b3cc65667bb656.jpg" alt="enter image description here"><br>电影《模仿游戏》中，讲述了我们的计算机科学之父<code>图灵</code>通过制造背后那个大机器，来协助盟军破译德国密码系统<code>“英格玛”</code>，从而扭转二战战局的经历。</p>
-<p>如果没图灵用这大机器来破译情报，知道敌军动向，估计整个二战战局可能都被改写！<br>尽管历史没假设，事实就是事实。</p>
-<p>今天我们要说的观察者就是这样的功效，他监视着被观察者，一有什么风吹草动就打报告。</p>
+          <p> 上一篇文章，我们对Binder做了一个简单的介绍。现在想从Binder机制的Java层来说下。</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/binder_Binder%E7%9A%84%E5%B1%82%E7%BA%A7%E6%A1%86%E6%9E%B6.png" alt="Java层的Binder框架"></p>
+<p>安卓本身在<code>natvie层</code>搭建了整套机制的基础，然后在<code>Java层</code>也重新包装了下，方便我们使用。<br>因此本篇想尝试就只剖析Java层的架构为主，对于natvie层只是简单掠过，虽然在native层我们可以看到他加载虚拟Binder设备，打开Binder驱动，注册service的具体内容。不过我们还是一步一步来。有兴趣的伙伴可以自己去看下。</p>
+<p>那么，就让我们开始探索之旅吧。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/03/设计模式系列13---感知变化的观察者模型/#more" rel="contents">
+            <a class="btn" href="/2016/03/09/源码探索系列26---那个搭桥牵线的月老Binder(中)之Java层/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -383,8 +388,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/03/设计模式系列12---快速拷贝的原型模型/" itemprop="url">
-                设计模式系列12---遍历统一的迭代模式
+              <a class="post-title-link" href="/2016/03/07/源码探索系列26---那个搭桥牵线的月老Binder(上)之论述篇/" itemprop="url">
+                源码探索系列26---那个搭桥牵线的月老Binder(上)之论述篇
               </a>
             
           
@@ -394,8 +399,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-03T21:22:00+08:00" content="2016-01-03">
-            2016-01-03
+          <time itemprop="dateCreated" datetime="2016-03-07T14:47:46+08:00" content="2016-03-07">
+            2016-03-07
           </time>
         </span>
 
@@ -420,8 +425,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/03/设计模式系列12---快速拷贝的原型模型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/设计模式系列12---快速拷贝的原型模型/" itemprop="commentsCount"></span>
+              <a href="/2016/03/07/源码探索系列26---那个搭桥牵线的月老Binder(上)之论述篇/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/源码探索系列26---那个搭桥牵线的月老Binder(上)之论述篇/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -436,13 +441,10 @@
 
       
         
-          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/W020141211406589017323.jpg" alt="enter image description here"></p>
-<p>对于迭代这件事，我们曾经遇到过很多类似的事情，</p>
-<p>例如：上课点名！！！</p>
-<p> 每次我们的课室<code>存储</code>了一堆的<code>学生对象</code>，然后老师开始<code>迭代名单</code>–点名，<br> 判断某学生是否来上课了，没来的平时分给你扣点，积少成多，考试就压力大了。</p>
-<p> 大学时代满满的回忆啊。</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/binder_201109131125266418.jpg" alt="enter image description here"></p>
+<p>Binder，大名鼎鼎，有了他，我们才能和另外一个陌生人（进程）发生沟通啊.<br>那么这个搭桥牵绳的中间人—月老Binder，到底是怎么做到的呢？<br>我们先来简单的了解下，然后再深入的探索。<br>篇幅会比较长，所以分了上中下篇，上篇简述基本的原理，下篇尝试从java层和Native层源码的角度来理解。<br>好了，那么我们就开始说下这个月老Binder的故事吧！</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/03/设计模式系列12---快速拷贝的原型模型/#more" rel="contents">
+            <a class="btn" href="/2016/03/07/源码探索系列26---那个搭桥牵线的月老Binder(上)之论述篇/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -475,8 +477,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/03/设计模式系列11---快速拷贝的原型模型/" itemprop="url">
-                设计模式系列11---快速拷贝的原型模型
+              <a class="post-title-link" href="/2016/03/05/源码探索系列25---救急灭火的消防员之HotFix/" itemprop="url">
+                源码探索系列25---救急灭火的消防员之插件&HotFix
               </a>
             
           
@@ -486,8 +488,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-03T00:34:00+08:00" content="2016-01-03">
-            2016-01-03
+          <time itemprop="dateCreated" datetime="2016-03-05T23:33:46+08:00" content="2016-03-05">
+            2016-03-05
           </time>
         </span>
 
@@ -512,8 +514,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/03/设计模式系列11---快速拷贝的原型模型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/设计模式系列11---快速拷贝的原型模型/" itemprop="commentsCount"></span>
+              <a href="/2016/03/05/源码探索系列25---救急灭火的消防员之HotFix/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/05/源码探索系列25---救急灭火的消防员之HotFix/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -528,10 +530,12 @@
 
       
         
-          <p> <img src="http://7xl9zd.com1.z0.glb.clouddn.com/2013050615205185.jpg" alt="enter image description here"><br>早年一直有新闻报道，XXX拖欠农民工工资的情况，甚至没有和员工签订合同的。这种做法当然不好，但现实也是挺残酷的，上门为了利润，就这么做，能省就省，遇到什么工伤之类的都不用赔，因为没有合同，你怎么说工伤呢？<br>这和大公司开一家小公司，去做特定的项目类似，规避风险。</p>
-<p>假设我们有一份    重要的合同，需要一式两份保存，每人个一份。<br>这时候我们要快速的备份一份，因为内容完全一样，这时候就可以用原型模型</p>
+          <p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/hotfix_201832-120i022461493.jpg" alt="enter image description here"></p>
+<p>在插件化和热修复方面，应该算是解决了不少燃眉问题了。</p>
+<p>目前开源的有：<br>360的<a href="https://github.com/Qihoo360/DroidPlugin">DroidPlugin</a>，<br>阿里的<a href="https://github.com/alibaba/AndFix">AndFix</a>，<a href="https://github.com/alibaba/dexposed">Dexposed</a><br>主席的<a href="https://github.com/singwhatiwanna/dynamic-load-apk">dynamic-load-apk</a><br>点评的<a href="https://github.com/mmin18/AndroidDynamicLoader">Android Dynamic Loader</a>， </p>
+<p>现在我们来看看它们的原理和各自的优缺点吧。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/03/设计模式系列11---快速拷贝的原型模型/#more" rel="contents">
+            <a class="btn" href="/2016/03/05/源码探索系列25---救急灭火的消防员之HotFix/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -564,8 +568,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/01/02/设计模式系列10---高度定制的抽象工厂方法模式/" itemprop="url">
-                设计模式系列10---高度定制的抽象工厂方法模式
+              <a class="post-title-link" href="/2016/03/03/源码探索系列24---那把黄油刀ButterKnife/" itemprop="url">
+                源码探索系列24---那把黄油刀ButterKnife
               </a>
             
           
@@ -575,8 +579,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2016-01-02T18:04:00+08:00" content="2016-01-02">
-            2016-01-02
+          <time itemprop="dateCreated" datetime="2016-03-03T17:45:00+08:00" content="2016-03-03">
+            2016-03-03
           </time>
         </span>
 
@@ -601,8 +605,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/02/设计模式系列10---高度定制的抽象工厂方法模式/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/02/设计模式系列10---高度定制的抽象工厂方法模式/" itemprop="commentsCount"></span>
+              <a href="/2016/03/03/源码探索系列24---那把黄油刀ButterKnife/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/源码探索系列24---那把黄油刀ButterKnife/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -617,12 +621,12 @@
 
       
         
-          <p>上一篇我们介绍了关于使用公模做手机的事情，但有个问题就是不能高度定制，现在我们来介绍下我的抽象工厂方法，他可以做到的定制就很高啦，既可以造飞机，汽车，又可以做苹果手机等等。</p>
-<p>一般能处理这类问题的，都是些大厂家，这类大厂家就很规范，分工明确的，而且也有很多流水线，代工不少产品，为了降低风险同时提营业额嘛，好懂。</p>
-<p>假设有一家叫 <code>NiuBi</code> 的公司，他很厉害，有多条流水线，一条生产火箭，一条生产苹果机，一条生产汽车的。能加工这么广的是厉害。</p>
-<p>面对一个这么厉害的厂，我们需要更高的抽象，现在来展示下怎么写这个厂。</p>
+          <p><img src="https://github.com/JakeWharton/butterknife/raw/master/website/static/logo.png" alt="enter image description here"></p>
+<p>相信做安卓开发的人，一定对写一堆 findViewById（）很有印象。特别是当界面多的时候，那简直是觉得为何没有什么简单易行的办法来拯救我们与危难之间呢？</p>
+<p>既然我诚心诚意的问了，那就得写下答案，如何解决这个重复累赘问题.</p>
+<h1 id="u89E3_u51B3_u65B9_u6848"><a href="#u89E3_u51B3_u65B9_u6848" class="headerlink" title="解决方案"></a>解决方案</h1>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/02/设计模式系列10---高度定制的抽象工厂方法模式/#more" rel="contents">
+            <a class="btn" href="/2016/03/03/源码探索系列24---那把黄油刀ButterKnife/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -648,7 +652,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/6/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/6/">&raquo;</a>
   </nav>
 
  </div>
@@ -682,7 +686,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -696,7 +700,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

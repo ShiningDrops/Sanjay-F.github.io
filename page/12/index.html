@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/03/Android测试教程9--聊聊配置测试环境的一些问题/" itemprop="url">
-                Android测试教程9--聊聊配置测试环境的一些问题
+              <a class="post-title-link" href="/2015/12/31/设计模式系列4---对外包办的门面模型/" itemprop="url">
+                设计模式系列4---对外包办的门面模型
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-03T18:09:00+08:00" content="2015-12-03">
-            2015-12-03
+          <time itemprop="dateCreated" datetime="2015-12-31T16:26:00+08:00" content="2015-12-31">
+            2015-12-31
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/03/Android测试教程9--聊聊配置测试环境的一些问题/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/Android测试教程9--聊聊配置测试环境的一些问题/" itemprop="commentsCount"></span>
+              <a href="/2015/12/31/设计模式系列4---对外包办的门面模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/31/设计模式系列4---对外包办的门面模型/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,9 +255,14 @@
 
       
         
-          <p>最近学测试的时候，遇到一些配置上的问题，在这里都写下来</p>
+          <p>说到门面这个词， 在我国的文化就很有内涵啦！<br>不过<code>Facade</code> 这个词有时候翻译为外观。<br>到底该怎么理解这个门面模型呢？</p>
+<p>我们可以看一个公司的架构 </p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/20120725112047797.jpg" alt="enter image description here"></p>
+<p><strong>董事长</strong>同他的<strong>总经理</strong>说他要把今年的销售额翻<code>30</code>倍吧。总经理听了脸都青了，但没办法，还是得干活，说行，然后就把指标发下去了，让下面的干活去。即把实际做的事情分割给不同部门，然后自己又在办公室继续玩电脑了。</p>
+<p>这样对于发号施令的董事长，不需要知道具体的细节，只需要记得找总经理负责这事就好了。<br>就是苦了这个总经理，需要了解所有的部门情况，分割不同的事情给下面的人干活去。</p>
+<p>所以我们可以简化这个流程成这样的，老板说要去赚钱，总经理找了技术部开发了个杀手级应用，然后销售部门就负责去卖，从而达到赚钱的效果。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/03/Android测试教程9--聊聊配置测试环境的一些问题/#more" rel="contents">
+            <a class="btn" href="/2015/12/31/设计模式系列4---对外包办的门面模型/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -290,8 +295,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/12/03/源码探索系列0---微信抢红包插件原理解析/" itemprop="url">
-                源码探索系列0---微信抢红包插件原理解析
+              <a class="post-title-link" href="/2015/12/30/设计模式系列3---搞转换的适配器模型/" itemprop="url">
+                设计模式系列3---搞转换的适配器模型
               </a>
             
           
@@ -301,8 +306,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-12-03T11:23:00+08:00" content="2015-12-03">
-            2015-12-03
+          <time itemprop="dateCreated" datetime="2015-12-30T21:26:00+08:00" content="2015-12-30">
+            2015-12-30
           </time>
         </span>
 
@@ -327,8 +332,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/03/源码探索系列0---微信抢红包插件原理解析/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/源码探索系列0---微信抢红包插件原理解析/" itemprop="commentsCount"></span>
+              <a href="/2015/12/30/设计模式系列3---搞转换的适配器模型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/设计模式系列3---搞转换的适配器模型/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -343,13 +348,13 @@
 
       
         
-          <p>好程序员，序号都是从0开始的。哈哈</p>
-<h1 id="u5FAE_u4FE1_u62A2_u7EA2_u5305_u63D2_u4EF6"><a href="#u5FAE_u4FE1_u62A2_u7EA2_u5305_u63D2_u4EF6" class="headerlink" title="微信抢红包插件"></a>微信抢红包插件</h1><p>不知道你们还记不记得小米发布会的时候，把不服跑个分改成抢红包了，同时演示了一遍。<br>现在这个是基于他的修改版本，<a href="https://github.com/geeeeeeeeek/WeChatLuckyMoney">地址在这里</a></p>
-<p>,如果你想看下小米抢红包的源代码，<a href="https://github.com/XiaoMi/LuckyMoneyTool">就点击这里</a></p>
-<p> 接下来讲解其中一种实现 ，但这个是dev版，不是百分百，要百分百好用的，<a href="https://github.com/geeeeeeeeek/WeChatLuckyMoney/tree/stable">点这里</a>：</p>
-<p>下面的讲解仅针对该伙伴分享的<strong>dev分支</strong>。</p>
+          <p>用过苹果手机的人对这两样东西应该很熟悉</p>
+<p><img src="http://7xl9zd.com1.z0.glb.clouddn.com/adapter.jpg" alt="enter image description here">  <img src="http://7xl9zd.com1.z0.glb.clouddn.com/charge_apple.jpg" alt="enter image description here"></p>
+<p>我们常常需要买多左边那个适配器来用，要不然以苹果这插头，没几个排插能插上的。<br>但有了这转换器的话，只要满足两端标准，就可以<strong>循环利用</strong>，很”环保”.</p>
+<p>例如这样： <img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E5%82%B2%E6%B8%B8%E6%88%AA%E5%9B%BE20151230203716.jpg" alt="enter image description here">    —   或者这个： <img src="http://7xl9zd.com1.z0.glb.clouddn.com/%E5%82%B2%E6%B8%B8%E6%88%AA%E5%9B%BE20151230203809.jpg" alt="enter image description here"></p>
+<p>想当年的巴别塔，如果有这样的做语言转换的翻译人，估计也建好了把。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/03/源码探索系列0---微信抢红包插件原理解析/#more" rel="contents">
+            <a class="btn" href="/2015/12/30/设计模式系列3---搞转换的适配器模型/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -382,8 +387,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/27/Android测试教程8--测试我们的Activity/" itemprop="url">
-                Android测试教程8--测试我们的Activity
+              <a class="post-title-link" href="/2015/12/30/设计模式系列2---幕后黑手的代理模式/" itemprop="url">
+                设计模式系列2---幕后黑手的代理模式
               </a>
             
           
@@ -393,8 +398,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-27T11:31:00+08:00" content="2015-11-27">
-            2015-11-27
+          <time itemprop="dateCreated" datetime="2015-12-30T17:21:27+08:00" content="2015-12-30">
+            2015-12-30
           </time>
         </span>
 
@@ -419,8 +424,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/27/Android测试教程8--测试我们的Activity/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/27/Android测试教程8--测试我们的Activity/" itemprop="commentsCount"></span>
+              <a href="/2015/12/30/设计模式系列2---幕后黑手的代理模式/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/设计模式系列2---幕后黑手的代理模式/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -435,16 +440,10 @@
 
       
         
-          <p>做安卓开发，怎能不测试下我们的Activity呢？<br>但实际的项目经验告诉我的直觉，这个测试真是因人而异啊。<br>为啥？</p>
-<ul>
-<li>有些人把网络请求直接写在Activity里面的</li>
-<li>有采用MVVM，MVP架构的</li>
-<li>有的把数据库操作部分直接写在Activity里面的</li>
-<li>还有各种乱七八糟的</li>
-</ul>
-<p>所以理解的Activity测试内容就给人不一样的感觉。<br>这里讲下一个特殊的测试类<code>ActivityUnitTestCase</code> </p>
+          <p> 今天我们来说说那个代理模式，他的一大功效就是成了挡子弹的人，代替幕后黑手出来干活。<br> 为何这么说呢？<br> 因为人如其名，代理，就是中间人代理商这样的，<br> 我们不用过问到底背后怎么做，只需要找到这个代理人，他可以帮我们搞定所有。</p>
+<p>假设有这么一个人，他可以制造茶叶蛋，炸弹，手枪，火箭，电脑病毒等等。嗯，是个人才。<br>现在他突然手头紧了，想找个朋友帮他看有没什么门路，卖点东西出去，但为了给自己留点后路，他就同他朋友说他会做<code>茶叶蛋</code>，是个十分正经的守法好人民，同时希望帮他卖一点，虽然这朋友并不知道他如意算盘背后是给他背后做的事业提供资金来源。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/27/Android测试教程8--测试我们的Activity/#more" rel="contents">
+            <a class="btn" href="/2015/12/30/设计模式系列2---幕后黑手的代理模式/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -477,8 +476,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/26/Android测试教程7--丢失/" itemprop="url">
-                Android测试教程7---丢失，待补充
+              <a class="post-title-link" href="/2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/" itemprop="url">
+                源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview
               </a>
             
           
@@ -488,8 +487,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-26T23:11:00+08:00" content="2015-11-26">
-            2015-11-26
+          <time itemprop="dateCreated" datetime="2015-12-30T00:27:46+08:00" content="2015-12-30">
+            2015-12-30
           </time>
         </span>
 
@@ -514,8 +513,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/26/Android测试教程7--丢失/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/26/Android测试教程7--丢失/" itemprop="commentsCount"></span>
+              <a href="/2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -530,8 +529,16 @@
 
       
         
-          <span itemprop="articleBody"><p> 我的这篇文章被CSDN吞了，找不回来了</p>
-</span>
+          <p>作为这源码探索系列的初篇的终结，选择Listview来做最后一个探索的对象好像也挺好的。<br>所以我们就来简单的看下我们曾经最熟悉的Listview是怎么去绘制我们的各个View，如何复用的View。</p>
+<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><p>API：23</p>
+<p>我们的<code>Listview</code>是继承于<code>AbsListView</code> 的</p>
+<pre><code>public class ListView extends AbsListView 
+</code></pre><p>而这个AbsListView里面帮我们做了大量的工作，包括与我们的adapter相关的工作，对View的复用等。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/30/源码探索系列16---初篇结尾---那个被RecyclerView替代的Listview/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -561,8 +568,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/26/Android测试教程6--测试我们的Application/" itemprop="url">
-                Android测试教程6--测试我们的Application
+              <a class="post-title-link" href="/2015/12/29/设计模式系列1---独当一面的单例/" itemprop="url">
+                设计模式系列1---独当一面的单例
               </a>
             
           
@@ -572,8 +579,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-26T13:27:00+08:00" content="2015-11-26">
-            2015-11-26
+          <time itemprop="dateCreated" datetime="2015-12-29T21:55:46+08:00" content="2015-12-29">
+            2015-12-29
           </time>
         </span>
 
@@ -598,8 +605,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/26/Android测试教程6--测试我们的Application/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/26/Android测试教程6--测试我们的Application/" itemprop="commentsCount"></span>
+              <a href="/2015/12/29/设计模式系列1---独当一面的单例/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/设计模式系列1---独当一面的单例/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -614,10 +621,12 @@
 
       
         
-          <p>有时候我们会继承我们的Application，然后在里面加多一些全局的设置，常量啊等等。</p>
-<p>那么该如何测试呢？<br>这里举一个简单的例子<br>来测试一下用SharedPreferences保存和读取数据。</p>
+          <p>在开始写之前我想吐槽下CSDN！ 在上面写的源码探索系列6和14居然不见了，上次找版主去找回一次别的文章！ 这次居然跑了两篇，服务器要高可用啊！</p>
+<p>现在还记得14写的内容是HandleThread，但第六篇那么久那里还记得写的是哪篇，想补都补不回来了！<br>（更新：12/30， 记起来了，那个第六篇是四大金刚之一的广播，唉，那篇写了好久才整理出来的，跪了！）</p>
+<p>为了写这篇文章，内心压制了好久，那些文章都是我每天下完班辛辛苦苦熬到凌晨一两点才写完的！ 翻看了那么多代码，熬了这么久！真的内心难以忍受这样的错误！</p>
+<p>一个可以让人舒服写字的地方真不容易找！</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/26/Android测试教程6--测试我们的Application/#more" rel="contents">
+            <a class="btn" href="/2015/12/29/设计模式系列1---独当一面的单例/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -643,7 +652,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/13/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/11/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/13/">&raquo;</a>
   </nav>
 
  </div>
@@ -677,7 +686,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -691,7 +700,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

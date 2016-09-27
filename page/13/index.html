@@ -202,8 +202,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/24/Android测试教程5--模拟键盘输入/" itemprop="url">
-                Android测试教程5--模拟键盘输入
+              <a class="post-title-link" href="/2015/12/29/设计模式系列0---写在这系列前的话/" itemprop="url">
+                设计模式系列0---写在这系列前的话
               </a>
             
           
@@ -213,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-24T11:35:00+08:00" content="2015-11-24">
-            2015-11-24
+          <time itemprop="dateCreated" datetime="2015-12-29T01:55:46+08:00" content="2015-12-29">
+            2015-12-29
           </time>
         </span>
 
@@ -239,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/24/Android测试教程5--模拟键盘输入/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/24/Android测试教程5--模拟键盘输入/" itemprop="commentsCount"></span>
+              <a href="/2015/12/29/设计模式系列0---写在这系列前的话/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/设计模式系列0---写在这系列前的话/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -255,12 +255,122 @@
 
       
         
-          <p> 开发过程中，如何向需要输入字符串的输入框输入数据呢？<br> 最重要的语句如下：</p>
-<pre><code>ulPhoneET.requestFocus();
-sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
-</code></pre><p>先让输入框获得焦点，然后调用<code>sendKeys</code>输入我们想要的内容。<br>例如这里输入一个电话号码<code>18812345678</code>（请各个字用空格空开）</p>
+          <span itemprop="articleBody"><h1 id="u524D_u8BB0"><a href="#u524D_u8BB0" class="headerlink" title="前记"></a>前记</h1><p>熬了那么多个晚上，整个源码探索系列也算写了点内容了。<br>虽然很多是代码，不过整个过程要看的内容也真的还不少。<br>是时候换点内容，刺激下大脑了，下次时机合适时再补充对整个安卓FrameWork的探索文章。<br>在写这第一系列的源码探索过程遇到了不少设计模式，如：<code>桥接</code>，<code>组合</code>，<code>单例</code>，<code>静态代理</code>，<code>工场</code>，<code>策略</code>等等，因此产生了写设计模式系列的文章念头。<br>当然，整个过程也和不少的数据结构打了下交道，<br>嗯，如果有时间，也就顺便把一些数据结构的内容记录下。</p>
+<p>那么问题来了，作为一名初出茅庐的小菜鸟，<br>对这些设计模式的理解也不是多么说出神入化，<br>关于设计模式的内容的书与文章也已满天飞了，现在我出来写设计模式的文章，又写得不怎么样，这世界还需要多我这么个关于设计模式的吗？</p>
+<p><strong>我的思考</strong></p>
+<ol>
+<li><strong>温习</strong><br>看过不少本讨论设计模式的书和文章，在实际的开发中也有不少的应用，现在写出来，也算是对自己的一次总结吧。</li>
+<li><strong>知新</strong><br>所谓温故而知新，可以为师矣。我就厚着脸皮，再重新思考下这个设计模式，寻找一些新的灵光的地方，看能不能有什么变化。</li>
+<li><strong>没有的有</strong><br>因为这是我的文章啊，哈哈，就是以前没写过，所以要写。不为任何人，只为自己写的文章。就这样。哈哈！</li>
+</ol>
+<p>自己写，或多或少可以有多一些的思考，就像看别人写的代码一样，觉浅需行。<br>书上看的时候觉得行，懂了。但想彻底掌握还是需要自己亲行力践</p>
+<h1 id="u53C2_u8003_u4E66_u7C4D"><a href="#u53C2_u8003_u4E66_u7C4D" class="headerlink" title="参考书籍"></a>参考书籍</h1><p>这里列下看过的设计模式的书，文章的就太难以罗列了，就不写在这了,<br>那篇文章写的时候有参考就再额外补充吧。</p>
+<ol>
+<li>《Design Pattern in java》— Steven Metsker; William C. Wake，教科书一本。</li>
+<li>《设计模式》—Head First系列，非常轻松幽默，图文并茂。</li>
+<li>《设计模式之禅》—秦小波，如果你看过原稿，你会觉内容有些内涵啊。 </li>
+<li>《Android 源码设计模式解析与实战》—何红辉，关爱民，深度与广度兼有，不过排版特差！ </li>
+<li>《设计模式：可复用面向对象软件的基础》—GOF，这本没得说，经典</li>
+</ol>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/" itemprop="url">
+                源码探索系列15---那个AsyncTask里面的FutureTask
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-12-29T01:46:00+08:00" content="2015-12-29">
+            2015-12-29
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/android/" itemprop="url" rel="index">
+                  <span itemprop="name">android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>很久前在写<a href="http://blog.csdn.net/sanjay_f/article/details/50237729">源码探索系类2–AsyncTask</a>时候有提及到这个类，现在在这里把<code>FutureTask</code>，<code>Future</code>和<code>Callback</code>，这三个火枪手的关系温习下 </p>
+<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><p>就让我们进入主题，开始说说这个<strong>FutureTask</strong>吧。</p>
+<p>在安装开发过程中，系统限制我们对于耗时的任务是不能执行在主线程的，必须单独开一个线程去做。<br>所以我们在开发过程的一种写法是下面这样</p>
+<h2 id="1-__u7528Runnable"><a href="#1-__u7528Runnable" class="headerlink" title="1. 用Runnable"></a>1. <strong>用Runnable</strong></h2><pre><code>new Thread(new Runnable() {
+        @Override
+        public void run() {
+
+         //do something
+         ...
+
+         myHandler.sendMessage(msg);   
+        }
+}).run();
+</code></pre><p>但有时候我们需要这个线程的运算结果，可我们没办法直接获取，因此安卓配套了一个Handler给我们用，利用他发送消息会我们的主线程，执行一些更新任务等。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/24/Android测试教程5--模拟键盘输入/#more" rel="contents">
+            <a class="btn" href="/2015/12/29/源码探索系列15---那个AsyncTask里面的FutureTask/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -293,8 +403,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
           
             
-              <a class="post-title-link" href="/2015/11/21/Android测试教程4--定点测试/" itemprop="url">
-                Android测试教程4--定点测试
+              <a class="post-title-link" href="/2015/12/28/源码探索系列14---那个HandleThread/" itemprop="url">
+                源码探索系列14---那个HandleThread
               </a>
             
           
@@ -304,8 +414,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-21T21:39:00+08:00" content="2015-11-21">
-            2015-11-21
+          <time itemprop="dateCreated" datetime="2015-12-28T22:05:00+08:00" content="2015-12-28">
+            2015-12-28
           </time>
         </span>
 
@@ -330,8 +440,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/21/Android测试教程4--定点测试/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/21/Android测试教程4--定点测试/" itemprop="commentsCount"></span>
+              <a href="/2015/12/28/源码探索系列14---那个HandleThread/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/源码探索系列14---那个HandleThread/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -346,12 +456,11 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
 
       
         
-          <p>我们在测试的时候，很多时候难以避免的问题就是，我写了很多测试案例。<br>但只是想对其中一部分重要的测试进行测试，或者只是希望对数据库部分进行测试。<br>但那些测试有分割在不同的包，不同的类里面，那么，到底该怎么解决呢？</p>
-<p>能不能<strong>“钓鱼测试”</strong></p>
-<p>执行特定的一类的测试案例呢？</p>
-<p>显然是可以啦。<br>下面是其中解决方案之一。</p>
+          <p>这篇文章被CSDN搞丢了，好在通过使用谷歌搜索，<br>看到历史的记录版本，现在再根据记忆，补充下内容。<br>算是恢复了这篇文章的大概的模样。虽然对于CSDN的来说这文章没什么，但对于我来说就是自己花的时间和精力。   </p>
+<h1 id="u8D77_u822A"><a href="#u8D77_u822A" class="headerlink" title="起航"></a>起航</h1><p>这次我们来说说HandleThread，听名字好像就是Handler+Thread的感觉啊。<br>他和Handler的关系就像Service和IntentService一样，一个不支持耗时的任务，一个可以。<br>不过两者还是有点区别，一些是运行在主线程的，一个不在主线程跑。<br>很好理解，要是在主线程跑也能搞耗时任务，那不就逆天了？？<br>对于他的使用，我们就不介绍了，让我们看下他实际做些什么吧。</p>
+<p>就从我们的HandleThread的声明开始说起吧<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/21/Android测试教程4--定点测试/#more" rel="contents">
+            <a class="btn" href="/2015/12/28/源码探索系列14---那个HandleThread/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -384,8 +493,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
           
             
-              <a class="post-title-link" href="/2015/11/19/Android测试教程3--用Robotium来生自动生成操作/" itemprop="url">
-                Android测试教程3--用Robotium来生自动生成操作
+              <a class="post-title-link" href="/2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/" itemprop="url">
+                源码探索系列13---Window的PhoneWindow与WindowManager
               </a>
             
           
@@ -395,8 +504,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-19T12:16:00+08:00" content="2015-11-19">
-            2015-11-19
+          <time itemprop="dateCreated" datetime="2015-12-28T17:36:00+08:00" content="2015-12-28">
+            2015-12-28
           </time>
         </span>
 
@@ -421,8 +530,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/19/Android测试教程3--用Robotium来生自动生成操作/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/19/Android测试教程3--用Robotium来生自动生成操作/" itemprop="commentsCount"></span>
+              <a href="/2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -437,9 +546,15 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
 
       
         
-          <p>前面的教程2。<br>我们自己手写了一些简单的测试案例，你发现需要各种绑定界面的。<br>现在作为偷懒的人，想像以前用按键精灵一样，自动给我们做好各种点击操作，<br>来看下运行是否正常。那么该怎么做呢？<br>下面教程告诉你，用<code>Robotium</code>如何做到。</p>
+          <p>关于Window，PhoneWindow和WindowManager三者的关系是：</p>
+<blockquote>
+<p>Window是一个抽象类，他的具体实现是PhoneWindow<br>我们通过WindowManager来管理Window。</p>
+</blockquote>
+<p>我们的所有的界面，例如Activity，Toast，Dialog等都是靠Window来呈现，因此他是View的管理者咯。</p>
+<p>很久前用过他的一个功能就是拿来做消息提醒，当有用户发来特定消息时候，就跑出来一个小悬浮窗来提示用户。现在看得多的就是各种管家关于内存的提示！这真的很让人纠结的安卓机啊！特别是某米的手机，当年发现他不支持这个功能！搞到得单独为他开发一个别的方式….</p>
+<p>好了，说这么多，我们该从哪里开始说起呢？</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/19/Android测试教程3--用Robotium来生自动生成操作/#more" rel="contents">
+            <a class="btn" href="/2015/12/28/源码探索系列13---Window的PhoneWindow与WindowManager/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -472,8 +587,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
           
             
-              <a class="post-title-link" href="/2015/11/19/Android测试教程2--简单小测试/" itemprop="url">
-                Android测试教程2--简单小测试
+              <a class="post-title-link" href="/2015/12/27/源码探索系列12---关于事件分发机制/" itemprop="url">
+                源码探索系列12---关于事件分发机制
               </a>
             
           
@@ -483,8 +598,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-11-19T00:41:00+08:00" content="2015-11-19">
-            2015-11-19
+          <time itemprop="dateCreated" datetime="2015-12-27T21:36:00+08:00" content="2015-12-27">
+            2015-12-27
           </time>
         </span>
 
@@ -509,8 +624,8 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/19/Android测试教程2--简单小测试/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/19/Android测试教程2--简单小测试/" itemprop="commentsCount"></span>
+              <a href="/2015/12/27/源码探索系列12---关于事件分发机制/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/27/源码探索系列12---关于事件分发机制/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -525,97 +640,21 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
 
       
         
-          <p>在教程1，我们知道了怎么运行起我们的测试，现在，我们是时候对我们的界面进行一些操作了，让我们来做一个小的简单测试吧。</p>
+          <p>关于View的事件分发，实质就是关于MotionEvent时间的分发<br>再简单点说就是通过一堆判断，最后决定这个MotionEvent给谁用的问题。</p>
+<ul>
+<li><p><strong>三巨头</strong><br>分发过程中有主要涉及到三个人：<br><code>dispatchTouchEvent()</code>,<code>onInterceptTouchEvent()</code>,<code>onTouchEvent()</code><br>这三者的关系如下</p>
+<pre><code> public boolean dispatchTouchEvent(MotionEvent ev) {
+      boolean belongToMe=false;
+      if(onInterceptTouchEvent(ev)){
+           belongToMe=onTouchEvent(ev);
+      }else{
+          belongToMe=child.dispatchTouchEvent(ev);
+      }
+      return belongToMe;
+}        
+</code></pre>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/19/Android测试教程2--简单小测试/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/11/18/Android测试教程1--跑起来/" itemprop="url">
-                Android测试教程1--跑起来
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-11-18T23:11:00+08:00" content="2015-11-18">
-            2015-11-18
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/android/" itemprop="url" rel="index">
-                  <span itemprop="name">android</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/18/Android测试教程1--跑起来/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/18/Android测试教程1--跑起来/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="1__u9009_u62E9Android_Instrument_Tests"><a href="#1__u9009_u62E9Android_Instrument_Tests" class="headerlink" title="1 选择Android Instrument Tests"></a>1 选择Android Instrument Tests</h1><p>确认你选中的Test Artifact 是Android Instrument Tests；<br><img src="http://img.blog.csdn.net/20151118174128573" alt="这里写图片描述"><br>就在AS的左下角，自己看吧。有些人选择的是Junit，导致这个类的前面都是红色小标记，没办法运行。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/18/Android测试教程1--跑起来/#more" rel="contents">
+            <a class="btn" href="/2015/12/27/源码探索系列12---关于事件分发机制/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -641,7 +680,7 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/14/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/12/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/14/">&raquo;</a>
   </nav>
 
  </div>
@@ -675,7 +714,7 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -689,7 +728,7 @@ sendKeys(&quot;1 8 8 1 2 3 4 5 6 7 8&quot;);
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

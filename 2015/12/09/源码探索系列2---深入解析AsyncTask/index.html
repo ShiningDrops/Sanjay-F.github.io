@@ -51,7 +51,7 @@ class MyDemoAsyncTask extends AsyncTask&amp;lt;Integer, Integer, String&amp;gt; 
 class MyDemoAsyncTask extends AsyncTask&amp;lt;Integer, Integer, String&amp;gt; {
 
         private">
-<meta property="og:updated_time" content="2016-01-02T13:13:51.000Z">
+<meta property="og:updated_time" content="2016-06-11T16:23:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="源码探索系列2---深入解析AsyncTask">
 <meta name="twitter:description" content="在解析前，我们先来看下一般我们使用的情况是怎样的下面写了一个简单的demo，用来做个简单的任务，从1数到100，同时调用publishProgress(i);来更新下进度。我想用过的人自己直接阅读下面代码没有任何问题。
@@ -347,7 +347,11 @@ public final AsyncTask&lt;Params, Progress, Result&gt; executeOnExecutor(Executo
        return this;
 }
 </code></pre><ol>
-<li><p>看到这里，我们似乎得到了<strong>第一个问题的答案</strong>，为何只能执行一次，因为AsyncTask会对自己的状态做一些标记，如果已经是<code>RUNNING</code>或者<code>FINISHED</code>状态，那么就会抛出异常，那么为何需要状态呢？这个需要我们继续探索</p>
+<li><p>看到这里，我们似乎得到了<strong>第一个问题的答案</strong>，为何只能执行一次，因为AsyncTask会对自己的状态做一些标记，如果已经是<code>RUNNING</code>或者<code>FINISHED</code>状态，那么就会抛出异常，那么为何需要状态呢？</p>
+<ol>
+<li>主要因为不允许重用！当我们重用的话，一些变量可能被上一次给修改了，再用就有可能出错！就像我们写Junit一样，需要销毁掉，再开始新的测试用例一样。而且当有竞争并发的情况出现后，处理起来的问题就复杂多了。所以还是直接干脆让你在new一个好了。</li>
+<li>另外是为了避免内存泄漏问题！<br>当我们做那么多后台任务，这就有可能导致你的Activity都关了，人家还在干活，这就有可能导致内存泄漏问题啊！返回结果还没人要..</li>
+</ol>
 </li>
 <li><p>在调用了<code>Exccute()</code>后，我们看到他顺势也调用了<code>onPreExecute();</code>，这个运行在主线程也好理解了。</p>
 </li>
@@ -549,6 +553,7 @@ protected final void publishProgress(Progress... values) {
 <p>#后记 </p>
 <p>到这里我们就基本把AsyncTask的主要部分代码看完了，在实现上使用到了FutureTask，Callback这两个平时比较少用的类，温习了下，对他的使用以后就可以更有把握啦。</p>
 <p>看完觉得好和不好，欢迎评论下，知道改进，谢谢。</p>
+<p>虽然这个类应该用的很少了，不过也算了解，避免以后自己写类似的代码，从中也学到不少内容了</p>
 </span>
       
     </div>
@@ -665,7 +670,7 @@ protected final void publishProgress(Progress... values) {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -679,7 +684,7 @@ protected final void publishProgress(Progress... values) {
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">116</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
